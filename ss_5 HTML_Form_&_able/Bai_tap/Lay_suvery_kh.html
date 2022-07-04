@@ -11,17 +11,17 @@
     <hr style="border-top: dotted 1px;"/>
     <p><strong>What is your age range?</strong></p>
     <select style="width: 50%">
-        <option value = "1"  selected>18-24</option>
-        <option value = "2">25-34</option>
-        <option value = "3">35-50</option>
-        <option value = "4">50+</option>
+        <option value="1" selected>18-24</option>
+        <option value="2">25-34</option>
+        <option value="3">35-50</option>
+        <option value="4">50+</option>
     </select><br><br>
-   <strong>What is your yearly income range?</strong></p>
+    <strong>What is your yearly income range?</strong></p>
     <select style="width: 50%">
-        <option value = "1"  selected>$0-$25</option>
-        <option value = "2">2501-50000</option>
-        <option value = "3">500001-100000</option>
-        <option value = "4">100000+</option>
+        <option value="1" selected>$0-$25</option>
+        <option value="2">2501-50000</option>
+        <option value="3">500001-100000</option>
+        <option value="4">100000+</option>
     </select>
     <p><strong>Gender</strong></p>
     <input type="radio" name="Male">Male<br>
@@ -36,33 +36,59 @@
     <input type="radio" name="Weekly">Weekly<br>
     <input type="radio" name="Monthly">Monthly<br>
     <p><strong>What would you pay for the new product?</strong></p>
-    <strong>$</strong><input type="text" name="Daily" >
-    <strong>. </strong><input type="text" name="Daily" style="width: 1%"><br>
-    <p><strong>What features would you like t see in the new product</strong></p>
-    <textarea rows = "10" cols = "70" name = "description">
-            Enter description here...
-         </textarea>
-    <p>Plese rate your level of greement with flowing statement</p>
-    <table style="font-family: Arial"
-
+    <table>
         <tr>
-        <tr>
-            <th></th>
-            <th>Strongly Disagree</th>
-            <th>Disagree</th>
-            <th>Agree</th>
-            <th>StronglyAgree</th>
-
+            <td><strong>$</strong></td>
+            <td><input type="text" style="width: 70%"></td>
+            <td><strong>.</strong></td>
+            <td><input type="text" style="width: 10%"></td>
         </tr>
         <tr>
-            <td>Shabbir Hussein</td>
-            <td>7000</td>
+            <td></td>
+            <td>Dolal</td>
+            <td></td>
+            <td>Cent</td>
         </tr>
     </table>
+    <p><strong>What features would you like t see in the new product</strong></p>
 
+    <textarea rows="10" cols="70" name="description">
+            Enter description here...
+         </textarea>
+    <p><b>Plese rate your level of greement with flowing statement</b>/</p>
+    <table border="1" style="border-collapse: collapse">
+        <tr style="background-color: skyblue">
+            <th style="width: 10%"></th>
+            <th style="width: 10%"> Strongly Disagree</th>
+            <th style="width: 10%"> Disagree</th>
+            <th style="width: 10%"> Strongly Agreen</th>
+            <th style="width: 10%"> Agreen</th>
+        </tr>
+        <tr>
+            <td>Our prooduc are pricel fairly</td>
+            <td style="text-align:center"><input type="radio" name="a"><br>1</td>
+            <td style="text-align:center"><input type="radio" name="b"><br>2</td>
+            <td style="text-align:center"><input type="radio" name="c"><br>3</td>
+            <td style="text-align:center"><input type="radio" name="d"><br>4</td>
+        </tr>
+        <tr style="background-color: skyblue">
+            <td>Our prooduc are pricel fairly</td>
+            <td style="text-align:center"><input type="radio" name="e"><br>1</td>
+            <td style="text-align:center"><input type="radio" name="h"><br>2</td>
+            <td style="text-align:center"><input type="radio" name="l"><br>3</td>
+            <td style="text-align:center"><input type="radio" name="m"><br>4</td>
+        </tr>
+        <tr>
+            <td style="width: 50%">You would.........coworker</td>
+            <td style="text-align:center"><input type="radio" name="e"><br>1</td>
+            <td style="text-align:center"><input type="radio" name="w"><br>2</td>
+            <td style="text-align:center"><input type="radio" name="v"><br>3</td>
+            <td style="text-align:center"><input type="radio" name="b"><br>4</td>
+        </tr>
 
-
-
+    </table>
+    <br>
+    <input type="submit" name="submit" value="submit" size="20cm">
 </form>
 
 </body>
