@@ -2,28 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BAI TAP CO THE</title>
+    <title>BAI TAP CHI SO CO THE</title>
 </head>
 <body>
 <form>
     <h1>Tính chỉ số cân nặng</h1>
-    Nhập cân nặng: (kg)<input type="text" id="weight"><br><br>
-    Nhập chiều cao: (m)<input type="text" id="height">
+    Nhập cân nặng: (kg)<input type="number" id="weight"><br><br>
+    Nhập chiều cao: (m)<input type="number" id="height">
 </form><br><br>
-<button onclick="chiSo()">Kiểm tra</button>
+<button onclick="bmi()">Kiểm tra</button>
+<p id="kQht"></p>
 <script>
-    function chiSo(){
-    let wEt= +document.getElementById(weight).value;
-    let hEt=+document.getElementById(height).value;
-    let bMi=wEt/(hEt^2)
+    function bmi(){
+    let weight = +document.getElementById("weight").value;
+    let height=+document.getElementById("height").value;
+    let bMi= weight/(height*height)
+        let kQht
         if (bMi < 18)
-            document.write("Underweight");
+            kQht= "Underweightl" + bMi;
         else if (bMi < 25.0)
-            document.write("Normal");
+            kQht= "Normal" + bMi;
         else if (bMi < 30.0)
-            document.write("Overweight");
+            kQht= " Overweight" + bMi;
         else
-            document.write("Obese");
+            kQht= "Obese";
+        document.getElementById("kQht").innerHTML = kQht
     }
 </script>
 </body>

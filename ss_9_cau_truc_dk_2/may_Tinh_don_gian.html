@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAY TINH DON GIAN</title>
+</head>
+<body>
+<h2>Máy tính cá nhân</h2>
+
+    <table>
+        <tr>
+            <th><input type="text" id="hienThi"></th>
+        </tr>
+    </table>
+    <table  style="border-collapse: collapse " cellpadding="8">
+        <tbody>
+        <tr>
+            <td><button  onclick="kiTu('1')">1</button></td>
+            <td> <button onclick="kiTu('2')">2</button></td>
+            <td><button onclick="kiTu('3')">3</button></td>
+            <td><button onclick="kiTu('a1')">+</button><br></td>
+        </tr>
+        <tr>
+            <td><button onclick="kiTu('4')">4</button></td>
+            <td><button onclick="kiTu('5')">5</button></td>
+            <td><button onclick="kiTu('6')">6</button></td>
+            <td><button onclick="kiTu('a2')">-</button><br></td>
+        </tr>
+        <tr>
+            <td><button onclick="kiTu('7')">7</button></td>
+            <td> <button onclick="kiTu('8')">8</button></td>
+            <td> <button onclick="kiTu('9')">9</button></td>
+            <td>  <button onclick="kiTu('a3')">*</button><br></td>
+        </tr>
+        <tr>
+            <td> <button onclick="kiTu('a4')" >AC</button></td>
+            <td><button onclick="kiTu('0')">0</button></td>
+            <td> <button onclick="kiTu('a5')">=</button></td>
+            <td><button onclick="kiTu('a6')">/</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+<script>
+
+    function kiTu(value) {
+        alert(value)
+        document.getElementById("hienThi").value += value
+    }
+
+</script>
+</html>
