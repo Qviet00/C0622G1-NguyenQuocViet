@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNG DUNG MAY TINH</title>
+</head>
+<body>
+<input type="number" placeholder="Số hạng 1" id="soHang1">
+<input type="number" placeholder="Số hạng 2" id="soHang2"><br>
+<button onclick="mis('add')"><b>Cộng</b></button>
+<button onclick="mis('sub')"><b>Trừ</b></button>
+<<button onclick="mis('dda')"><b>Nhân</b></button>
+<<button onclick="mis('bus')"><b>Chia</b></button>
+<h2>Result</h2>
+<p id="ketQua"></p>
+</body>
+<script>
+    function mis(value) {
+        let number1 = +document.getElementById("soHang1").value;
+        let number2 = +document.getElementById("soHang2").value;
+        if(value === "add"){
+            document.getElementById("ketQua").innerText = number1 + number2;
+        }else if(value === "sub"){
+            document.getElementById("ketQua").innerText = number1 - number2
+        }else if(value ==="dda"){
+            document.getElementById("ketQua").innerText = number1 * number2
+        }else document.getElementById("ketQua").innerText = number1 / number2
+    }
+
+</script>
+</html>

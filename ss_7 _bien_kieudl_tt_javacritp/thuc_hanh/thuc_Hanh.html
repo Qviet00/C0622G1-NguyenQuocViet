@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP CO THE</title>
+</head>
+<body>
+<form>
+    <h1>Tính chỉ số cân nặng</h1>
+    Nhập cân nặng: (kg)<input type="text" id="weight"><br><br>
+    Nhập chiều cao: (m)<input type="text" id="height">
+</form><br><br>
+<button onclick="chiSo()">Kiểm tra</button>
+<script>
+    function chiSo(){
+    let wEt= +document.getElementById(weight).value;
+    let hEt=+document.getElementById(height).value;
+    let bMi=wEt/(hEt^2)
+        if (bMi < 18)
+            document.write("Underweight");
+        else if (bMi < 25.0)
+            document.write("Normal");
+        else if (bMi < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+    }
+</script>
+</body>
+</html>

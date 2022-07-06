@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNG DUNG CHUYEN DOI TIEN TE</title>
+</head>
+<body>
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="amount"></td>
+        <td>
+           <select id="from">
+               <option value = "VND" selected>VND</option>
+               <option value = "USD">USD</option>
+           </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value = "USD" selected>USD</option>
+                <option value = "VND">VND</option>
+            </select>
+        </td>
+        <td><button onclick="changeMoney()">Convert</button></td>
+    </tr>
+</table><br>
+<p id="kqht"></p>
+</body>
+<script>
+    function changeMoney() {
+        let amount = document.getElementById("amount").value;
+        let fromC = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let kqht;
+        if (fromC == "USD" && to == "VND") {
+            kqht = "Ketqua: " + (amount * 23000) + " Đ";
+        }
+        else if (fromC == "VND"&& to =="USD"){
+            kqht = "Ketqua: "+ (amount / 23000) + " $";
+        }
+        else if (fromC == "VND") {
+            kqht = "Ketqua: " + amount + " Đ"
+        } else {
+            kqht = "Ketqua: " + amount + " $"
+        }
+        document.getElementById("kqht").innerHTML =kqht ;
+    }
+</script>
+</html>
