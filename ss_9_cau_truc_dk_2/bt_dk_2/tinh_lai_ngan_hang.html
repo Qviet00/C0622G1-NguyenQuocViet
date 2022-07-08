@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TINH LAI NGAN HANG</title>
+    <title>Title</title>
 </head>
 <body>
-<script>
-    let a= parseFloat(prompt("Nhập số tiền vay (vnd)"));
-    let b= parseInt(prompt("Nhập số ngày vay"));
-    let c=a*0.15*b
-    if(!(isNaN(a)&&isNaN(b)&&a>=0&&b>=0)){
-        if(b<30){
-            alert("Số tiền phải đóng là:" + c)
-        }else {
-            if(b<60){
-                alert("Số tiền phải đóng là:" +c+a*b*0.2)
-            }
-        }
-    }
-</script>
+
 </body>
+<script>
+    let a = parseFloat(prompt("Nhập số tiền Vay (trĐ) "+
+        "Lãi suất hàng tháng là 5%"))
+    let n = prompt('Số tháng vay');
+    for (i = 0; i < n; i++) {
+        a = a + a / 100 * 5;
+    }
+    alert('Số tiền bạn  đóng '+n+' tháng là '+ a.toFixed(2)+'trĐ');
+</script>
 </html>

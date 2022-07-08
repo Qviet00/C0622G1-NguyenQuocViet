@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh thue ca nhan</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("Nhập tiền thu nhập VND"));
+    if(!(isNaN(a))){
+        if(a>=0&&a<10000){
+            alert("Tiền thuế phải đóng:" + (a*0.05) +"VND");
+        }
+        else {
+            if(a<15000){
+                alert("Tiền thuế phải đóng:" + (a*0.1) +"VND");
+            }
+            else {
+                if(a<20000){
+                    alert("Tiền thuế phải đóng:" + (a*0.15) +"VND");
+                }
+                else {
+                    alert( "Tiền thuế phải đóng:" + (a*0.2) +"VND");
+                }
+            }
+        }
+    }
+    else {
+        alert("Số không xác định");
+    }
+</script>
+</body>
+</html>
