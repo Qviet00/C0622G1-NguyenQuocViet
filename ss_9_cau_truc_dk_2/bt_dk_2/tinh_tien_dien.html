@@ -6,25 +6,25 @@
 </head>
 <body>
 <script>
-    let a=parseFloat(prompt("Nhập số chữ điện"));
-    const b = 1500
-    const c = 2500
-    const d = 3500
-    const e = 4500
-    if(!(isNaN(a))){
-        if(a>=0&&a<100){
-            alert("Tiền điện tháng này là:" + (a*b) +"VND");
+    let soA=parseFloat(prompt("Nhập số chữ điện"));
+    const soB = 1500
+    const soC = 2500
+    const soD = 3500
+    const soE = 4500
+    if(!(isNaN(soA))){
+        if(soA>=0&&soA<100){
+            alert("Tiền điện tháng này là:" + (soA*soB) +"VND");
         }
         else {
-            if(a<150){
-                alert("Tiền điên tháng này là:" + (a*c) +"VND");
+            if(soA<150){
+                alert("Tiền điên tháng này là:" + (soA*soC) +"VND");
             }
             else {
-                if(a<200){
-                    alert("Tiền đt tháng này là:" + (a*d) +"VND");
+                if(soA<200){
+                    alert("Tiền đt tháng này là:" + (soA*soD) +"VND");
                 }
                 else {
-                    alert( "Tiền đt tháng này là:" + (a*b) +"VND");
+                    alert( "Tiền đt tháng này là:" + (soA*soB) +"VND");
                 }
             }
         }

@@ -6,26 +6,26 @@
 </head>
 <body>
 <script>
-    let a=parseFloat(prompt("Nhập giá trị A"));
-    let b=parseFloat(prompt("Nhập giá trị B"));
-    let c=parseFloat(prompt("Nhập giá trị C"));
-    let d= b*b-4*a*c
-    let e=((-b+Math.sqrt(d))/(2*a)).toFixed(2);
-    let f=((-b-Math.sqrt(d))/(2*a)).toFixed(2);
-    if(!(isNaN(a) && isNaN(b) && isNaN(c))){
-        if(a===0 && b===0 && c===0){
+    let soA=parseFloat(prompt("Nhập giá trị A"));
+    let soB=parseFloat(prompt("Nhập giá trị B"));
+    let soC=parseFloat(prompt("Nhập giá trị C"));
+    let soD= soB*soB-4*soA*soC
+    let soE=((-soB+Math.sqrt(soD))/(2*soA)).toFixed(2);
+    let soF=((-soB-Math.sqrt(soD))/(2*soA)).toFixed(2);
+    if(!(isNaN(soA) && isNaN(soB) && isNaN(soC))){
+        if(soA===0 && soB===0 && soC===0){
             alert("Phương trình vô số Nghiệm");
         }else {
-            if(a===0){
-            alert(" Phương trình có Nghiệm là:" + -c/b.toFixed(2));}
+            if(soA===0){
+            alert(" Phương trình có Nghiệm là:" + -soC/soB.toFixed(2));}
             else{
-                if(d<0){
+                if(soD<0){
                     alert("Phương trình vô Nghiêm")
                 }else {
-                    if(d===0){
-                        alert("Phương trình có Nghiêm kép là x1=x2=" + -b/(2*a*c).toFixed(2))
+                    if(soD===0){
+                        alert("Phương trình có Nghiêm kép là x1=x2=" + -soB/(2*soA*soC).toFixed(2))
                     }else {
-                        alert("Phương trình có hai Nghiệm X1=" + e+";X2="+f);
+                        alert("Phương trình có hai Nghiệm X1=" + soE+";X2="+soF);
                     }
                 }
             }

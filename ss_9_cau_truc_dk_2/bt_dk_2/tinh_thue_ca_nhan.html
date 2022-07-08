@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-    let a=parseFloat(prompt("Nhập tiền thu nhập VND"));
-    if(!(isNaN(a))){
-        if(a>=0&&a<10000){
-            alert("Tiền thuế phải đóng:" + (a*0.05) +"VND");
+    let soA=parseFloat(prompt("Nhập tiền thu nhập VND"));
+    if(!(isNaN(soA))){
+        if(soA>=0&&soA<10000){
+            alert("Tiền thuế phải đóng:" + (soA*0.05) +"VND");
         }
         else {
-            if(a<15000){
-                alert("Tiền thuế phải đóng:" + (a*0.1) +"VND");
+            if(soA<15000){
+                alert("Tiền thuế phải đóng:" + (soA*0.1) +"VND");
             }
             else {
-                if(a<20000){
-                    alert("Tiền thuế phải đóng:" + (a*0.15) +"VND");
+                if(soA<20000){
+                    alert("Tiền thuế phải đóng:" + (soA*0.15) +"VND");
                 }
                 else {
-                    alert( "Tiền thuế phải đóng:" + (a*0.2) +"VND");
+                    alert( "Tiền thuế phải đóng:" + (soA*0.2) +"VND");
                 }
             }
         }

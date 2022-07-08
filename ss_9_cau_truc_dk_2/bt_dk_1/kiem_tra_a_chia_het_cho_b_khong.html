@@ -11,14 +11,14 @@
     <p id="ket_qua"></p>
 <script>
     function kiemTra(){
-    let a = +document.getElementById("nhapA").value;
-    let b = +document.getElementById("nhapB").value;
-    let c
-        if (a%b===0 ){
-            c= "Số A chia hết cho SỐ B";}
+    let soA = +document.getElementById("nhapA").value;
+    let soB = +document.getElementById("nhapB").value;
+    let soC
+        if (soA%soB===0 ){
+            soC= "Số A chia hết cho SỐ B";}
         else {
-             c = "Số A không chia hết cho SỐ B";}
-    document.getElementById("ket_qua").innerHTML = c;}
+             soC = "Số A không chia hết cho SỐ B";}
+    document.getElementById("ket_qua").innerHTML = soC;}
 </script>
 </body>
 </html>

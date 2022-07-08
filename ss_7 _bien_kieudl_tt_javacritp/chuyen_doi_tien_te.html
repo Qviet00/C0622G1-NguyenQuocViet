@@ -34,16 +34,16 @@
 <script>
     function changeMoney() {
         let amount = document.getElementById("amount").value;
-        let fromC = document.getElementById("from").value;
+        let fromt = document.getElementById("from").value;
         let to = document.getElementById("to").value;
         let kqht;
-        if (fromC == "USD" && to == "VND") {
+        if (fromt == "USD" && to == "VND") {
             kqht = "Ketqua: " + (amount * 23000) + " Đ";
         }
-        else if (fromC == "VND"&& to =="USD"){
+        else if (fromt == "VND"&& to =="USD"){
             kqht = "Ketqua: "+ (amount / 23000) + " $";
         }
-        else if (fromC == "VND") {
+        else if (fromt == "VND") {
             kqht = "Ketqua: " + amount + " Đ"
         } else {
             kqht = "Ketqua: " + amount + " $"

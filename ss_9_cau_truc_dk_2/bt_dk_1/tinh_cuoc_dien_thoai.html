@@ -6,22 +6,18 @@
 </head>
 <body>
 <script>
-    let a=parseFloat(prompt("Nhập số phút gọi"));
-    const b = 1500
-    const c = 2500
-    const d = 3500
-    const e = 4500
-    if (!(isNaN(a))) {
-        if (a >= 0 && a < 60) {
-            alert("Tiền đt tháng này là:" + (a * e));
+    let soA=parseFloat(prompt("Nhập số phút gọi"));
+    if (!(isNaN(soA))) {
+        if (soA >= 0 && soA < 60) {
+            alert("Tiền đt tháng này là:" + (soA * 120));
         } else {
-            if (a < 120) {
-                alert("Tiền đt tháng này là:" + (a * d));
+            if (soA < 120) {
+                alert("Tiền đt tháng này là:" + (soA * 150);
             } else {
-                if (a < 180) {
-                    alert("Tiền đt tháng này là:" + (a * c));
+                if (soA < 180) {
+                    alert("Tiền đt tháng này là:" + (soA * 170));
                 } else {
-                    alert("Tiền đt tháng này là:" + (a * b))
+                    alert("Tiền đt tháng này là:" + (soA * 180))
                 }
             }
         }

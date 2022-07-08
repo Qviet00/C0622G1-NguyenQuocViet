@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-let a = parseFloat(prompt("Nhập số A")) ;
-let b = parseFloat(prompt("Nhập số B")) ;
-let c = parseFloat(prompt("Nhập số C")) ;
-if(a%a===0&&b%b===0&&c%c===0) {
-    if (a > b) {
-        if (a > c) {
-            alert(a + "là số lớn nhất")
+let soA = parseFloat(prompt("Nhập số A")) ;
+let soB = parseFloat(prompt("Nhập số B")) ;
+let soC = parseFloat(prompt("Nhập số C")) ;
+if(soA%soA===0&&soB%soB===0&&soC%soC===0) {
+    if (soA > soB) {
+        if (soA > soC) {
+            alert(soA + "là số lớn nhất")
         } else {
-            alert(c+ " là số lớn nhất")
+            alert(soC+ " là số lớn nhất")
         }
     } else {
-        if (b> c){
-            alert(b+ "là số lướn nhất")
+        if (soB> soC){
+            alert(soB+ "là số lướn nhất")
         } else {
-            alert(c + "là số lớn nhất")
+            alert(soC + "là số lớn nhất")
         }
     }
 }else {
