@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh cuoc dien thoai</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("Nhập số phút gọi"));
+    const b = 1500
+    const c = 2500
+    const d = 3500
+    const e = 4500
+    if (!(isNaN(a))) {
+        if (a >= 0 && a < 60) {
+            alert("Tiền đt tháng này là:" + (a * e));
+        } else {
+            if (a < 120) {
+                alert("Tiền đt tháng này là:" + (a * d));
+            } else {
+                if (a < 180) {
+                    alert("Tiền đt tháng này là:" + (a * c));
+                } else {
+                    alert("Tiền đt tháng này là:" + (a * b))
+                }
+            }
+        }
+    } else {
+        alert("Số không xác định")
+    }
+</script>
+</body>
+</html>

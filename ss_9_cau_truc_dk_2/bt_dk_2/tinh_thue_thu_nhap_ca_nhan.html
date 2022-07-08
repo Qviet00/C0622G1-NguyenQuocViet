@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = prompt('Nhập số tiền Vay (trĐ)\n' +
+        'Lãi suất hàng tháng là 5%');
+    a=parseFloat(a);
+    let n = prompt('Số tháng vay');
+
+    for (i = 0; i < n; i++) {
+        a = a + a / 100 * 5;
+    }
+    alert('Số tiền bạn  đóng '+n+' tháng là '+ a.toFixed(3)+'trĐ');
+</script>
+</html>

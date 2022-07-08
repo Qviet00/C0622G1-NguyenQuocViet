@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a = parseFloat(prompt("Nhập số A")) ;
+let b = parseFloat(prompt("Nhập số B")) ;
+let c = parseFloat(prompt("Nhập số C")) ;
+if(a%a===0&&b%b===0&&c%c===0) {
+    if (a > b) {
+        if (a > c) {
+            alert(a + "là số lớn nhất")
+        } else {
+            alert(c+ " là số lớn nhất")
+        }
+    } else {
+        if (b> c){
+            alert(b+ "là số lướn nhất")
+        } else {
+            alert(c + "là số lớn nhất")
+        }
+    }
+}else {
+    alert("Số không xác định")
+}
+</script>
+</body>
+</html>

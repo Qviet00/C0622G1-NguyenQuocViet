@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai phuong trinh bac 2</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("Nhập giá trị A"));
+    let b=parseFloat(prompt("Nhập giá trị B"));
+    let c=parseFloat(prompt("Nhập giá trị C"));
+    let d= b*b-4*a*c
+    let e=((-b+Math.sqrt(d))/(2*a)).toFixed(2);
+    let f=((-b-Math.sqrt(d))/(2*a)).toFixed(2);
+    if(!(isNaN(a) && isNaN(b) && isNaN(c))){
+        if(a===0 && b===0 && c===0){
+            alert("Phương trình vô số Nghiệm");
+        }else {
+            if(a===0){
+            alert(" Phương trình có Nghiệm là:" + -c/b.toFixed(2));}
+            else{
+                if(d<0){
+                    alert("Phương trình vô Nghiêm")
+                }else {
+                    if(d===0){
+                        alert("Phương trình có Nghiêm kép là x1=x2=" + -b/(2*a*c).toFixed(2))
+                    }else {
+                        alert("Phương trình có hai Nghiệm X1=" + e+";X2="+f);
+                    }
+                }
+            }
+        }
+    }else {
+        alert("Số Nhập Không Đúng");
+    }
+</script>
+</body>
+</html>

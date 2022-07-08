@@ -2,52 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MAY TINH DON GIAN</title>
+    <title>demo</title>
 </head>
 <body>
-<h2>Máy tính cá nhân</h2>
+<table style="collapse: 6">
+    <tbody>
+    <tr>
+        <label><input type="text"id="view"></td></label>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="clic('1')" value="1">1</button></td>
+        <td><button type="button" onclick="clic('2')" value="2">2</button></td>
+        <td><button type="button" onclick="clic('3')" value="3">3</button></td>
+        <td><button type="button" onclick="clic('+')" value="+">+</button></td>
+    </tr><tr>
+        <td><button type="button" onclick="clic('4')" value="4">4</button></td>
+        <td><button type="button" onclick="clic('5')" value="5">5</button></td>
+        <td><button type="button" onclick="clic('6')" value="6">6</button></td>
+        <td><button type="button" onclick="clic('-')" value="-">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="clic('7')" value="7">7</button></td>
+        <td><button type="button" onclick="clic('8')" value="8">8</button></td>
+        <td><button type="button" onclick="clic('9')" value="9">9</button></td>
+        <td><button type="button" onclick="clic('*')" value="*">*</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="clic('0')" value="0">0</button></td>
+        <td><button type="button" onclick="result()" value="=">=</button></td>
+        <td><button type="button" onclick="xoa()" >A</button></td>
+        <td><button type="button" onclick="clic('.')" value=".">.</button></td>
 
-    <table>
-        <tr>
-            <th><input type="text" id="hienThi"></th>
-        </tr>
-    </table>
-    <table  style="border-collapse: collapse " cellpadding="8">
-        <tbody>
-        <tr>
-            <td><button  onclick="kiTu('1')">1</button></td>
-            <td> <button onclick="kiTu('2')">2</button></td>
-            <td><button onclick="kiTu('3')">3</button></td>
-            <td><button onclick="kiTu('a1')">+</button><br></td>
-        </tr>
-        <tr>
-            <td><button onclick="kiTu('4')">4</button></td>
-            <td><button onclick="kiTu('5')">5</button></td>
-            <td><button onclick="kiTu('6')">6</button></td>
-            <td><button onclick="kiTu('a2')">-</button><br></td>
-        </tr>
-        <tr>
-            <td><button onclick="kiTu('7')">7</button></td>
-            <td> <button onclick="kiTu('8')">8</button></td>
-            <td> <button onclick="kiTu('9')">9</button></td>
-            <td>  <button onclick="kiTu('a3')">*</button><br></td>
-        </tr>
-        <tr>
-            <td> <button onclick="kiTu('a4')" >AC</button></td>
-            <td><button onclick="kiTu('0')">0</button></td>
-            <td> <button onclick="kiTu('a5')">=</button></td>
-            <td><button onclick="kiTu('a6')">/</button></td>
-        </tr>
-        </tbody>
-    </table>
-
-</body>
+    </tr>
+    </tbody>
+</table>
 <script>
-
-    function kiTu(value) {
-        alert(value)
-        document.getElementById("hienThi").value += value
+    let view = document.getElementById("view");
+    function clic(value){
+        view.value += value;
     }
-
+    function result() {
+        let result = eval(view.value);
+        view.value = result;
+    }
+    function xoa() {
+        view.value="";
+    }
 </script>
+</body>
 </html>

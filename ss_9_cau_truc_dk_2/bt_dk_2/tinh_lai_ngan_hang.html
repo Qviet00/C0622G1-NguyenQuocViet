@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH LAI NGAN HANG</title>
+</head>
+<body>
+<script>
+    let a= parseFloat(prompt("Nhập số tiền vay (vnd)"));
+    let b= parseInt(prompt("Nhập số ngày vay"));
+    let c=a*0.15*b
+    if(!(isNaN(a)&&isNaN(b)&&a>=0&&b>=0)){
+        if(b<30){
+            alert("Số tiền phải đóng là:" + c)
+        }else {
+            if(b<60){
+                alert("Số tiền phải đóng là:" +c+a*b*0.2)
+            }
+        }
+    }
+</script>
+</body>
+</html>

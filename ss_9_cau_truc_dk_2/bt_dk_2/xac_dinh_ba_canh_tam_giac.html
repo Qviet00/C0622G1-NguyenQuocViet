@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XAC DINH BA CANH TAM GIAC</title>
+</head>
+<body>
+<script>
+    let a= parseFloat(prompt("Nhập độ dài cạnh A"));
+    let b= parseFloat(prompt("Nhập độ dài cạnh B"));
+    let c= parseFloat(prompt("Nhập độ dài cạnh C"));
+    if (isFinite(a) && isNaN(b) && isNaN(c)) {
+        alert("Số nhập vào không đúng");
+    } else {
+        if (a > 0 && b > 0 && c > 0) {
+            if ((a + b > c) && (a + c > b) && (b + c > a)) {
+                alert("Ba số là cạnh của tam giác");
+            } else {
+                alert("Ba số là không phải cạnh của tam giác");
+            }
+        } else {
+            alert("Số nhập vào không đúng");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh tien dien</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("Nhập số chữ điện"));
+    const b = 1500
+    const c = 2500
+    const d = 3500
+    const e = 4500
+    if(!(isNaN(a))){
+        if(a>=0&&a<100){
+            alert("Tiền điện tháng này là:" + (a*b) +"VND");
+        }
+        else {
+            if(a<150){
+                alert("Tiền điên tháng này là:" + (a*c) +"VND");
+            }
+            else {
+                if(a<200){
+                    alert("Tiền đt tháng này là:" + (a*d) +"VND");
+                }
+                else {
+                    alert( "Tiền đt tháng này là:" + (a*b) +"VND");
+                }
+            }
+        }
+    }
+    else {
+        alert("Số không xác định")
+    }
+</script>
+</body>
+</html>
