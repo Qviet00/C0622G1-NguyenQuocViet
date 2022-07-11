@@ -6,24 +6,24 @@
 </head>
 <body>
 <script>
-    let chieuDai = parseFloat(prompt("Nhập chiều Dài" ))
-    let chieuRong =parseFloat(prompt("Nhập chiều Rộng"))
-    let canhDai = ''
-    let canhDaiRong = ''
+    let chieuDai = parseFloat(prompt("Nhập chiều Dài" ));
+    let chieuRong =parseFloat(prompt("Nhập chiều Rộng"));
+    let canhDai = '';
+    let canhDaiRong = '';
     for (let i = 1; i <= chieuRong; i++) {
-        canhDai += '*'
+        canhDai += '*';
         if (i === 1 || i ===chieuRong) {
-            canhDaiRong += '*'
+            canhDaiRong += '*';
         } else {
-            canhDaiRong += '&nbsp&nbsp'
+            canhDaiRong += '&nbsp&nbsp';
         }
     }
     for (let j = 1; j <= chieuDai; j++) {
         if (j === 1 || j === chieuDai) {
-            document.write(canhDai)
+            document.write(canhDai);
         } else {
-            document.write(canhDaiRong)
-        }document.write("<br/>")
+            document.write(canhDaiRong);
+        }document.write("<br/>");
     }
 </script>
 </body>
