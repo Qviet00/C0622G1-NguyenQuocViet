@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tông 30 so chia het cho 7</title>
+</head>
+<body>
+<script>
+    let tongSo = 0;
+    let soTunhien = 1;
+    let counT = 0;
+    while(true) {
+        if(soTunhien % 7 ===0) {
+            tongSo += soTunhien;
+            counT ++;
+        }
+        if(counT === 30) {
+            break;
+        }
+        soTunhien ++
+    }
+    document.write('Tổng là: ' + tongSo);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh tong 20 so dau tien fibonaci</title>
+</head>
+<body>
+<script>
+    let counT = 1
+    let soA = 0
+    let soB = 1;
+    let fiboNacci;
+    while(counT <= 20) {
+        fiboNacci = soA + soB
+        soA = soB;
+        soB = fiboNacci;
+        counT ++
+    }
+    document.write('Tổng của 20 số đầu tiên trong dãy fibonacci:  ' +  fiboNacci)
+</script>
+</body>
+</html>

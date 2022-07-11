@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+</head>
+<body>
+<script>
+        let soNhapvao1 = +prompt("Nhập số khoảng dự đoán?")
+        let soNgaunhien = Math.floor(Math.random() * soNhapvao1);
+        console.log(soNgaunhien);
+        let soNhapvao2 = +prompt ("Nhập số bạn đoán");
+        let count = 0;
+        while (soNhapvao2 !== soNgaunhien) {
+            count++;
+            if (count === 4) {
+                alert("Bạn hết số lần đoán")
+                break;
+            } else if (soNhapvao2 < soNgaunhien) {
+                alert("Số bạn đoán nhỏ hơn");
+            } else {
+                alert ("Số bạn đoán lớn hơn")
+            }
+            soNhapvao2 = prompt ("Nhập số bạn đoán");
+        }
+        if (count === 4) {
+            document.write("Bạn hết số lần đoán")
+        } else {
+            document.write("Bạn đã đoán đúng số. Chúc mừng bạn!")
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In day fibonaci</title>
+</head>
+<body>
+<script>
+    let counT =1;
+    let soA = 0;
+    let soB = 1;
+    let fiboNacci;
+    document.write(soA + "<br>");
+    document.write(soB + "<br>");
+    while(counT <= 1000) {
+        fiboNacci = soA + soB;
+        document.write( fiboNacci+ "<br>");
+        counT+= 1;
+        soA = soB;
+        soB = fiboNacci;
+    }
+</script>
+</body>
+</html>

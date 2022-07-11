@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve hinh trai tim</title>
+</head>
+<body>
+<script>
+    let i, j;
+    let traiTim = '';
+    for (i = 1; i <= 7; i++) {
+        for (j = 1; j <= 7; j++) {
+            if ((i === 1 && (j === 1 || j === 4 || j === 7)) ||
+                (i === 5 && (j === 1 || j === 7)) ||
+                (i === 6 && (j === 1 || j === 2 || j === 6 || j === 7)) ||
+                (i === 7 && (j === 1 || j === 2 || j === 3 || j === 5 || j === 6 || j === 7))) {
+                traiTim += '&ensp;';
+            } else {
+                traiTim += '*';
+            }
+        }
+        traiTim += '<br>';
+    }
+    document.write(traiTim);
+</script>
+</body>
+</html>

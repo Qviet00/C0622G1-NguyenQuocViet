@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so chia het cho 5 dau tien trong day finonaci</title>
+</head>
+<body>
+<script>
+    let kiemTra = true
+    let soA = 0, soB = 1, fibonacci;
+    while(kiemTra) {
+        fibonacci = soA + soB
+        if(fibonacci % 5 === 0) {
+           document.write('số fibonacci đầu tiên chia hết cho 5 là:  ' + fibonacci)
+            kiemTra = false
+        } else {
+            soA = soB;
+            soB = fibonacci;
+        }
+    }
+</script>
+</body>
+</html>
