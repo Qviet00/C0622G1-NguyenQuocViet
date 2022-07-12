@@ -5,12 +5,13 @@
     <title>in ra so nguyen to</title>
 </head>
 <body>
+<p>Dãy 20 số nguyên tố là:</p>
 <script>
-    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
+    let number = 22
     let count = 0;
-    let countSNT = 0;
-    for (let i = 2; i < 1000; i++) {
-        if (countSNT >= number) {
+    let countSNT = 2;
+    for (let i = 1; i <=1000; i++) {
+        if (number<=countSNT) {
             break;
         } else {
             for (let j = 1; j <= i; j++) {
@@ -22,8 +23,7 @@
                 document.write(i + "<br>");
                 countSNT+=1;
             }
-            count = 0;
-        }
+        } count = 0;
     }
 </script>
 </body>
