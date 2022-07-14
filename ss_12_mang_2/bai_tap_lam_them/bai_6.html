@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap vao so nguyen k</title>
+</head>
+<body>
+<!--nhap vao so k, tinh tong các số nguyên tố nhỏ hơn k-->
+<script>
+    let soK = parseInt(prompt("Nhập số đi bạn ơi:"));
+    let coulT = 2
+    let tongCacso = 0;
+    if (soK >= 2) {
+        for (let  i = 2; i < soK; i++) {
+            for (let j = 2; j <= i; j++) {
+                if (i % j === 0) {
+                    coulT +=1;
+                    tongCacso += coulT;
+                }
+            }
+        }
+    } else {
+        document.write("NOT FOUND" + "<br>")
+    }document.write("Tổng các số nguyên tố là:"+"&nbsp" + tongCacso)
+</script>
+</body>
+</html>

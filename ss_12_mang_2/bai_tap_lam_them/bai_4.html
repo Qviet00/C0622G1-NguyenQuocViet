@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap sô tim so lớn nhất</title>
+</head>
+<body>
+<script>
+    let strongA = prompt('Nhập số đi bạn ơi');
+    let max=""
+    for (let i=0; i<strongA.length;i++){
+        if(strongA[i]<strongA[i+1]){
+            max = strongA[i+1];
+        }
+    }document.write("Số lớn nhất là: " +max);
+
+</script>
+</body>
+</html>
