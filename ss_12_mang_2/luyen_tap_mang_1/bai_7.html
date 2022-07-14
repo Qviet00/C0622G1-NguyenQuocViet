@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIEM TRA VA XOA PHAN TU</title>
+</head>
+<body>
+<script>
+    let mangA = [1,2,3,4,5,6,7,8,9,10,11];
+    let soA = parseInt(prompt("Nhập số đi bạn gì đó ơi"));
+    let daySo1="";
+    let daySo2="";
+    for (let i=1;i<mangA[i];i++){
+        if (soA ===mangA[i]){
+            daySo1=(mangA.splice(i,1,));
+            daySo2=(mangA.push("0"));
+            break;
+        }
+    }document.write(mangA);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hoa tnanh thuong</title>
+</head>
+<body>
+<script>
+    let sTrong =prompt("Nhập chữ đi bạn");
+    let upPer = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let loWer = 'abcdefghijklmnopqrstuvwxyz';
+    let resulT = [];
+
+    for(var x=0; x<sTrong.length; x++)
+    {
+        if(upPer.indexOf(sTrong[x]) !== -1)
+        {
+            resulT.push(sTrong[x].toLowerCase());
+        }
+        else if(loWer.indexOf(sTrong[x]) !== -1)
+        {
+            resulT.push(sTrong[x].toUpperCase());
+        }
+        else
+        {
+            resulT.push(sTrong[x]);
+        }
+    }
+    document.write(resulT.join('-'));
+</script>
+</body>
+</html>

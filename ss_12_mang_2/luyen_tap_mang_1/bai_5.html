@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEM SO NGUUYEN AM</title>
+</head>
+<body>
+<script>
+    let mangA = [];
+    let bienDem = 0;
+    let cacSoam=""
+    for (let i= 0; i<10;i++){
+        mangA[i]= parseInt(prompt("nhập số đi bạn ơi :"+(i+1)));
+        if(mangA[i]>0){
+            bienDem=bienDem;
+        }else{
+            bienDem+=1;
+            cacSoam+=mangA[i];
+        }
+    }document.write("Các số âm là:"+cacSoam+ "<br>")
+    document.write( "Số lượng số âm là :" +bienDem);
+</script>
+</body>
+</html>

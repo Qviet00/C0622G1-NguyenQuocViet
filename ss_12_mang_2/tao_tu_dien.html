@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAO TU DIEN</title>
+</head>
+<body>
+Nhập từ muốn tìm kiếm :
+<input type="text" id="otimkiem">
+<button onclick =" dichTu()">Dịch</button>
+<p id="daura"></p>
+<script>
+    function dichTu(){
+    let vieW=document.getElementById("otimkiem").value;
+    let mangA= ["apple","orange","grape","mango","banana","lemon"];
+    let mangB= ["Táo", "Cam", "Nho","Xoài","Chuối","Chanh"];
+    let indexEng = 0;
+    let result = "";
+    for(let i = 0; i<mangA.length; i++){
+        if (mangA[i] === vieW) {
+            indexEng = i;
+            for (let j = 0; j < mangB.length; j++) {
+                if (indexEng === j) {
+                    result = mangB[j];
+                }
+            }
+        }
+    }
+    document.getElementById("daura").innerHTML= result;
+    }
+</script>
+</body>
+</html>

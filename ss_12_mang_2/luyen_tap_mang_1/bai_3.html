@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim so lơn nhat va in ra tong trung bình</title>
+</head>
+<body>
+<script>
+    let mangA = [];
+    let maxCantim = mangA[0];
+    let tongTrungbinh = 0;
+    for (let i=0; i<3; i++) {
+        mangA[i] = parseInt(prompt('Nhập số đi bạn ơi :' + (i+1)));
+        tongTrungbinh = tongTrungbinh + mangA[i];
+        if (maxCantim < mangA[i]) {
+            maxCantim = mangA[i];
+        } else {
+            maxCantim = mangA[0];
+        }
+    }document.write("Gía trị lướn nhất:"+ maxCantim + "Tổng trung bình :" + tongTrungbinh/3);
+</script>
+</body>
+</html>

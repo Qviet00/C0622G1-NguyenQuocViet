@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH TONG CA SO LẼ</title>
+</head>
+<body>
+<script>
+    let mangA = [];
+    let tongSole=0;
+    let bienDem =0;
+    for (let i = 0;i<5;i++){
+    mangA[i]= parseInt(prompt("Nhập số đi bạn ơi :" + (i+1)));
+        if (mangA[i] % 2=== 0) {
+        bienDem +=1
+        tongSole += mangA[i]
+        }
+    }document.write(tongSole/bienDem)
+</script>
+</body>
+</html>

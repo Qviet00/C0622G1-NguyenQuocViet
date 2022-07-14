@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra so lơn nhat</title>
+</head>
+<body>
+<script>
+    let mangA = [];
+    let maxA = mangA[0];
+    for (let i=0; i<5; i++){
+        mangA[i]= parseInt(prompt("Nhập số đi bạn: " +i))
+        if(maxA < mangA[i] ){
+            maxA = mangA[i]
+        }else{
+            maxA = mangA[0];
+        }
+    }
+    document.write("Gía trị lớn nhất là:"+ maxA +"&nbsp&nbsp"+
+        "Vị trí trong mảng:"+ mangA.indexOf(maxA));
+</script>
+</body>
+</html>

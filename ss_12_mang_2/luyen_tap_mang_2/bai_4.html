@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐẾM SỐ KÍ TỰ TRONG MẢNG</title>
+</head>
+<body>
+<script>
+    let mangA = ["a","t","h",3,"r","t",5,"u",8,"d","s","s","c",];
+    let bienDem = 0;
+    document.write("Chiều dài của mảng là :"+ "&nbsp" +mangA.length+"<br/>");
+    for(let i=0; i<mangA.length;i++){
+        if((isNaN(mangA[i]))){
+            bienDem=bienDem + 1;
+        }
+    }document.write("Số kí tự từ trong mảng:" + bienDem)
+</script>
+</body>
+</html>
