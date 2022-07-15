@@ -8,7 +8,18 @@
 <script>
     let strongA ="hello viet nam";
     let strongB = "toi yeu viet nam";
-    document.write(JSON.stringify(strongA)===JSON.stringify(strongB));
+    let soSanh="";
+    for(let i=0;i <strongA.length;i++){
+        for(let j=0;j<strongB.length;j++){
+            if((strongA[i])!==(strongB[j])){
+                soSanh=(" Hai chuỗi không giống nhau");
+                break;
+            }else{
+                soSanh=(" Hai chuỗi giống nhau");
+            }
+        }
+    }document.write(soSanh);
+
 </script>
 </body>
 </html>

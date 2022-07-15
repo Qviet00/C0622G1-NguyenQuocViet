@@ -7,10 +7,10 @@
 <body>
 <script>
     let strongA= "Toi la nguyen van nam";
-    let bienDem = 1;
+    let bienDem =1;
     for(let i=0; i<strongA.length;i++){
-        if((strongA[i])===" "){
-            bienDem=bienDem + 1;
+        if((strongA[i]===" ")&&(strongA[i+1]!==" ")){
+            bienDem += 1;
         }
     }document.write("Số  từ trong mảng:" + bienDem);
 </script>
