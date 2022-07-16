@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌM SÔ NHỎ NHÂT TRONG MẢNG</title>
+</head>
+<body>
+<script>
+    let arrA = [1,2,3,7,13,0,-55,7];
+    let min = minArray(arrA);
+    function minArray(arr){
+        let min = arr[0];
+        for (let i=1;i<arr.length;i++){
+            if(arr[i]<min){
+                min = arr[i];
+            }
+        } return min
+    }
+    document.write(min);
+
+</script>
+</body>
+</html>

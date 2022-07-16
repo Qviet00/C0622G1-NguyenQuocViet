@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>KIEM TRA SO NHAP VAO CÓ PHAI SO NGUYEN TO</title>
+</head>
+<body>
+<label for="nhapSo"></label>
+Nhập số đi bạn ơi <input type="number" id="nhapSo" >
+<button type="button" onclick="check()" name="" id="kiemTra">Kiểm tra</button>
+<p id="hienThi">Kết quả tại đây:</p>
+<script>
+    function isPrime(n) {
+        if(n<1){
+            return "KHONG PAI LA SO NGUYEN TO";
+        }else{
+            for(let i=2;i<n;i++){
+                if(n%i===0){
+                    return "KHONG PAI LA SO NGUYEN TO";
+                }
+            }
+            return "PHAI LA SO NGUYEN TO";
+        }
+    }
+    function check() {
+        let numBer = document.getElementById("nhapSo").value;
+        let hienThi = isPrime(numBer);
+        document.getElementById("hienThi").innerHTML = hienThi;
+    }
+
+</script>
+</body>
+</html>

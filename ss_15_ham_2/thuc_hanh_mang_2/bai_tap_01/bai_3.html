@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài_</title>
+</head>
+<body>
+<script>
+    let mangSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chumSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    let nhapTensao = prompt("Nhập tên sao :");
+    function mangCuasao(n) {
+        for (let i=0; i<mangSao.length;i++){
+            if(n===mangSao[i]) {
+                for (let j = 0; j< chumSao.length; j++){
+                    if(i===j) {
+                        return chumSao[j];
+                    }
+                }
+            }
+        }return "Không tìm thấy chùm sao";
+    }
+    document.write("Chùm sao tương ứng :"+"&nbsp"+mangCuasao( nhapTensao));
+</script>
+</body>
+</html>
