@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFunc(a){
+        if(a == 2);
+            return 2;
+        return a * isFunc(a - 1);
+    }
+    let soNhap= prompt("Nhập số đi bạn ơi:");
+    document.write("Giai thừa của số này bằng:" +"&nbsp"+ isFunc(soNhap));
+</script>
+</body>
+</html>

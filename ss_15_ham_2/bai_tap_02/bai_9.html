@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<script>
+    //Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    let mangA = [];
+    let kiTu = prompt("Nhập kí tự cần kiểm tra đi bạn:");
+    for (let i = 0; i < 5; i++) {
+        mangA[i] = prompt("Nhập phần tử của mảng đi bạn ơi:" + (i ));
+    }
+
+    function isArr(mangA, a) {
+        let bienDem = 0;
+        for (let j = 0; j < mangA.length; j++) {
+            if (a === mangA[j]) {
+                bienDem += 1;
+            }
+        }
+        if (bienDem === 0) {
+            return -1;
+        } else {
+            return bienDem
+        }
+    }
+
+    document.write("Số lần xuất hiện của kí tự này là :" + isArr(mangA, kiTu));
+</script>
+</body>
+</html>

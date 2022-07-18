@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<script>
+    function isMin(a,b,c) {
+        if(a<b){
+            if(a<c){
+                return a;
+            }else{
+                if(b<c){
+                    return b;
+                }else {
+                    return c;
+                }
+            }
+        }
+    }
+    let soA= prompt("Nhập số A đi bạn");
+    let soB= prompt("Nhập số B đi bạn");
+    let soC= prompt("Nhập số C đi bạn");
+    document.write("Số nhỏ nhất là:" + isMin(soA,soB,soC));
+</script>
+</body>
+</html>
