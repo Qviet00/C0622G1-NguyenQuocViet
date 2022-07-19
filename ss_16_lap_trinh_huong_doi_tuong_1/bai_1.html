@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border: saddlebrown"></canvas><br>
+<script>
+    class HCN{
+        constructor(a,b) {
+            this.a = a
+            this.b = b
+        }
+        tinhCv(){
+            return (this.a+this.b)/2};
+        tinhDt(){
+            return this.a*this.b};
+        canVas(){
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            let grd = ctx.createLinearGradient(0,0,1,0);
+            grd.addColorStop(1,"saddlebrown");
+            ctx.fillStyle = grd;
+            ctx.fillRect(0,0,this.a,this.b);
+             }
+    }
+    let hcn=new HCN(200,100);
+    document.write("-Cạnh dài hình chữ nhật là :"+hcn.a+"cm"+"<br>");
+    document.write("-Cạnh ngắnhình chữ nhật là :"+hcn.b+"cm"+"<br>");
+    document.write("-Chu vi hình chữ nhật là :"+hcn.tinhCv()+"cm"+"<br>");
+    document.write("-Diện tích hình chữ nhật là:"+hcn.tinhDt()+"cm2");
+    hcn.canVas();
+</script>
+</body>
+</html>

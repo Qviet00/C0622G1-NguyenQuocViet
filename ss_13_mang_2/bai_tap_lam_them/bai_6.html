@@ -8,20 +8,30 @@
 <!--nhap vao so k, tinh tong các số nguyên tố nhỏ hơn k-->
 <script>
     let soK = parseInt(prompt("Nhập số đi bạn ơi:"));
-    let coulT = 2
-    let tongCacso = 0;
-    if (soK >= 2) {
-        for (let  i = 2; i < soK; i++) {
-            for (let j = 2; j <= i; j++) {
-                if (i % j === 0) {
-                    coulT +=1;
-                    tongCacso += coulT;
-                }
+    let coulT =" ";
+    let sum = 0;
+    function isPrimes(soK) {
+        let sum =0;
+        for (let i = 0; i <soK ; i++) {
+            if (isPrime(soK)){
+                coulT= i
+                sum +=i;
             }
         }
-    } else {
-        document.write("NOT FOUND" + "<br>")
-    }document.write("Tổng các số nguyên tố là:"+"&nbsp" + tongCacso)
+        return sum;
+    function isPrime(number){
+        if (number<2){
+            return false;
+        }else {
+            for (let i = 2; i <number ; i++) {
+                if(number%i===0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }
 </script>
 </body>
 </html>

@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>chuyen do f sang do c</title>
+    <title>Chuyển đổi nhiệt độ</title>
 </head>
 <body>
 <script>
     class TemClass {
-        doK;
         constructor(K) {
             this.doK = K;
         }
@@ -18,7 +17,7 @@
             return this.doK + 273.15
         }
     }
-    let temClass = new TemClass(25);
+    let temClass = new TemClass(10);
     let myF1 = temClass.myF();
     let myK1 = temClass.myK();
     document.write("Nhiệt độ K: " + myF1 + "<br>"
