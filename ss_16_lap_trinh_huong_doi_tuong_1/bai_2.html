@@ -7,17 +7,18 @@
 <body>
 <script>
     class TemClass {
-        constructor(K) {
-            this.doK = K;
+        constructor(C) {
+            this.doC = C;
         }
         myF() {
-            return 9/5 * this.doK + 32;
+            return 9/5 * this.doC + 32;
         }
+
         myK() {
-            return this.doK + 273.15
+            return this.doC + 273.15
         }
     }
-    let temClass = new TemClass(10);
+    let temClass = new TemClass(25);
     let myF1 = temClass.myF();
     let myK1 = temClass.myK();
     document.write("Nhiệt độ K: " + myF1 + "<br>"
