@@ -42,12 +42,12 @@
     let switchButton_1 = new SwitchButton(electricLamp_1,false);
     let i=1
     do {
-    document.write(switchButton_1.switchOn()+"<br>");
+    document.write(i+"."+switchButton_1.switchOn()+"<br>");
     document.write(electricLamp_1.getStatus()+"<br>");
-    document.write(switchButton_1.switchOff()+"<br>");
+    document.write(i+"."+switchButton_1.switchOff()+"<br>");
     document.write(electricLamp_1.getStatus()+"<br>");
     i++
-    }while (i<5)
+    }while (i<=10)
 
     
 </script>
