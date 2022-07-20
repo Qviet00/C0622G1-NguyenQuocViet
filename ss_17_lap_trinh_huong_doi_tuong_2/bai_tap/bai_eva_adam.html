@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eva anhd adam</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            this.weith = 10
+        }
+        isEmpty() {
+            return this.weith;
+        }
+        canNang(){
+            if(this.isEmpty()>=0){
+                return this.weith--
+            }else{
+                return  document.write("Táo đã ăn hết");
+            }
+        }
+        isWeight() {
+            return this.weith;
+        }
+    }
+    class Human{
+        constructor(name,gioitinh,weith) {
+            this.name= name;
+            this.gioitinh = gioitinh;
+            this.weith = weith;
+        }
+        getgioitinh(){
+            return this.weith;
+        }
+        say(string){
+            document.write(string+"<br>");
+        }
+        anTao(a){
+            if(a>0){
+                return this.weith+1
+            }else{
+                return ("Không thay đổi");
+            }
+        }
+    }
+    let apple = new Apple();
+    let aDam = new Human("adam","nam",56);
+    let eVa = new Human("eva","nu",40);
+    aDam.say("Tôi là :Adam");
+    eVa.say("Tôi là: Eva");
+    document.write("Khối lượng táo có:"+apple.canNang()+"<br>");
+    aDam.say("Em ăn táo đi Eva");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Cân nặng của Eva:"+eVa.anTao(apple.isWeight())+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    eVa.say("Anh ăn táo đi Adam");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Khối lượng táo còn:"+apple.canNang()+"<br>");
+    document.write("Cân nặng của Eva:"+eVa.anTao(apple.isWeight()));
+</script>
+</body>
+</html>
