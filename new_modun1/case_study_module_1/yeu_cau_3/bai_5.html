@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực đơn gọi món</title>
+</head>
+<body>
+<script>
+    let arrTensp = ["Cafe", "Nước cam vắt", "Nước ép cà chua", "Nước ép cà rốt", "Nước lọc", "Nước dừa"];
+    let arrGia = [10000, 15000, 15000, 15000, 7000, 20000, "Tổng"];
+    let soTT = prompt("Nhập tên món theo thứ tự:\n" +
+        "1.Cafe \n 2.Nước cam vắt \n 3. Nước ép cà chua \n 4.Nước ép cà rốt \n" +
+        "5.Nước lọc \n 6. Nước dừa\n7.Kết thúc gọi món");
+    let giaSP = 0;
+    let i = 1;
+    for (let i = 0; i < arrGia.length; i++) {
+        if (soTT == 1) {
+            giaSP = arrGia[0];
+        } else {
+            if (soTT == 2) {
+                giaSP = arrGia[1];
+            } else {
+                if (soTT == 3) {
+                    giaSP = arrGia[2];
+                } else {
+                    if (soTT == 4) {
+                        giaSP = arrGia[3];
+                    } else {
+                        if (soTT == 5) {
+                            giaSP = arrGia[4];
+                        } else {
+                            if (soTT == 6) {
+                                giaSP = arrGia[5];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    alert(giaSP);
+    let soLuong = prompt("Nhập số lượng:");
+    soLuong = soLuong * giaSP;
+    let sT2 = prompt("Kết thúc gọi món:\n" +
+        "1.Cafe \n 2.Nước cam vắt \n 3. Nước ép cà chua \n 4.Nước ép cà rốt \n" +
+        "5.Nước lọc \n 6. Nước dừa\n7.Kết thúc gợi món");
+    if (sT2 == 7) {
+        document.write("Tổng tiền phải thanh toán:" + soLuong);
+    } else {
+        document.write("vui lòng nhập lại");
+    }
+</script>
+</body>
+</html>
