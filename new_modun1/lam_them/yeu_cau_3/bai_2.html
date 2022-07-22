@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+<script>
+    //: Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các
+    // phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+    //Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện.
+    //: Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các phần tử
+    // xuất hiện trong mảng B nhưng lại không xuất hiện A
+   // Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện.
+    function isGiongnhau(arrA,arrB) {
+        let arrC=[];
+        for(let i=0;i<arrB.length;i++) {
+            if ((arrA.indexOf(arrB[i]) === -1) && (arrC.indexOf(arrB[i])) === -1) {
+                arrC.push(arrB[i]);
+            }
+        }
+        return arrC;
+    }
+
+    let arrA= [12,3,4,5,6,7,1,25,5,6,7];
+    let arrB= [10,4,1,9,5,7,11,4,6,7,2];
+    document.write(isGiongnhau(arrA,arrB));
+
+</script>
+</body>
+</html>
