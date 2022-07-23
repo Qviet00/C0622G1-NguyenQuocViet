@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve tam giac can</title>
+</head>
+<body>
+<script>
+    let height=parseInt(prompt('Nhập chiều cao tam giác cân'));
+    for(let i=1; i<=height*2;i += 2){
+        for (let j = 0; j < (height*2-i); j++) {
+            document.write("&nbsp");
+        }
+        for (let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

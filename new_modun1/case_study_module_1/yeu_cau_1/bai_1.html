@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>VẼ HÌNH CHỮ NHẬT</title>
+    <title>ve hinh chu nhat </title>
 </head>
 <body>
 <script>
-    let daiB = parseInt(prompt("Nhập chiều dài :"));
+    let daiA = parseInt(prompt("Nhập chiều dài :"));
     let rongB =parseInt(prompt("Nhập chiều rộng:"));
-    for (let i = 1; i <= rongB; i++) {
-        for (let j = 1; j <= daiB; j++) {
-            if (i === 1 || i === rongB) {
+    for (let i = 1; i <= daiA; i++) {
+        for (let j = 1; j <= rongB; j++) {
+            if (i === 1 || i === daiA) {
                 document.write("*");
-            } else if (j === 1 || j === daiB) {
+            } else if (j === 1 || j === rongB) {
                 document.write("*");
             } else {
                 document.write("&ensp;");

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+// Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
+// Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.
+// 2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.
+    function isSoluong(a,b) {
+        let arr1 = a.split("");
+        let arr2 = b.split("");
+        let arr3 = [];
+
+        for (let i=0; i<arr2.length;i++) {
+            if (arr1.includes(arr2[i])) {
+                arr3.push(arr2[i]);
+            }
+        }return arr3
+    }
+
+    let arr1 = "aabcc";
+    let arr2 = "adcaa";
+    document.write(isSoluong(arr1,arr2));
+</script>
+</body>
+</html>
