@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>/bai-1</title>
+</head>
+<body>
+<script>
+    // Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
+    // Với m, n là các số nhập từ bàn phím.
+    function isSum(arr) {
+        let bienSum = 0;
+
+        for(let i=0;i<arr.length;i++){
+            for( let j=0; j<arr[i].length; j++){
+                if(arr[i][j]%2===0){
+                    bienSum+=parseInt(arr[i][j]);
+                }
+            }
+        }return bienSum;
+    }
+
+    let daiM = prompt("Nhập chìu dài mảng:");
+    let rongN = prompt("Nhập chiều rộng mảng:");
+    let arr1= [];
+    let arr2= [];
+    for(let i=0;i<daiM;i++){
+        for(let j=0;j<rongN;j++){
+         arr2[j]=prompt( "Nhap phan tu đi bạn:"+(j+1));
+        arr1.push(arr2[j]);
+        }
+    }
+    let arr3 = [arr1];
+    document.write("Tỏng các phần tử chẳn:"+isSum(arr3));
+
+</script>
+</body>
+</html>

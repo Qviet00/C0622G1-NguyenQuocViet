@@ -5,16 +5,37 @@
     <title>Title</title>
 </head>
 <body>
-Nhập từ muốn tìm kiếm :
-<input type="text" id="otimkiem">
-<button onclick =" dichTu()">Dịch</button>
-<p id="daura"></p>
 <script>
-    function dichTu(){
-        let vieW=document.getElementById("otimkiem").value;
-        let mangA= ["apple","orange","grape","mango","banana","lemon"];
-        let mangB= ["Táo", "Cam", "Nho","Xoài","Chuối","Chanh"];
-        alert(mangA.indexOf((mangB),(vieW));
+    function isNguyento(a) {
+        let count = 0;
+        for (let i = 1; i <= a ; i++) {
+            if(a%i===0){
+                count++;
+            }
+        }
+        if(count===2) {
+            return true;
+        } else
+            {
+            return false;
+            }
+    }
+
+    function isArrhaichieu(arr) {
+        let mangA =[];
+
+        for (let i = 0; i < arr.length ; i++) {
+            for (let j = 0; j < arr[i].length ; j++) {
+                if (isNguyento(arr[i][j])){
+                    mangA.push(arr[i][j]);
+                }
+            }
+        }
+        return  "Các số nguyên tố mảng trong 2 chiều: "+mangA+"<br>"+"Số lượng là: "+mangA.length;
+    }
+
+    let mangA = [[1,2,3,5],[3,3,5],[5,3,1]];
+    document.write(isArrhaichieu(mangA));
 </script>
 </body>
 </html>

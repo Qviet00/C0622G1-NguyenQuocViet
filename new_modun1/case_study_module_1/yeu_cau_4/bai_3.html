@@ -14,16 +14,18 @@
         let arr2 = b.split("");
         let arr3 = [];
 
+
         for (let i=0; i<arr2.length;i++) {
-            if (arr1.includes(arr2[i])) {
+            if (arr1.includes(arr2[i]) && !arr3.includes(arr2[i])){
                 arr3.push(arr2[i]);
             }
-        }return arr3
+        }return arr3.length;
     }
 
     let arr1 = "aabcc";
     let arr2 = "adcaa";
-    document.write(isSoluong(arr1,arr2));
+    let arr3 = isSoluong(arr1,arr2)
+    document.write("Số kí tự chung:"+ arr3);
 </script>
 </body>
 </html>
