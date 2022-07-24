@@ -6,36 +6,30 @@
 </head>
 <body>
 <script>
-    function isNguyento(a) {
-        let count = 0;
-        for (let i = 1; i <= a ; i++) {
-            if(a%i===0){
-                count++;
-            }
-        }
-        if(count===2) {
-            return true;
-        } else
-            {
-            return false;
-            }
-    }
-
-    function isArrhaichieu(arr) {
-        let mangA =[];
-
-        for (let i = 0; i < arr.length ; i++) {
-            for (let j = 0; j < arr[i].length ; j++) {
-                if (isNguyento(arr[i][j])){
-                    mangA.push(arr[i][j]);
+    let s1 = 'aabccdeebbbbbbbb';
+    let s2 = 'daeedcaaaaaaab';
+    function commonCharacterCount(s1, s2) {
+        s1 = s1.split('');
+        s2 = s2.split('');
+        let result = [];
+        let run = true;
+        while(run) {
+            for(let i = 0; i < s1.length; i++) {
+                let index = s2.indexOf(s1[i]);
+                if(index > -1) {
+                    result.push(s1[i]);
+                    s1.splice(i, 1);
+                    s2.splice(index, 1);
+                    break;
+                }
+                if(i === s1.length -1) {
+                    run = false;
                 }
             }
         }
-        return  "Các số nguyên tố mảng trong 2 chiều: "+mangA+"<br>"+"Số lượng là: "+mangA.length;
+        return result.length;
     }
-
-    let mangA = [[1,2,3,5],[3,3,5],[5,3,1]];
-    document.write(isArrhaichieu(mangA));
+    document.write(commonCharacterCount(s1, s2));
 </script>
 </body>
 </html>
