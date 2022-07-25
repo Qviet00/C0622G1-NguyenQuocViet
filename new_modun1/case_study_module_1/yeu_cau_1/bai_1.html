@@ -8,16 +8,13 @@
 <script>
     let daiA = parseInt(prompt("Nhập chiều dài :"));
     let rongB =parseInt(prompt("Nhập chiều rộng:"));
-    for (let i = 1; i <= daiA; i++) {
+    for (let i = 1; i <=daiA; i++) {
         for (let j = 1; j <= rongB; j++) {
-            if (i === 1 || i === daiA) {
-                document.write("*");
-            } else if (j === 1 || j === rongB) {
+            if (i === 1 || i === daiA || j===1 || j===rongB) {
                 document.write("*");
             } else {
                 document.write("&ensp;");
-            }
-        }
+            }}
         document.write('<br>');
     }
 </script>
