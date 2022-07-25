@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const arr = [0, 1, 2, 3];
+
+    const a = arr.map(v => v * 2);
+    const b = arr.reduce((t, v) => [...t, v * 2], []);
+
+    console.log(a, b); // > Array [0, 2, 4, 6] Array [0, 2, 4, 6]
+</script>
+</body>
+</html>

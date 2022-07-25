@@ -8,30 +8,29 @@
 <script>
     // Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
     // Với m, n là các số nhập từ bàn phím.
-    function isSum(arr) {
-        let bienSum = 0;
+    function isChan(arr) {
+        let sum = 0;
 
-        for(let i=0;i<arr.length;i++){
-            for( let j=0; j<arr[i].length; j++){
-                if(arr[i][j]%2===0){
-                    bienSum+=parseInt(arr[i][j]);
+        for(let i=1; i<arr.length; i++){
+            for(let j=0; j<arr[i].length; j++){
+                if( arr[i][j]%2 === 0){
+                    sum += parseInt(arr[i][j]) ;
                 }
             }
-        }return bienSum;
+        }return sum ;
     }
 
-    let daiM = prompt("Nhập chìu dài mảng:");
-    let rongN = prompt("Nhập chiều rộng mảng:");
-    let arr1= [];
-    let arr2= [];
-    for(let i=0;i<daiM;i++){
-        for(let j=0;j<rongN;j++){
-         arr2[j]=prompt( "Nhap phan tu đi bạn:"+(j+1));
-        arr1.push(arr2[j]);
+    let mangA = prompt("Nhập chiều dài mảng mẹ:") ;
+    let mangAi = prompt("Nhập chìu dài mảng con:") ;
+    let mangB = [] ;
+    let mangC = [] ;
+    for(let i =0; i<mangA; i++){
+        for(let j=0; j<mangAi; j++){
+            mangB[j] = prompt("Nhập phần tử "+ (j+1)) ;
+            mangC.push(mangB[j]) ;
         }
     }
-    let arr3 = [arr1];
-    document.write("Tỏng các phần tử chẳn:"+isSum(arr3));
+    document.write("Tổng các số chẳn là: "+isChan(mangC))
 
 </script>
 </body>
