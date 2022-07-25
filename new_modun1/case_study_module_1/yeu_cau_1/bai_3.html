@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    let height=parseInt(prompt('Nhập chiều cao tam giác cân'));
-    for(let i=1; i<=height*2;i += 2){
-        for (let j = 0; j < (height*2-i); j++) {
-            document.write("&nbsp");
-        }
-        for (let j = 0; j < i; j++) {
-            document.write("*");
-        }
-        document.write("<br>");
+    let cCao=parseInt(prompt('Nhập chiều cao tam giác cân'))
+    for(let i=1; i<=cCao;i++){
+        for (let j = 1; j <cCao*2; j++) {
+            if(j<(cCao+i) && j>(cCao-i)){
+                document.write("*");
+            }else{
+                document.write("&nbsp&nbsp")
+            }
+    }document.write("<br>");
     }
 </script>
 </body>

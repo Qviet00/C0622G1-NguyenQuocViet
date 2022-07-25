@@ -12,23 +12,21 @@
     // Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để
     // nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
     function isHoa(a) {
-       let arr = a.split("");
+        let arr = a.split("");
 
-       for(let i=0 ; i<arr.length ; i++){
-           if(i===0  || arr[i-1]===(" ")){
-               if(arr[i]===(" ")){
-                   arr.slice(i,1);
-                   i--;
-               }else{
-                   arr[i]=arr[i].toUpperCase();
-               }
-           }
-       }return arr.join("")
+        for(let i=0 ; i<arr.length ; i++){
+            if(i===0  || arr[i-1]===(" ")){
+                if(arr[i]===(" ")){
+                    arr.slice(i,1);
+                }else{
+                    arr[i]=arr[i].toUpperCase();
+                }
+            }
+        }return arr.join("")
     }
 
     let arr = prompt("Nhập gì đó đi:");
     document.write(isHoa(arr.toLowerCase()));
-
 </script>
 </body>
 </html>
