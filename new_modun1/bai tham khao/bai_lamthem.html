@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-1212121</title>
+</head>
+<body>
+<script>
+    let arrA=" nguyen    van A";
+
+   function vietTat(arr) {
+       let array=arr.split("");
+
+       for(let i=0; i<array.length; i++){
+           if (i===0 || array[i-1]===(" ")){
+               if (array[i]===(" ")){
+                   array.splice(i,1);
+                   i--;
+               }
+           }
+       }return array;
+   }
+
+   document.write(vietTat(arrA))
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+    <input  type="text" id="nhap" placeholder="Tên SP">
+    <input  type="text" id="nhap3" placeholder="Tên SP thay đổi"><br>
+    <input  type="text" id="nhap1" placeholder="Màu sắc">
+    <input  type="text" id="nhap4" placeholder="Màu sắc muốn thay đổi"><br>
+    <input  type="text" id="nhap2" placeholder="Chip SP">
+    <input  type="text" id="nhap5" placeholder="Chip SP muốn thay đổi"><br>
+    <input type="button" value="Add" onclick="nhapVao()">
+    <input type="button" value="Rename" onclick="suaDoi()"><br>
+    <input type="button" value="delete" onclick="xoaPT()"><br><br>
+</label>
+
+<p id="display"></p>
+<script>
+    class SanPham {
+        constructor(name,color,chip) {
+            this.Name = name ;
+            this.Color = color ;
+            this.Chip = chip ;
+         }
+         getName() {
+            return this.Name ;
+         }
+         getColor() {
+            return this.Color ;
+        }
+         getChip() {
+            return this.Chip ;
+         }
+    }
+
+    let sanPham1= new SanPham("SamSung","Xanh","Exynos85");
+    let sanPham2= new SanPham("Nokia","Vàng","Snapdragon710");
+    let sanPham3= new SanPham("Apple","Đỏ", "A12");
+    let arrSP= [sanPham1,sanPham2,sanPham3];
+
+    function nhapVao() {
+        let tenSp= document.getElementById("nhap").value;
+        let mauSp= document.getElementById("nhap1").value;
+        let chipSp= document.getElementById("nhap2").value;
+        let sanPham4 = new SanPham(tenSp,mauSp,chipSp);
+        arrSP.push(sanPham4);
+        danhSach(arrSP);
+    }
+
+    function suaDoi() {
+        let tenSp= document.getElementById("nhap3").value;
+        let mauSp= document.getElementById("nhap4").value;
+        let chipSp= document.getElementById("nhap5").value;
+        let sanPham4 = new SanPham(tenSp,mauSp,chipSp);
+        let viTri=prompt("Nhập vị trí muốn sữa:");
+        arrSP.splice(viTri-1,1,sanPham4);
+        danhSach(arrSP);
+    }
+    function xoaPT() {
+        let viTri = prompt("Vị trí muốn xóa:");
+        arrSP.splice(viTri-1,1);
+        danhSach(arrSP);
+    }
+
+    function danhSach(arr) {
+        let tableString = "<table border='1'>" +
+            "    <tr>\n" +
+            "        <td><b>Stt</b></td>\n" +
+            "        <td><b>Tên sản phẩm</b></td>\n" +
+            "        <td><b>Màu sắc</b></td>\n" +
+            "        <td><b>Chíp sử dụng</b></td>\n" +
+            "    </tr>";
+        for (let i=0; i<arr.length;i++){
+            tableString += "<tr>\n"+
+            "        <td>"+ (i+1)+ "</td>\n" +
+            "        <td>" + arr[i].getName() + "</td>\n" +
+            "        <td>" + arr[i].getColor() +  "</td>\n" +
+            "        <td>" + arr[i].getChip() + "</td>\n" +
+             " </tr>" ;
+        }
+        tableString += "</table>";
+        document.getElementById("display").innerHTML= tableString;
+    }
+    danhSach(arrSP);
+
+</script>
+</body>
+</html>

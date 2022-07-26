@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tham khao</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm làm các công việc sau:
+    //     - Cho phép người dùng nhập vào 1 kí tự. Kiểm tra xem kí tự đó có phải là số hay
+    // không. Nếu phải hiển thị thông báo
+    // - Cho phép người dùng nhập vào 1 số. Kiểm tra xem số đó có phải là số nguyên
+    // tố hay không, Nếu phải return true, không thì return false
+    //     - Viết hàm có 1 tham số đầu vào và kiểm tra tham số đầu vào đó có phải là số
+    // hoàn hảo hay không. Nếu phải trả về true, không trả về false.
+
+    function isSymboy(a) {
+        let thongBao = ""
+        if (!isNaN(a)){
+            thongBao = "đây là số";
+        }else{
+            thongBao =" Không phải là số";
+        }
+        return thongBao ;
+    }
+
+    let soA = prompt("Nhập đi bạn:")
+    document.write(isSymboy(soA))
+</script>
+</body>
+</html>

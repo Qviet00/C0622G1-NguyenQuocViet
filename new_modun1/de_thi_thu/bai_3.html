@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai-3</title>
+</head>
+<body>
+<script>
+    let mangB = soFibonaci();
+    function kiemTra(array) {
+        let mangC = [];
+        for (let i=0; i<array.length; i++ ){
+            if (mangB.includes(array[i])){
+                mangC.push(array[i]);
+            }
+        }return mangC;
+    }
+    function soFibonaci() {
+        let arrayA= [0,1];
+        let phanTu1 = 0;
+        let phanTu2 = 1;
+        let fibonaci=0;
+        for (let i=0; i<1000000; i++){
+            fibonaci=phanTu1+phanTu2;
+            arrayA.push(fibonaci);
+            phanTu1=phanTu2;
+            phanTu2=fibonaci;
+        }return arrayA;
+    }
+    let arrayA = [0,1,2,5,7,8,3,4,5,13,19];
+    document.write(kiemTra(arrayA));
+</script>
+</body>
+</html>

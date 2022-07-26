@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    // Bài 1: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n&lt;=50). Hiển thị ra màn hình
+    // danh sách các phần tử của mảng,
+    //     Hiện thị giá trị = tổng các số ở vị trí chắn – tổng các số ở vị trí lẻ
+    // Ví dụ: [15,2,3,5,10,15,7]. Kết quả sau khi thực hiện là: (15+3+10+7)-(2+5+15) = ?
+
+    let soA;
+    let array = [];
+    let sum1 = 0;
+    let sum2 = 0;
+    do{
+        soA = prompt("Nhập số đi bạn");
+        if(isNaN(soA) || soA>50){
+            alert("Nhập lại:");
+        }
+    }
+    while (isNaN(soA) || soA>50)
+    {
+        for (let i = 0; i < soA; i++) {
+            array[i] = prompt("Nhập số phần tử:" + (i + 1));
+        }
+        for (let j = 0; j < array.length; j++) {
+            if (array[j]%2 === 0) {
+                sum1 += parseInt(array[j]);
+            } else {
+                sum2 += parseInt(array[j]);
+            }
+        }
+    }
+        document.write("Số phần tử là:" + array + "<br>" + "Hiệu tổng-lẻ là:" + (sum1 - sum2));
+
+
+</script>
+</body>
+</html>
