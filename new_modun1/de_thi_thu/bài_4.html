@@ -52,6 +52,8 @@
     let mangMay=[may1,may2,may3,may4];
 
     function display(array) {
+        array.sort((a,b) => a>b ? 1:-1);
+
         let tableString="<table border='1'>\n" +
             "    <tr>\n" +
             "        <td><b>Stt</b></td>\n" +
@@ -69,6 +71,7 @@
             "        <td>"+array[i].setGiaban()+"</td>\n" +
             "    </tr>\n";
         }
+
         tableString+="</table>";
         document.getElementById("display").innerHTML = tableString;
     }display(mangMay);
@@ -82,15 +85,7 @@
         mangMay.push(may5);
         display(mangMay);
     }
-    let gia1 = may1.setGiaban();
-    let gia2 = may2.setGiaban();
-    let gia3 = may3.setGiaban();
-    let gia4 = may4.setGiaban();
-    let mangGia=[gia1,gia2,gia3,gia4];
-    function sapXep(){
-        mangGia.sort((a,b) => a>b ? 1:-1);
-        display(mangGia);
-    }
+
 </script>
 </body>
 </html>

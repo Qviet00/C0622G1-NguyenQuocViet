@@ -12,7 +12,7 @@
     // thường
     // Nếu là chuỗi rỗng “” =&gt; thì trả về một mảng [0,0]
     function inChuhoa(arr) {
-        let arrayA = arr.split("");
+        let arrayA = Array.from(arr);
             let count1 = 0;
             let count2 = 0;
             let arrayB = [];
@@ -29,8 +29,8 @@
         arrayB ="Số các kí tự hoa và thường:"+"["+ count1+","+count2+"]";
         return arrayB;
         }
-    let arr2 = "Nguyen quoC vieT";
-   document.write(inChuhoa(arr2))
+    let str = "Nguyen quoC vieT";
+   document.write(inChuhoa(str))
 
 </script>
 </body>

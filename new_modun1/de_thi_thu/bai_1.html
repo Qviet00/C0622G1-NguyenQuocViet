@@ -17,17 +17,17 @@
     let sum2 = 0;
     do{
         soA = prompt("Nhập số đi bạn");
-        if(isNaN(soA) || soA>50){
+        if(isNaN(soA) || soA>50|| soA===" "){
             alert("Nhập lại:");
         }
     }
-    while (isNaN(soA) || soA>50)
+    while (isNaN(soA) || soA>50|| soA===" ")
     {
         for (let i = 0; i < soA; i++) {
             array[i] = prompt("Nhập số phần tử:" + (i + 1));
         }
         for (let j = 0; j < array.length; j++) {
-            if (array[j]%2 === 0) {
+            if (j%2 === 0) {
                 sum1 += parseInt(array[j]);
             } else {
                 sum2 += parseInt(array[j]);
