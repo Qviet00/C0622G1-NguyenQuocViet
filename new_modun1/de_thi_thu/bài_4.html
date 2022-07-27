@@ -7,9 +7,10 @@
 <body>
 <input type="text" id="nhap1" placeholder="Mã máy">
 <input type="text" id="nhap2" placeholder="Tên máy"><br>
-<input type="text" id="nhap3" placeholder="Hang máy">
+<input type="text" id="nhap3" placeholder="Hãng máy">
 <input type="text" id="nhap4" placeholder="Gía bán"><br><br>
 <button type="submit" onclick="themVao()">Add</button>
+<button type="submit" onclick="sapXep()">Sắp xếp</button>
 <p id="display"></p>
 <script>
     class MayTinhcuaem{
@@ -44,10 +45,10 @@
             return this.giaBan ;
         }
     }
-    let may1 = new MayTinhcuaem("01","Dell01","Dell","13000000");
+    let may1 = new MayTinhcuaem("01","Dell01","Dell","18000000");
     let may2 = new MayTinhcuaem("02","Dell02","Dell","14000000");
     let may3 = new MayTinhcuaem("03","Dell03","Dell","15000000");
-    let may4 = new MayTinhcuaem("04","Dell04","Dell","16000000");
+    let may4 = new MayTinhcuaem("04","Dell04","Dell","17000000");
     let mangMay=[may1,may2,may3,may4];
 
     function display(array) {
@@ -80,7 +81,15 @@
         let may5 = new MayTinhcuaem(maMay,tenMay,hangSX,giaBan);
         mangMay.push(may5);
         display(mangMay);
-
+    }
+    let gia1 = may1.setGiaban();
+    let gia2 = may2.setGiaban();
+    let gia3 = may3.setGiaban();
+    let gia4 = may4.setGiaban();
+    let mangGia=[gia1,gia2,gia3,gia4];
+    function sapXep(){
+        mangGia.sort((a,b) => a>b ? 1:-1);
+        display(mangGia);
     }
 </script>
 </body>
