@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so chinh nguyen</title>
+</head>
+<body>
+<script>
+    // function soNguyen(n) {
+    //
+    //     let giaTri = 1;
+    //     if (Math.ceil(n) !== Math.floor(n)) {
+    //         giaTri = 0;
+    //     }
+    //     return giaTri;
+    // }
+    //
+    // function soChinhNguyen(n) {
+    //
+    //     let giaTri = 0;
+    //
+    //     if (soNguyen(Math.sqrt(n))) {
+    //         giaTri = 1
+    //     }
+    //     return giaTri;
+    // }
+    //
+    // let array = [1, 4, 5, 6, 9, 16];
+    // let arrayA = [];
+    // for (let i = 0; i < array.length; i++) {
+    //     if (soChinhNguyen(array[i])) {
+    //         arrayA.push(array[i]);
+    //     }
+    // }
+    // document.write(arrayA);
+    function soChinhNguyen(n) {
+
+        let giaTri = 0;
+        let i = 0;
+        while (i <= n) {
+            if (Math.pow(i, 2) === n) {
+                giaTri = 1;
+                break;
+            }
+            i++;
+        }
+        return giaTri;
+    }
+
+    let array = [1, 4, 5, 6, 9, 16];
+    let arrayA = [];
+    for (let i = 0; i < array.length; i++) {
+        if (soChinhNguyen(array[i])) {
+            arrayA.push(array[i]);
+        }
+    }
+    document.write(arrayA);
+
+</script>
+</body>
+</html>

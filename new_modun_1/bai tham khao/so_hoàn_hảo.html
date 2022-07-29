@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so hoan hao</title>
+</head>
+<body>
+<script>
+    function soHoamHao(n) {
+
+        let giaTri = 0;
+        let total = 0;
+        for (let i = 1; i < n; i++) {
+            if (n % i === 0) total += i;
+        }
+        if (total === n && n !== 0) giaTri = 1;
+
+        return giaTri;
+    }
+
+    let array = [1, 6, 28, 10, 11];
+    let arrayA = [];
+    for (let i = 0; i < array.length; i++) {
+        if (soHoamHao(array[i])) {
+            arrayA.push(array[i]);
+        }
+    }
+    document.write(arrayA);
+</script>
+</body>
+</html>

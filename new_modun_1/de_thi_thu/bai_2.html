@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện đếm số
+    // lượng ký tự in Hoa và các ký tự in thường
+    // Ví dụ: HellOCodeym =&gt; kết quả trả về : [3,8]=&gt; 3: ký tự in hoa, 8 ký tự
+    // thường
+    // Nếu là chuỗi rỗng “” =&gt; thì trả về một mảng [0,0]
+    function inChuhoa(arr) {
+        let arrayA = Array.from(arr);
+        let count1 = 0;
+        let count2 = 0;
+        let arrayB = [];
+        for (let i = 0; i < arrayA.length; i++) {
+            if (arrayA[i] == arrayA[i].toUpperCase() && arrayA[i] !== " ") {
+                count1 += 1;
+            }
+            if (arrayA[i] == arrayA[i].toLowerCase() && arrayA[i] !== " ") {
+                count2 += 1
+            } else {
+                arrayB = "[" + 0 + 0 + "]";
+            }
+        }
+        arrayB = "Số các kí tự hoa và thường:" + "[" + count1 + "," + count2 + "]";
+        return arrayB;
+    }
+
+    let str = "Nguyen quoC vieT";
+    document.write(inChuhoa(str))
+
+</script>
+</body>
+</html>

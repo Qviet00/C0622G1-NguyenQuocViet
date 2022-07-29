@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+    <input type="button" value="ADD" onclick="themVao()"><br><br>
+    <input type="button" value="Delete" onclick="xoaPT()">
+
+</label>
+<p id="display"></p>
+<script>
+    class QuanLiXeMay {
+        constructor(bienso, hoten, cmnd, hangxe, phi) {
+            this.Bienso = bienso;
+            this.Hoten = hoten;
+            this.Chungminh = cmnd;
+            this.Hangxe = hangxe;
+            this.Phi = phi;
+        }
+
+        getBienso() {
+            this.Bienso;
+        }
+
+        setBienso() {
+            return this.Bienso;
+        }
+
+        getHoten() {
+            this.Hoten;
+        }
+
+        setHoten() {
+            return this.Hoten;
+        }
+
+        getChungminh() {
+            this.Chungminh;
+        }
+
+        setChungminh() {
+            return this.Chungminh;
+        }
+
+        getHangxe() {
+            this.Hangxe;
+        }
+
+        setHangxe() {
+            return this.Hangxe;
+        }
+
+        getPhi() {
+            this.Phi;
+        }
+
+        setPhi() {
+            return this.Hoten;
+
+        }
+    }
+
+    let xeMay1 = new QuanLiXeMay("92L1-34563", "NGUYEN VAN A", "205581296", "YAMAHA", "3000");
+    let xeMay2 = new QuanLiXeMay("92L1-34564", "NGUYEN VAN B", "205581296", "VESION", "3000");
+    let xeMay3 = new QuanLiXeMay("92L1-34565", "NGUYEN VAN C", "205581296", "SH", "3000");
+    let xeMay4 = new QuanLiXeMay("92L1-34566", "NGUYEN VAN D", "205581296", "LIBERTI", "3000");
+    let arrayXM = [xeMay1, xeMay2, xeMay3, xeMay4];
+
+    function danhSach(arr) {
+        let tableString = "<table border='1'>" +
+            "    <tr>\n" +
+            "        <td><b>Stt</b></td>\n" +
+            "        <td><b>Biển số xe</b></td>\n" +
+            "        <td><b>Họ và tên</b></td>\n" +
+            "        <td><b>Số CMND</b></td>\n" +
+            "        <td><b>Hãng xe</b></td>\n" +
+            "        <td><b>Phí gữi</b></td>\n" +
+            "    </tr>";
+        for (let i = 0; i < arr.length; i++) {
+            tableString += "<tr>\n" +
+                "        <td>" + (i + 1) + "</td>\n" +
+                "        <td>" + arr[i].setBienso() + "</td>\n" +
+                "        <td>" + arr[i].setHoten() + "</td>\n" +
+                "        <td>" + arr[i].setChungminh() + "</td>\n" +
+                "        <td>" + arr[i].setHangxe() + "</td>\n" +
+                "        <td>" + arr[i].setPhi() + "</td>\n" +
+                " </tr>";
+        }
+        tableString += "</table>";
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    danhSach(arrayXM);
+
+    function themVao() {
+        let bienSo = prompt("Nhập biển số");
+        let hoVaten = prompt("Nhập Họ và tên");
+        let soCMND = prompt("Nhập số cmnd");
+        let hangXe = prompt("Nhập hãng xe");
+        let phiGui = prompt("Nhập phí gữi");
+        let themXemay = new QuanLiXeMay( bienSo, hoVaten, soCMND, hangXe, phiGui);
+        arrayXM.push(themXemay);
+        danhSach(arrayXM);
+    }
+
+    function xoaPT() {
+        let viTri;
+        do {
+            viTri = prompt("Vị trí muốn xóa:");
+            if (viTri % viTri !== 0 || viTri < 0 || viTri > 5) {
+                alert("vui lòng nhập lại");
+            }
+        } while (viTri % viTri !== 0 || viTri < 0 || viTri > 5)
+        {
+            alert("BẠN CÓ CHẮC XÓA:");
+            arrayXM.splice(viTri - 1, 1);
+            danhSach(arrayXM);
+        }
+    }
+
+</script>
+</body>
+</html>

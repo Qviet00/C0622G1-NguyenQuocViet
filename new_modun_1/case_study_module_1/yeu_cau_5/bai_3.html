@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    // <!--Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều -->
+    function isMinmax(arr) {
+        let minArr = arr[0][0];
+        let maxArr = arr[0][0];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > maxArr) {
+                    maxArr = arr[i][j];
+                }
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < minArr) {
+                    minArr = arr[i][j];
+                }
+            }
+        }
+        return "Gía trị lớn nhất:" + maxArr + "<br>" + "Gía trị nhỏ nhất:" + minArr;
+    }
+
+    let mangA = [[1, 2, 3, 4, 5], [2, 5, 6, 7, 8]];
+    document.write(isMinmax(mangA));
+
+</script>
+</body>
+</html>

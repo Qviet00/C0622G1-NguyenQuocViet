@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so doi xung</title>
+</head>
+<body>
+<script>
+    function reverse_num(n) {
+        n = n.toString()
+        return n.split("").reverse().join("");
+    }
+
+    function symmetrical_num(n) {
+
+        let giaTri = 0;
+        if (reverse_num(n) === n){
+            giaTri = 1;
+        }
+        return giaTri;
+    }
+</script>
+</body>
+</html>

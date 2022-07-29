@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_1</title>
+</head>
+<body>
+<script>
+    let mangSong = [];
+    let soNhap;
+    do {
+        soNhap = prompt("Nhập số đi bạn");
+        if (soNhap > 50 || isNaN(soNhap)) {
+            alert("Nhập lại");
+        }
+    } while (soNhap > 50 || isNaN(soNhap))
+    {
+    }
+    for (let i = 0; i < soNhap; i++) {
+        mangSong[i] = prompt("Nhập các phần tử");
+    }
+    document.write("Mảng đó là:" + mangSong + "<br>");
+
+    function mangKiemtrasong(arr) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] < arr[j + 1] && arr[j + 1] > arr[j + 2] || arr[j] > arr[j + 1] && arr[j + 1] < arr[j + 2]) {
+                return true;
+            } else {
+                return false
+            }
+        }
+    }
+
+    document.write(mangKiemtrasong(mangSong));
+</script>
+</body>
+</html>

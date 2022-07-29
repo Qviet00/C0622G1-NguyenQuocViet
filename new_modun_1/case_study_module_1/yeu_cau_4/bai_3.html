@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    // Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
+    // Ví dụ: stringS1 = "aabcc" và stringS2 = "adcaa", thì kết quả soLuong(stringS1, stringS2) = 3.
+    // 2 xâu stringS1 và stringS2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.
+    function soLuong(s1, s2) {
+        let arr1 = s1.split("");
+        let arr2 = s2.split("");
+        let arr = [];
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    arr.push(arr2[j]);
+                    arr2.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        return arr;
+
+    }
+
+    let stringS1 = "aabcc";
+    let stringS2 = "adcaa";
+    document.write("Số lượng kí tự chung:" + soLuong(stringS1, stringS2).length + "<br>"
+        + "Các kí tự đó là:" + soLuong(stringS1, stringS2));
+
+</script>
+</body>
+</html>

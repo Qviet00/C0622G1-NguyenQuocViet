@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve hinh chu nhat </title>
+</head>
+<body>
+<script>
+    let daiA = parseInt(prompt("Nhập chiều dài :"));
+    let rongB = parseInt(prompt("Nhập chiều rộng:"));
+    for (let i = 1; i <= daiA; i++) {
+        for (let j = 1; j <= rongB; j++) {
+            if (i === 1 || i === daiA || j === 1 || j === rongB) {
+                document.write("*");
+            } else {
+                document.write("&ensp;");
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

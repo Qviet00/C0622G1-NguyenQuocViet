@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve tam giac vuong can rong chieu cao h</title>
+</head>
+<body>
+<script>
+    let height = parseInt(prompt("Nhập chiều cao h:"));
+    for (let i = 1; i <= height; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j === 1 || j === i || i === height) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>
