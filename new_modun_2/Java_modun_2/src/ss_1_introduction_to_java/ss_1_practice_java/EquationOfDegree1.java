@@ -2,7 +2,7 @@ package ss_1_introduction_to_java.ss_1_practice_java;
 
 import java.util.Scanner;
 
-public class GiaiPhuongTrinhBacNhat {
+public class EquationOfDegree1 {
     public static void main(String[] args) {
 
         System.out.println("Linear Equation Resolver");
