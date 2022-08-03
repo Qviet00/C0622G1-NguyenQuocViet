@@ -17,7 +17,7 @@ public class Post2AddArray {
                 System.out.println("Vui lòng nhập lại.");
             }
         } while (index < 0 || index > arr.length);
-        System.arraycopy(arr, index, arr, index + 1, arr.length - 1 - index);
+        System.arraycopy(arr, index, arr, index + 1,  arr.length - 1 - index);
         arr[index] = num;
         System.out.println(Arrays.toString(arr));
     }
