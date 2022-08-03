@@ -2,7 +2,7 @@ package ss_2_arrays_and_methods_java.ss_2_exercise_java;
 
 import java.util.Scanner;
 
-public class Post1_Drawing {
+public class Post1Drawing {
     public static void main(String[] args) {
         Scanner src = new Scanner(System.in);
         int height;

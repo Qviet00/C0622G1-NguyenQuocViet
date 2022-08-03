@@ -1,6 +1,6 @@
 package ss_2_arrays_and_methods_java.ss_2_exercise_java;
 
-public class Post2_Print20Prime {
+public class Post2Print20Prime {
     public static void main(String[] args) {
         System.out.println("Các số nguyên tố: ");
         int number = 0;

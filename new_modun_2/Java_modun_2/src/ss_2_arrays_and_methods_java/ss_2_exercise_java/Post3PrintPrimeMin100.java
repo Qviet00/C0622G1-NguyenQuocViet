@@ -1,6 +1,6 @@
 package ss_2_arrays_and_methods_java.ss_2_exercise_java;
 
-public class Post3_PrintPrimeMin100 {
+public class Post3PrintPrimeMin100 {
     public static void main(String[] args) {
         System.out.println("Các số nguyên tố: ");
         int count;

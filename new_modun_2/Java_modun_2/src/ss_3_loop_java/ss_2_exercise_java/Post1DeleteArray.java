@@ -2,7 +2,7 @@ package ss_3_loop_java.ss_2_exercise_java;
 
 import java.util.Scanner;
 
-public class Post1_DeleteArray {
+public class Post1DeleteArray {
     public static void main(String[] args) {
         Scanner src = new Scanner(System.in);
         int[] arrayOne = {1, 2, 3, 4, 5, 6, 7, 8};
