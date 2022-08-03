@@ -10,16 +10,16 @@ public class Post2AddArray {
         System.out.print("Nhập phần tử muốn chèn: ");
         int num = scanner.nextInt();
         System.out.print("Nhập vị trí muốn chèn: ");
-        int index = scanner.nextInt();
-        if (index < 0 || index > arr.length-1) {
-            System.out.println("Vị trí không hợp lệ");
-        } else {
-            for (int i = arr.length - 1; i > index; i--) {
-                arr[i] = arr[i - 1];
+        int index;
+        do {
+            index = scanner.nextInt();
+            if (index < 0 || index > arr.length) {
+                System.out.println("Vui lòng nhập lại.");
             }
-            arr[index] = num;
-            System.out.println(Arrays.toString(arr));
-        }
+        } while (index < 0 || index > arr.length);
+        System.arraycopy(arr, index, arr, index + 1, arr.length - 1 - index);
+        arr[index] = num;
+        System.out.println(Arrays.toString(arr));
     }
 }
 

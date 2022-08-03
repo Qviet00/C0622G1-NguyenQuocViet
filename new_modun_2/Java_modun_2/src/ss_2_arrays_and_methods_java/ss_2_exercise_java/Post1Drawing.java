@@ -7,25 +7,27 @@ public class Post1Drawing {
         Scanner src = new Scanner(System.in);
         int height;
         int width;
+        int i;
+        int j;
         System.out.println("Nhập độ dài:");
         height = src.nextInt();
         System.out.println("Nhập độ rộng:");
         width = src.nextInt();
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
+        for ( i = 0; i < height; i++) {
+            for ( j = 0; j < width; j++) {
                 System.out.print("*");
             }
             System.out.println();
 
         }
-        for (int i = 1; i <= height; i++) {
-            for (int j = 1; j < i; j++) {
+        for ( i = 1; i <= height; i++) {
+            for ( j = 1; j < i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-        for (int i = height; i > 0; i--) {
-            for (int j = 1; j <= i; j++) {
+        for ( i = height; i > 0; i--) {
+            for ( j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();

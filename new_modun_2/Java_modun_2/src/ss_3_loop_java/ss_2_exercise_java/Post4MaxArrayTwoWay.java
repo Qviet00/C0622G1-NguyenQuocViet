@@ -13,23 +13,23 @@ public class Post4MaxArrayTwoWay {
 
         do {
             n = src.nextInt();
-            if (n < 0) {
-                System.out.println("Số nhập không đúng,Vui lòng nhập lại");
+            if (n < 2) {
+                System.out.println("Chiều dãi mảng phải lướn hơn 1,Vui lòng nhập lại");
             }
-        } while (n < 0);
+        } while (n < 2);
         int m;
         System.out.print("Nhập số độ dài mảng con: ");
         do {
             m = src.nextInt();
             if (m < 0) {
-                System.out.println("Số nhập không đúng,Vui lòng nhập lại");
+                System.out.println("Chiều dài phải lướn hơn 0,Vui lòng nhập lại");
             }
         } while (m < 0);
         int[][] arrayTwoWay = new int[n][m];
         for ( i = 0; i < n; i++) {
             for ( j = 0; j < m; j++) {
                 System.out.print("Nhập phần tử thứ " + (j + 1) + " của mảng " + (i + 1) + ": ");
-                arrayTwoWay[i][j] = Integer.parseInt(src.nextLine());
+                arrayTwoWay[i][j] = src.nextInt();
             }
         }
         for (int[] unit : arrayTwoWay) System.out.println(Arrays.toString(unit) + "\t");
@@ -41,6 +41,6 @@ public class Post4MaxArrayTwoWay {
                 }
             }
         }
-        System.out.println("Gía trị lớn nhất của mảng hai chiều:" + maxElement);
+        System.out.println("Gía trị lớn nhất của mảng hai chiều : " + maxElement);
     }
 }
