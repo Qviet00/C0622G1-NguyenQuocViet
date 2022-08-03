@@ -12,20 +12,20 @@ public class Post7SumDiagonalLineArray {
         int j;
         for (i = 0; i < arrayDiagonalLine.length; i++) {
             for (j = 0; j < arrayDiagonalLine[i].length; j++) {
-                if (j == i - 3 || i == j - 3) {
+                if ((arrayDiagonalLine[i].length-1) -i==j) {
                     sumOne += arrayDiagonalLine[i][j];
                 }
             }
         }
-//        for (i = 0; i < arrayDiagonalLine.length; i++) {
-//            for (j = 0; j < arrayDiagonalLine[i].length; j++) {
-//                if (i == j) {
-//                    sumTwo += arrayDiagonalLine[i][j];
-//                }
-//            }
-//        }
+        for (i = 0; i < arrayDiagonalLine.length; i++) {
+            for (j = 0; j < arrayDiagonalLine[i].length; j++) {
+                if (i == j) {
+                    sumTwo += arrayDiagonalLine[i][j];
+                }
+            }
+        }
         int sum = sumOne + sumTwo;
-        System.out.println(sum);
+        System.out.println("Tổng hai đường chéo: "+sum);
     }
 
 }
