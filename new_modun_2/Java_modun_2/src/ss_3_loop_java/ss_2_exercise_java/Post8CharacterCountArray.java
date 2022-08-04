@@ -6,7 +6,7 @@ public class Post8CharacterCountArray {
     public static void main(String[] args) {
         Scanner src = new Scanner(System.in);
         System.out.print("Nhập chuỗi muốn kiểm tra: ");
-        String string = src.nextLine();
+        String string = String.valueOf(src.nextLine());
         System.out.print("Nhập kí tự cần tìm: ");
         char charracter = src.nextLine().charAt(0);
         int count = 0;

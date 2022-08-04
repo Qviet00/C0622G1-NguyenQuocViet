@@ -13,7 +13,7 @@ public class Post4MaxArrayTwoWay {
 
         System.out.print("Nhập độ dài mảng hai chiều: ");
         do {
-            n = src.nextInt();
+            n = Integer.parseInt(src.nextLine());
             if (n < 2) {
                 System.out.println("Chiều dãi mảng phải lướn hơn 1,Vui lòng nhập lại");
             }
@@ -21,7 +21,7 @@ public class Post4MaxArrayTwoWay {
 
         System.out.print("Nhập số độ dài mảng con: ");
         do {
-            m = src.nextInt();
+            m = Integer.parseInt(src.nextLine());
             if (m < 0) {
                 System.out.println("Chiều dài phải lướn hơn 0,Vui lòng nhập lại");
             }

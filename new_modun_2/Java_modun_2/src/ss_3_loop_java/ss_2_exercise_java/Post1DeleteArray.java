@@ -10,7 +10,7 @@ public class Post1DeleteArray {
         int valueX;
         int i;
         System.out.println("Nhập giá trị X:");
-        valueX = src.nextInt();
+        valueX = Integer.parseInt(src.nextLine());
         for (i = 0; i < arrayOne.length - 1; i++) {
             if (valueX == arrayOne[i]) {
                 deleteIndex = i;

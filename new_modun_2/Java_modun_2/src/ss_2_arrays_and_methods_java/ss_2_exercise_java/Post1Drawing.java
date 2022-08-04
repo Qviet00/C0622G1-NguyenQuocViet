@@ -10,9 +10,9 @@ public class Post1Drawing {
         int i;
         int j;
         System.out.println("Nhập độ dài:");
-        height = src.nextInt();
+        height = Integer.parseInt(src.nextLine());
         System.out.println("Nhập độ rộng:");
-        width = src.nextInt();
+        width = Integer.parseInt(src.nextLine());
         for ( i = 0; i < height; i++) {
             for ( j = 0; j < width; j++) {
                 System.out.print("*");

@@ -6,13 +6,13 @@ import java.util.Arrays;
 public class Post2AddArray {
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 4, 5, 9, 7, 8, 9, 15};
-        Scanner scanner = new Scanner(System.in);
+        Scanner src = new Scanner(System.in);
         System.out.print("Nhập phần tử muốn chèn: ");
-        int num = scanner.nextInt();
+        int num = Integer.parseInt(src.nextLine());
         System.out.print("Nhập vị trí muốn chèn: ");
         int index;
         do {
-            index = scanner.nextInt();
+            index = src.nextInt();
             if (index < 0 || index > arr.length) {
                 System.out.println("Vui lòng nhập lại.");
             }
