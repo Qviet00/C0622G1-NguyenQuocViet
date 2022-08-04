@@ -21,6 +21,10 @@ public interface Post1QuadraticEquation2 {
             return this.c / this.b;
         }
 
+        public double valueFout() {
+            return -this.b / (2 * this.a);
+        }
+
         public double valueTwo() {
             return (-this.b * this.b + Math.sqrt(getDiscriminant())) / (2 * this.a);
         }
@@ -41,15 +45,24 @@ public interface Post1QuadraticEquation2 {
         QuadraticEquation2 quadraic = new QuadraticEquation2(a, b, c);
         double valueOne = quadraic.valueTwo();
         double valueTwo = quadraic.valueThere();
+        double valueFourt = quadraic.valueFout();
+        double detal = quadraic.getDiscriminant();
         if (a == 0 && b == 0) {
             System.out.print("Phương trình vô Nghiệm");
         } else {
             if (a == 0) {
                 System.out.print("Phương trình có 1 nghiệm = " + quadraic.valuaOne());
             } else {
-                System.out.print("Phương trình có 2 nghiệm: " + "Ngiệm 1 = " + valueOne + ", Nghiệm 2 = " + valueTwo);
+                if (detal > 0) {
+                    System.out.print("Phương trình có 2 nghiệm: " + "Ngiệm 1 = " + valueOne + ", Nghiệm 2 = " + valueTwo);
+                } else {
+                    if (detal == 0) {
+                        System.out.println("Phương trình có Nghiệm kép: " + valueFourt);
+                    } else {
+                        System.out.println("Phương trình vô Nghiệm");
+                    }
+                }
             }
         }
-
     }
 }
