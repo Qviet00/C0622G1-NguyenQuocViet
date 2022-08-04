@@ -7,7 +7,13 @@ public class Post7SumDiagonalLineArray {
         int sumTwo = 0;
         int i;
         int j;
-
+//        for (i = 0; i < arrayDiagonalLine.length; i++) {
+//            for (j = 0; j < arrayDiagonalLine[i].length; j++) {
+//                if ((arrayDiagonalLine[i].length - 1) - i == j) {
+//                    sumOne += arrayDiagonalLine[i][j];
+//                }
+//            }
+//        }
         for (i = 0; i < arrayDiagonalLine.length; i++) {
             for (j = 0; j < arrayDiagonalLine[i].length; j++) {
                 if (i == j) {
