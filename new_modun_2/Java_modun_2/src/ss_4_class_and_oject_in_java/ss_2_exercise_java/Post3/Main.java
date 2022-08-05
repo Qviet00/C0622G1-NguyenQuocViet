@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Fan fanOne = new Fan(5, true, 5, "Yellow");
         Fan fanTwo = new Fan(0, false, 5, "Yellow");
-        System.out.println(fanOne.toString());
-        System.out.println(fanTwo.toString());
+        System.out.println(fanOne);
+        System.out.println(fanTwo);
     }
 }
