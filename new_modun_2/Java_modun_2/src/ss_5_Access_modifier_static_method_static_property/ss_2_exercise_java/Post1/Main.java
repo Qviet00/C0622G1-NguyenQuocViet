@@ -13,6 +13,9 @@ public class Main {
         Circle circleTwo= new Circle(radius,color);
         System.out.println(circleOne);
         System.out.println(circleTwo);
+        System.out.println("Radius: "+circleTwo.getRadiurs());
+        System.out.println("Cplor: "+circleTwo.getC0lor());
+
     }
 
 }

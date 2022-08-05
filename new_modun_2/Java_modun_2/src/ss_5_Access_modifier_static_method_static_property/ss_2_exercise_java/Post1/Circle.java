@@ -1,30 +1,46 @@
 package ss_5_Access_modifier_static_method_static_property.ss_2_exercise_java.Post1;
 
 public class Circle {
-    private final double radiurs;
-    private final String c0lor;
+    private double radius;
+    private String color;
 
     public Circle() {
-        this.radiurs = 1.0;
-        this.c0lor = "red";
+        this.radius = 1.0;
+        this.color = "red";
     }
 
-    public Circle(double radiurs, String color) {
-        this.radiurs = radiurs;
-        this.c0lor = color;
+    public Circle(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
     }
-    public double getRadiurs(){
-        return this.radiurs;
+
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
-    public String getArea(){
-        return this.c0lor;
+
+    public double getRadiurs() {
+        return radius;
+    }
+
+    public void setRadiurs(double radiurs) {
+        this.radius = radiurs;
+    }
+
+    public String getC0lor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radiurs=" + radiurs +
-                ", c0lor='" + c0lor + '\'' +
-                '}';
+        return "Circle[" +
+                "radius=" + radius +
+                ", c0lor='" + color + '\'' +
+                ']';
     }
 }
+
