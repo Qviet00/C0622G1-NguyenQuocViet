@@ -18,33 +18,25 @@ public class Circle {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-
     public String getC0lor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public double getArea() {
         double i = (this.radius * this.radius * Math.PI);
         return i;
     }
-    public String toSrings(){
-        return String.format("%.4f",getArea());
+
+    public String toSrings() {
+        return String.format("%.4f", getArea());
     }
 
     @Override
     public String toString() {
         return "Circle{" +
                 "radius=" + radius +
-                ", c0lor='" + color + '\'' + ", "+"Area="
-                +'\''+ toSrings()+" (Meter)"+'\''+
+                ", c0lor='" + color + '\'' + ", " + "Area="
+                + '\'' + toSrings() + " (Meter)" + '\'' +
                 '}';
     }
 
