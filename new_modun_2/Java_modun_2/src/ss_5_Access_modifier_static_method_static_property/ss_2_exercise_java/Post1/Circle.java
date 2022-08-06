@@ -14,18 +14,14 @@ public class Circle {
         this.color = color;
     }
 
+    public double getRadiurs() {
+        return radius;
+    }
 
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public double getRadiurs() {
-        return radius;
-    }
-
-    public void setRadiurs(double radiurs) {
-        this.radius = radiurs;
-    }
 
     public String getC0lor() {
         return color;
@@ -35,12 +31,23 @@ public class Circle {
         this.color = color;
     }
 
+    public double getArea() {
+        double i = (this.radius * this.radius * Math.PI);
+        return i;
+    }
+    public String toSrings(){
+        return String.format("%.4f",getArea());
+    }
+
     @Override
     public String toString() {
-        return "Circle[" +
+        return "Circle{" +
                 "radius=" + radius +
-                ", c0lor='" + color + '\'' +
-                ']';
+                ", c0lor='" + color + '\'' + ", "+"Area="
+                +'\''+ toSrings()+" (Meter)"+'\''+
+                '}';
     }
+
+
 }
 
