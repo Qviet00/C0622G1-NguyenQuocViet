@@ -5,7 +5,7 @@ public class Circle {
     private String color;
 
     public Circle(double radius, String color) {
-        this.radius = radius;
+        this.radius = (radius>=0?radius:0);
         this.color = color;
     }
 
@@ -14,7 +14,7 @@ public class Circle {
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        this.radius = (radius>=0?radius:0);
     }
 
     public String getColor() {
@@ -30,14 +30,14 @@ public class Circle {
     }
 
     public String toString1() {
-        return String.format("Area : %.3f", area());
+        return String.format("Area= %.1f", area());
     }
 
     @Override
     public String toString() {
         return "Circle{" +
                 "radius=" + radius + " (meter)" +
-                ", color='" + color + '\'' +
+                ", color:" + color  +
                 ", " + toString1() + " (meter2)" +
                 '}';
     }

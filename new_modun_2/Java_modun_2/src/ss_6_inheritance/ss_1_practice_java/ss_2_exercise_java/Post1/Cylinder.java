@@ -1,11 +1,11 @@
 package ss_6_inheritance.ss_1_practice_java.ss_2_exercise_java.Post1;
 
-public class Cylinder extends Circle {
+public  class Cylinder extends Circle {
     private double height;
 
     public Cylinder(double radius, String color, double height) {
         super(radius, color);
-        this.height = height;
+        this.height = (height>=0?height:0);
     }
 
     public double getHeight() {
@@ -13,7 +13,7 @@ public class Cylinder extends Circle {
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        this.height = (height>=0?height:0);
     }
 
     public double volumeTric() {
@@ -22,14 +22,14 @@ public class Cylinder extends Circle {
     }
 
     public String string1() {
-        return String.format("Volumetric: %.3f", volumeTric());
+        return String.format("Volumetric= %.1f", volumeTric());
     }
 
     @Override
     public String toString() {
         return "Cylinder{" +
-                "Radius" + getRadius() +
-                ", Color" + getColor() +
+                "Radius=" + getRadius() +" (meter)"+
+                ", Color:" + getColor() +
                 ", Height= " + height + " (meter)" +
                 ", " + string1() + " (meter3)" +
                 '}';
