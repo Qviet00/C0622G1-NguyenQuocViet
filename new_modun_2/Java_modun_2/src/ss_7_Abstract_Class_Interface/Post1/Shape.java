@@ -31,7 +31,7 @@ public abstract class Shape implements Resizeable {
 
     @Override
     public String toString() {
-        return "A Shape with color of "
+        return "A Shape color  "
                 + getColor()
                 + " and "
                 + (isFilled() ? "filled" : "not filled");

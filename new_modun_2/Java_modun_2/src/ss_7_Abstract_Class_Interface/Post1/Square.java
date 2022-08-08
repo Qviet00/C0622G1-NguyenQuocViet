@@ -25,9 +25,9 @@ public class Square extends Shape {
 
     @Override
     public String toString() {
-        return "A Square with side="
+        return "A Square  side="
                 + getSide()
-                + ", which is a subclass of "
+                + ", subclass of "
                 + super.toString()
                 + ", Area=" +
                 + getArea();

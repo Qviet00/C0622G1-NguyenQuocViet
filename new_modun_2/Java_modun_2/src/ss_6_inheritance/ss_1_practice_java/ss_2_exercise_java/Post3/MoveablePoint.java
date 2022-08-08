@@ -42,7 +42,7 @@ public class MoveablePoint extends Point {
 
     @Override
     public String toString() {
-        return String.format("MoveablePoint{xy=(%.1f,%.1f), Speed=(%.1f,%.1f)}", getX(), getY(), getxSpeed(),getySpeed());
+        return String.format("{xy=(%.1f,%.1f), Speed=(%.1f,%.1f)}", getX(), getY(), getxSpeed(),getySpeed());
     }
 
     public MoveablePoint move() {

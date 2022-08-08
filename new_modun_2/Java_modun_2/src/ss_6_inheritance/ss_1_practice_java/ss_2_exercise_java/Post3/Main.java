@@ -8,6 +8,4 @@ public class Main {
         System.out.println(moveablePoint);
         System.out.println(moveablePoint.move());
     }
-
-
 }

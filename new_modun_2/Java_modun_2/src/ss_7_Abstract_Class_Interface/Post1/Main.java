@@ -1,6 +1,6 @@
 package ss_7_Abstract_Class_Interface.Post1;
 
-public class Run {
+public class Main {
     public static void main(String[] args) {
         int x = (int) Math.floor(Math.random() * 10);
         Shape[] shapes = new Shape[3];
