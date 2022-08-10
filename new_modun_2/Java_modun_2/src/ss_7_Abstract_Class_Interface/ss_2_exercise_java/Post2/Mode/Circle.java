@@ -24,18 +24,15 @@ public class Circle extends Shape{
     }
 
     public double getArea() {
-        return radius * radius * 3.14;
+        return radius * radius * Math.PI;
     }
 
     public double getPerimeter() {
-        return 2 * radius * 3.14;
+        return 2 * radius * Math.PI;
     }
 
     @Override
     public String toString() {
-        return "A Circle with radius="
-                + getRadius()
-                + ", which is a subclass of "
-                + super.toString();
+        return String.format("Radius: %.2f, Area: %.2f, Perimeter: %2.f ",this.radius,getArea(),getPerimeter());
     }
 }

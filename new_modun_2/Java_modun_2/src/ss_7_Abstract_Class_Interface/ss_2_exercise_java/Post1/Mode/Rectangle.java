@@ -1,19 +1,13 @@
 package ss_7_Abstract_Class_Interface.ss_2_exercise_java.Post1.Mode;
 
-public  class Rectangle extends Shape {
+public class Rectangle extends Shape {
     private double width;
     private double heidth;
 
-    public Rectangle(double percent) {
+    public Rectangle() {
     }
 
     public Rectangle(double weight, double heidth) {
-        this.width = weight;
-        this.heidth = heidth;
-    }
-
-    public Rectangle(boolean filler, String color, double weight, double heidth) {
-        super(filler, color);
         this.width = weight;
         this.heidth = heidth;
     }
@@ -28,12 +22,6 @@ public  class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", heidth=" + heidth +
-                ", Area: "+ getArea()+
-                ", Primeter: "+ getPrimeter()+
-                "} " + super.toString();
+        return String.format("Width: %.2f, Height: %.2f, Area: %.2f, Perimeter: %.2f", this.width, this.heidth, getArea(), getPrimeter());
     }
 }
-

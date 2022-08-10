@@ -1,17 +1,9 @@
 package ss_7_Abstract_Class_Interface.ss_2_exercise_java.Post1.Mode;
 
 public class Square extends Circle {
-    private double height;
-
-    public Square() {
-    }
+    private final double height;
 
     public Square(double height) {
-        this.height = height;
-    }
-
-    public Square(double radius, double height) {
-        super(radius);
         this.height = height;
     }
 
@@ -19,14 +11,13 @@ public class Square extends Circle {
         super(filler, color, radius);
         this.height = height;
     }
-    public double getPerimeter(){
-        return getArea()*this.height;
+
+    public double getPerimeter() {
+        return getArea() * this.height;
     }
 
     @Override
     public String toString() {
-        return "Square{" +
-                "height=" + height + ", Primeter: "+ getPerimeter()+
-                "} " + super.toString();
+        return String.format("Radius: %.2f, Area: %.2f, Petter: %.2s, Color: %s, Filler: %s ", getRadius(), getArea(), getPerimeter(), getColor(), this.isFiller());
     }
 }

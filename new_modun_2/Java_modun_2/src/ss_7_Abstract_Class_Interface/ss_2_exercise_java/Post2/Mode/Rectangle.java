@@ -1,16 +1,8 @@
 package ss_7_Abstract_Class_Interface.ss_2_exercise_java.Post2.Mode;
 
 public class Rectangle extends Shape implements Colorable {
-    private double width;
-    private double heidth;
-
-    public Rectangle(double percent) {
-    }
-
-    public Rectangle(double weight, double heidth) {
-        this.width = weight;
-        this.heidth = heidth;
-    }
+    private final double width;
+    private final double heidth;
 
     public Rectangle(boolean filler, String color, double weight, double heidth) {
         super(color, filler);
@@ -22,18 +14,14 @@ public class Rectangle extends Shape implements Colorable {
         return this.heidth * this.width;
     }
 
-    public double getPrimeter() {
+    public double getPerimeter() {
         return 2 * (this.width + this.heidth);
     }
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", heidth=" + heidth +
-                ", Area: " + getArea() +
-                ", Primeter: " + getPrimeter() +
-                "} " + super.toString();
+        return String.format(
+                "Width %.2f, Height: %.2f Area: %.2f, Perimeter: %2.f", this.width, this.heidth, getArea(), getPerimeter());
     }
 
     @Override

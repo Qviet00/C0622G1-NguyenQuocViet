@@ -16,10 +16,6 @@ public abstract class Shape implements Resizeable {
         return filler;
     }
 
-    public void setFiller(boolean filler) {
-        this.filler = filler;
-    }
-
     public String getColor() {
         return color;
     }

@@ -24,10 +24,6 @@ public abstract class Shape {
         return filled;
     }
 
-    public void setFilled(boolean filled) {
-        this.filled = filled;
-    }
-
     public abstract double getArea();
 
 

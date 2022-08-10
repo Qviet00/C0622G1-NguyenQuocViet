@@ -23,18 +23,14 @@ public class Circle extends Shape {
         this.radius = radius;
     }
     public double getArea(){
-        return this.radius*this.radius*3.14;
+        return this.radius*this.radius*Math.PI;
     }
     public double getPerimeter(){
-        return 2*3.14*this.radius;
+        return Math.PI*this.radius;
     }
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                ", Area: "+ getArea()+
-                ", Primeter: "+ getPerimeter()+
-                "} " + super.toString();
+        return String.format("Rdius: %f, Area: %.2f, Metter: %.2f", this.radius,getArea(),getPerimeter());
     }
 }
