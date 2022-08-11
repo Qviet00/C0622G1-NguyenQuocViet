@@ -6,6 +6,5 @@ public class TennisGameTest {
     public static void main(String[] args) {
         String score = TennisGame.getScore(2,1);
         System.out.println(score);
-
     }
 }
