@@ -26,7 +26,7 @@ public abstract class PhuongTienDiChuyen {
     public void batDau(){
         System.out.println("Bắt Đầu");
     }
-    public void tăngToc(){
+    public void tangToc(){
         System.out.println("Tăng Tốc");
     }
     public void dungLai(){
