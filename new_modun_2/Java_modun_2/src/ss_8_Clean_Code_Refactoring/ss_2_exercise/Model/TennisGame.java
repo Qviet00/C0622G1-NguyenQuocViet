@@ -1,9 +1,14 @@
 package ss_8_Clean_Code_Refactoring.ss_2_exercise.Model;
 
 public class TennisGame {
+    static final int ZERO = 0;
+    static final int ONE = 1;
+    static final int TWO = 2;
+    static final int THREE = 3;
+    static final int FOUR = 4;
 
     public static String getScore(int m_score1, int m_score2) {
-        final int FOUR = 4;
+
         boolean isDraw = m_score1 == m_score2;
         boolean isDraw2 = m_score1 >= FOUR || m_score2 >= FOUR;
         if (isDraw) {
@@ -19,10 +24,6 @@ public class TennisGame {
 
     private static String getStringBuilder(int m_score1) {
         String score;
-        final int ZERO = 0;
-        final int ONE = 1;
-        final int TWO = 2;
-        final int THREE = 3;
         switch (m_score1) {
             case ZERO -> score = "Love-All";
             case ONE -> score = "Fifteen-All";
@@ -35,8 +36,6 @@ public class TennisGame {
 
     private static String getStringBuilderOne(int m_score1, int m_score2) {
         int core = m_score1 - m_score2;
-        final int  ONE = 1;
-        final int TWO = 2;
         String string;
         if (core == ONE) {
             string = "Advantage player2";
@@ -53,10 +52,6 @@ public class TennisGame {
     }
 
     private static String getStringBuilderTwo(int a, int b) {
-        final int ZERO = 0;
-        final int ONE = 1;
-        final int TWO = 2;
-        final int THREE = 3;
         StringBuilder score = new StringBuilder();
         int tempScore;
         for (int i = 1; i < 3; i++) {
