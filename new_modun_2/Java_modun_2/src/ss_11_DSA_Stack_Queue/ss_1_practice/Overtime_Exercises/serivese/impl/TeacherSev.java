@@ -20,7 +20,11 @@ public class TeacherSev implements IsSTeacherSev {
     public void addTeacher() {
         Teacher teacher = this.infoTeacher();
         teachers.add(teacher);
-        System.out.println("Add teacher ");
+        for (Teacher teacherOne : teachers
+        ) {
+            System.out.println(teacherOne);
+        }
+        System.out.println("Add teacher ok ");
     }
 
     private Teacher infoTeacher() {

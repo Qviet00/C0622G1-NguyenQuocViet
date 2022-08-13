@@ -21,7 +21,12 @@ public class StudentSev implements IsStudentSev {
     public void addStudent() {
         Student student = this.infoStudent();
         students.add(student);
-        System.out.println("Add ok");
+        System.out.println("Add Student ok");
+        for (Student studentOne : students
+        ) {
+            System.out.println(studentOne);
+        }
+
     }
 
     private Student infoStudent() {
@@ -37,7 +42,7 @@ public class StudentSev implements IsStudentSev {
         double point = Double.parseDouble(src.nextLine());
         System.out.print("Enter Name Class: ");
         String nameClass = src.nextLine();
-        return new Student(id, name, dateOfBirth, sex, nameClass, point);
+        return new Student(id, name, dateOfBirth, sex,point, nameClass);
     }
 
     public void displayAllStudent() {
