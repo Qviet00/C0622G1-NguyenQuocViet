@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ss_6_inheritance.ss_1_practice_java.ss_2_exercise_java.Post1.Model.Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/Downloads/jdk-18.0.2" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="ss_6_inheritance.ss_1_practice_java.ss_2_exercise_java.Post1.Model.Main" />
+    <module name="Java_modun_2" />
+    <extension name="coverage" sample_coverage="false">
+      <pattern>
+        <option name="PATTERN" value="ss_6_inheritance.ss_1_practice_java.ss_2_exercise_java.Post1.Model.*" />
+        <option name="ENABLED" value="false" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

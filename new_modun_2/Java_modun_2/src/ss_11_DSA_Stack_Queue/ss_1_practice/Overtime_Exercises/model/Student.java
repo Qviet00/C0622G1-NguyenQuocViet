@@ -36,7 +36,7 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student{" + "Id: " + getId() + ", Name: " + getName() + ", DateOfBirth: " + getBirthday() +
+        return "Student{" + "Id: " + getId() + ", Name: " + getName() + ",BirthDay: " + getBirthday() +
                 ", Sex: " + getSex() + ", Point: " + point + ", NameClass: " + nameClass +
                 "} ";
     }

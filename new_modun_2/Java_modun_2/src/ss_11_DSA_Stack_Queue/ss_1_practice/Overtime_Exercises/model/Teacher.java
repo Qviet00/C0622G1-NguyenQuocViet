@@ -26,7 +26,7 @@ public class Teacher extends Person {
     @Override
     public String toString() {
         return "Teacher{" +
-                "Id: " + getId() + ", Name: " + getName() + ", DateOfBirth: " + getBirthday() +
+                "Id: " + getId() + ", Name: " + getName() + ", BirthDay: " + getBirthday() +
                 ", Sex: " + getSex() + " ,Specialize: " + getSpecialize() +
                 "} ";
     }

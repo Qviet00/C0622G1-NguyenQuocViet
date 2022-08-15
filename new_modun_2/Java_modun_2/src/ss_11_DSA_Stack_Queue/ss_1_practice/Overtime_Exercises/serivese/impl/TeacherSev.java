@@ -33,12 +33,12 @@ public class TeacherSev implements IsSTeacherSev {
         System.out.print("Enter Name: ");
         String name = src.nextLine();
         System.out.print("Enter birthday: ");
-        String dateOfBirth = src.nextLine();
+        String BirthDay = src.nextLine();
         System.out.print("Enter sex: ");
         String sex = src.nextLine();
         System.out.print("Enter Specialize: ");
         String qualification = src.nextLine();
-        return new Teacher(id, name, dateOfBirth, sex, qualification);
+        return new Teacher(id, name, BirthDay, sex, qualification);
     }
 
     public void displayAllTeacher() {
