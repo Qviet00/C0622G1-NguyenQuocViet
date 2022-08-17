@@ -1,6 +1,6 @@
-package ss_10_DSA_list.Controller;
+package ss_10_DSA_list.controller;
 
-import ss_10_DSA_list.Model.MyArrayList;
+import ss_10_DSA_list.model.MyArrayList;
 
 public class Controller {
     public static class Student {
