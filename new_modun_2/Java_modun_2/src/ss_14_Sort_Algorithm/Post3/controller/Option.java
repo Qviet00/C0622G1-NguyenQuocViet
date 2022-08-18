@@ -1,4 +1,4 @@
-package ss_13_Sort_Algorithm.Post3.controller;
+package ss_14_Sort_Algorithm.Post3.controller;
 
 import java.util.Scanner;
 
@@ -11,14 +11,14 @@ public class Option {
         while (true) {
             System.out.println("1. Teacher");
             System.out.println("2. Student");
-            System.out.print("Option: ");
+            System.out.print(" Option: ");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
                 teacherController.optionTeacher();
             } else if (choice == 2) {
                 studentController.optionStudent();
             }else {
-                System.out.println("reset option");
+                System.out.println("Reset option");
             }
         }
     }

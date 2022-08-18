@@ -8,16 +8,16 @@ public class TeacherOption {
     private static Scanner scanner = new Scanner(System.in);
     private ITeacherService teacherService = new TeacherService();
 
-    public void menuManagementTeacher() {
+    public void OptionTeacher() {
         while (true) {
             System.out.println("---------------------------------------------");
-            System.out.println("hello");
-            System.out.println("1.display teacher");
-            System.out.println("2. add teacher");
-            System.out.println("3.detele teacher");
-            System.out.println("4.search teacher");
+            System.out.println("Hello");
+            System.out.println("1. Display teacher");
+            System.out.println("2. Add teacher");
+            System.out.println("3. Detele teacher");
+            System.out.println("4. Search teacher");
             System.out.println("5. Exit");
-            System.out.print("option 1 -> 5: ");
+            System.out.print("Option 1 -> 5: ");
             int choice2 = Integer.parseInt(scanner.nextLine());
             switch (choice2) {
                 case 1:
@@ -34,7 +34,7 @@ public class TeacherOption {
                 case 5:
                     return;
                 default:
-                    System.out.println("no");
+                    System.out.println("No");
             }
         }
     }

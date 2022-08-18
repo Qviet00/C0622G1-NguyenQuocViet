@@ -1,4 +1,4 @@
-package ss_13_Sort_Algorithm.Post3.serives;
+package ss_14_Sort_Algorithm.Post3.serives;
 
 public interface IStudentService {
     void addStudent();
@@ -8,4 +8,5 @@ public interface IStudentService {
     void deteleStudent();
 
     void searchStudent();
+    void sortStudent();
 }

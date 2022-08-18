@@ -1,6 +1,6 @@
-package ss_13_Sort_Algorithm.Post3.serives.impl;
-import ss_13_Sort_Algorithm.Post3.model.Teacher;
-import ss_13_Sort_Algorithm.Post3.serives.ITeacherService;
+package ss_14_Sort_Algorithm.Post3.serives.impl;
+import ss_14_Sort_Algorithm.Post3.model.Teacher;
+import ss_14_Sort_Algorithm.Post3.serives.ITeacherService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class TeacherService implements ITeacherService {
     }
 
     @Override
-    public void removeTeacher() {
+    public void deleteTeacher() {
         Teacher teacher = this.findTeacherID();
         if (teacher == null) {
             System.out.println("Not fond");
@@ -52,9 +52,9 @@ public class TeacherService implements ITeacherService {
     @Override
     public void searchTeacher() {
         while (true) {
-            System.out.println("1. Search ID");
-            System.out.println("2. Search name");
-            System.out.println("3. Cancel");
+            System.out.println("1.Search ID");
+            System.out.println("2.Search name");
+            System.out.println("3.Cancel");
             System.out.println("Enter option");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
@@ -81,6 +81,19 @@ public class TeacherService implements ITeacherService {
                     break;
             }
         }
+    }
+
+    @Override
+    public void sortTeacher() {
+        while (true){
+            System.out.println("1.Sort ID");
+            System.out.println("2.Sort Name");
+            System.out.println("3.Cancel");
+            System.out.print("Enter option: ");
+            int choice= Integer.parseInt(scanner.nextLine());
+
+        }
+
     }
 
     private Teacher findTeacherName() {
@@ -128,7 +141,6 @@ public class TeacherService implements ITeacherService {
         String sex = scanner.nextLine();
         System.out.print("Enter qualification: ");
         String qualification = scanner.nextLine();
-        Teacher teacher = new Teacher(id, name, dateOfBirth, sex, qualification);
-        return teacher;
+        return new Teacher(id, name, dateOfBirth, sex, qualification);
     }
 }

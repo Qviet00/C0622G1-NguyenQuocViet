@@ -1,11 +1,9 @@
-package ss_13_Sort_Algorithm.Post3.serives.impl;
+package ss_14_Sort_Algorithm.Post3.serives.impl;
 
-import ss_13_Sort_Algorithm.Post3.model.Student;
-import ss_13_Sort_Algorithm.Post3.serives.IStudentService;
+import ss_14_Sort_Algorithm.Post3.model.Student;
+import ss_14_Sort_Algorithm.Post3.serives.IStudentService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class StudentService implements IStudentService {
     private static Scanner scanner = new Scanner(System.in);
@@ -95,6 +93,18 @@ public class StudentService implements IStudentService {
         }
     }
 
+    @Override
+    public void sortStudent() {
+        while (true){
+            System.out.println("1.Sort ID");
+            System.out.println("2.Sort Name");
+            System.out.println("3.Cancel");
+            System.out.print("Enter option: ");
+            int choice= Integer.parseInt(scanner.nextLine());
+
+        }
+    }
+
     private Student findStudentName() {
         System.out.println("Enter name");
         String name = scanner.nextLine();
@@ -126,12 +136,12 @@ public class StudentService implements IStudentService {
         System.out.print("Enter birthday: ");
         String dateOfBirth = scanner.nextLine();
         System.out.print("Enter sex: ");
-        String sex = scanner.nextLine();
         System.out.print("Enter poit: ");
+        String sex = scanner.nextLine();
         double point = Double.parseDouble(scanner.nextLine());
         System.out.print("Enter name claas: ");
         String nameClass = scanner.nextLine();
-        Student student = new Student(id, name, dateOfBirth, sex, nameClass, point);
-        return student;
+        return new Student(id, name, dateOfBirth, sex, nameClass, point);
     }
+
 }

@@ -1,4 +1,6 @@
-package ss_13_Sort_Algorithm.Post1;
+package ss_14_Sort_Algorithm.Post2;
+
+import java.util.Arrays;
 
 public class InsertSort {
     public static int[] insertionSort(int[] array) {
@@ -13,5 +15,10 @@ public class InsertSort {
             array[pos] = x;
         }
         return array;
+    }
+
+    public static void main(String[] args) {
+        int[] array= new int[]{1,5,4,3,7,8,34,25};
+        System.out.println(Arrays.toString(insertionSort(array)));
     }
 }

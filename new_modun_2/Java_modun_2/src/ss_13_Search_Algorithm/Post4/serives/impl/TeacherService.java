@@ -13,6 +13,7 @@ public class TeacherService implements ITeacherService {
     static {
         teachers.add(new Teacher(1, "Hai TD", "1/1/1990", "nam", "tutor"));
         teachers.add(new Teacher(2, "Cong TT", "2/02/1995", "nam", "tutor"));
+        teachers.add(new Teacher(2, "Chanh TT", "3/03/1985", "nam", "tutor"));
     }
 
     @Override
@@ -27,22 +28,22 @@ public class TeacherService implements ITeacherService {
     public void addTeacher() {
         Teacher teacher = this.infoTeacher();
         teachers.add(teacher);
-        System.out.println("add ok");
+        System.out.println("Add ok");
     }
 
     @Override
     public void removeTeacher() {
         Teacher teacher = this.findTeacherID();
         if (teacher == null) {
-            System.out.println("not fond");
+            System.out.println("Not fond");
         } else {
-            System.out.println("ok detele ID " + teacher.getId() + " không?");
-            System.out.println("1 . yes");
-            System.out.println("2 . no");
+            System.out.println("Ok detele ID " + teacher.getId());
+            System.out.println("1 . Yes");
+            System.out.println("2 . No");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
                 teachers.remove(teacher);
-                System.out.println("detele ok");
+                System.out.println("Detele ok");
 
             }
         }
@@ -51,16 +52,16 @@ public class TeacherService implements ITeacherService {
     @Override
     public void searchTeacher() {
         while (true) {
-            System.out.println("1. search ID");
-            System.out.println("2. search name");
-            System.out.println("3. cancel");
-            System.out.println("enter option");
+            System.out.println("1. Search ID");
+            System.out.println("2. Search name");
+            System.out.println("3. Cancel");
+            System.out.println("Enter option");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
                     Teacher teacher = this.findTeacherID();
                     if (teacher == null) {
-                        System.out.println("not fond");
+                        System.out.println("Not fond");
                     } else {
                         System.out.println(teacher);
                     }
@@ -68,7 +69,7 @@ public class TeacherService implements ITeacherService {
                 case 2:
                     Teacher teacher1 = this.findTeacherName();
                     if (teacher1 == null) {
-                        System.out.println("not fond");
+                        System.out.println("Not fond");
                     } else {
                         System.out.println(teacher1);
                     }
@@ -76,14 +77,14 @@ public class TeacherService implements ITeacherService {
                 case 3:
                     return;
                 default:
-                    System.out.println("reset");
+                    System.out.println("Reset");
                     break;
             }
         }
     }
 
     private Teacher findTeacherName() {
-        System.out.println("reset name");
+        System.out.println("Reset name");
         String name = scanner.nextLine();
         for (Teacher teacher : teachers) {
             if (teacher.getName().contains(name)) {

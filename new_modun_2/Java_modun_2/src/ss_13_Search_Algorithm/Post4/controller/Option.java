@@ -14,11 +14,11 @@ public class Option {
             System.out.print("Option: ");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
-                teacherController.menuManagementTeacher();
+                teacherController.OptionTeacher();
             } else if (choice == 2) {
-                studentController.menuManagementStudent();
+                studentController.OptionStudent();
             }else {
-                System.out.println("reset option");
+                System.out.println("Reset option");
             }
         }
     }

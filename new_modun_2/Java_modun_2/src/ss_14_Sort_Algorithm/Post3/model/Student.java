@@ -1,4 +1,4 @@
-package ss_13_Sort_Algorithm.Post3.model;
+package ss_14_Sort_Algorithm.Post3.model;
 
 public class Student extends Person {
     private double point;

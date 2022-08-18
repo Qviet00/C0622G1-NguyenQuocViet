@@ -1,11 +1,12 @@
-package ss_13_Sort_Algorithm.Post3.serives;
+package ss_14_Sort_Algorithm.Post3.serives;
 
 public interface ITeacherService {
     void displayAllTeacher();
 
     void addTeacher();
 
-    void removeTeacher();
+    void deleteTeacher();
 
     void searchTeacher();
+    void sortTeacher();
 }

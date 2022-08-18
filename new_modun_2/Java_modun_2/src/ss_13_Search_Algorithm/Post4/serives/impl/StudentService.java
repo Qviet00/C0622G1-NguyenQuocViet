@@ -13,7 +13,8 @@ public class StudentService implements IStudentService {
 
     static {
         students.add(new Student(1, "Tran Van Nam", "12/12/1999", "nam", "C06G1", 1));
-        students.add(new Student(2, "Nguyen Cat Yen", "11/11/1198", "nu", "C06G1", 2));
+        students.add(new Student(2, "Nguyen Cat Yen", "11/11/1998", "nu", "C06G1", 2));
+        students.add(new Student(2, "Nguyen Thnah Hai", "10/101/1997", "nam", "C06G1", 3));
     }
 
 
@@ -21,7 +22,7 @@ public class StudentService implements IStudentService {
     public void addStudent() {
         Student student = this.infoStudent();
         students.add(student);
-        System.out.println("add ok");
+        System.out.println("Add ok");
     }
 
     @Override
@@ -36,15 +37,15 @@ public class StudentService implements IStudentService {
     public void removeStudent() {
         Student student = this.findStudentID();
         if (student == null) {
-            System.out.println("not fond");
+            System.out.println("Not fond");
         } else {
-            System.out.println("ok detele " + student.getId() + " không?");
-            System.out.println("1 . yes");
-            System.out.println("2 .no");
+            System.out.println("Ok detele " + student.getId());
+            System.out.println("1. Yes");
+            System.out.println("2. No");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
                 students.remove(student);
-                System.out.println("detele ok");
+                System.out.println("Detele ok");
             }
         }
     }
@@ -64,7 +65,7 @@ public class StudentService implements IStudentService {
 
         while (true) {
             System.out.println("1. Search ID");
-            System.out.println("2. search NAME");
+            System.out.println("2. Search NAME");
             System.out.println("3. Cancel");
             System.out.println("Enter option");
             int choice = Integer.parseInt(scanner.nextLine());
@@ -72,7 +73,7 @@ public class StudentService implements IStudentService {
                 case 1:
                     Student student = this.findStudentID();
                     if (student == null) {
-                        System.out.println("not fond");
+                        System.out.println("Not fond");
                     } else {
                         System.out.println(student);
                     }
@@ -80,7 +81,7 @@ public class StudentService implements IStudentService {
                 case 2:
                     Student student1 = this.findStudentName();
                     if (student1 == null) {
-                        System.out.println("not fond");
+                        System.out.println("Not fond");
                     } else {
                         System.out.println(student1);
                     }
@@ -88,7 +89,7 @@ public class StudentService implements IStudentService {
                 case 3:
                     return;
                 default:
-                    System.out.println("reset");
+                    System.out.println("Reset");
                     break;
             }
         }
@@ -122,15 +123,14 @@ public class StudentService implements IStudentService {
         } while (true);
         System.out.print("Enter name: ");
         String name = scanner.nextLine();
-        System.out.print("enter birthday: ");
+        System.out.print("Enter birthday: ");
         String dateOfBirth = scanner.nextLine();
-        System.out.print("enter sex: ");
+        System.out.print("Enter sex: ");
         String sex = scanner.nextLine();
-        System.out.print("enter poit: ");
+        System.out.print("Enter point: ");
         double point = Double.parseDouble(scanner.nextLine());
-        System.out.print("enter name claas: ");
+        System.out.print("Enter name claas: ");
         String nameClass = scanner.nextLine();
-        Student student = new Student(id, name, dateOfBirth, sex, nameClass, point);
-        return student;
+        return new Student(id, name, dateOfBirth, sex, nameClass, point);
     }
 }
