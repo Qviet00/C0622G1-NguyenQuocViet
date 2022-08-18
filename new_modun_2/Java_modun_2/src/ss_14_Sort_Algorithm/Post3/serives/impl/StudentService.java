@@ -12,7 +12,7 @@ public class StudentService implements IStudentService {
     static {
         students.add(new Student(1, "Tran Van Nam", "12/12/1999", "nam", "C06G1", 1));
         students.add(new Student(2, "Nguyen Cat Yen", "11/11/1998", "nu", "C06G1", 2));
-        students.add(new Student(2, "Nguyen Thanh Hai", "10/10/1997", "nam", "C06G1", 3));
+        students.add(new Student(3, "Nguyen Thanh Hai", "10/10/1997", "nam", "C06G1", 3));
     }
 
 
@@ -86,24 +86,52 @@ public class StudentService implements IStudentService {
                     break;
                 case 3:
                     return;
-                default:
-                    System.out.println("Reset");
-                    break;
             }
         }
     }
 
     @Override
     public void sortStudent() {
-        while (true){
-            System.out.println("1.Sort ID");
-            System.out.println("2.Sort Name");
-            System.out.println("3.Cancel");
-            System.out.print("Enter option: ");
-            int choice= Integer.parseInt(scanner.nextLine());
-
+//        while (true) {
+//            System.out.println("1.Sort ID");
+//            System.out.println("2.Sort Name");
+//            System.out.println("3.Cancel");
+//            System.out.print("Enter option: ");
+//            int choice = Integer.parseInt(scanner.nextLine());
+//            switch (choice) {
+//                case 1: {
+//                    students.sort(new sortID());
+//                    for (Student student : students) System.out.println(student);
+//                    break;
+//                }
+//                case 2: {
+//                    students.sort(new sortName());
+//                    for (Student student : students) System.out.println(student);
+//                }
+//                break;
+//                case 3:
+//                    return;
+//                default:
+//                    System.out.println("Reset");
+//                    break;
+//            }
+//        }
+        boolean isSwap = true;
+        Student temp;
+        for (int i = 0; i < students.size() - 1 && isSwap; i++) {
+            isSwap = false;
+            for (int j = 0; j < students.size() - 1 - i; j++) {
+                if (students.get(j).getName().compareTo(students.get(j + 1).getName()) > 0) {
+                    isSwap = true;
+                    temp = students.get(j + 1);
+                    students.set(j + 1, students.get(j));
+                    students.set(j, temp);
+                }
+            }
         }
+        displayAllStudent();
     }
+
 
     private Student findStudentName() {
         System.out.println("Enter name");
@@ -143,5 +171,22 @@ public class StudentService implements IStudentService {
         String nameClass = scanner.nextLine();
         return new Student(id, name, dateOfBirth, sex, nameClass, point);
     }
+
+//    private static class sortName implements Comparator<Student> {
+//
+//        @Override
+//        public int compare(Student o1, Student o2) {
+//            return o1.getName().compareTo(o2.getName());
+//        }
+//    }
+//
+//    private static class sortID implements Comparator<Student> {
+//
+//        @Override
+//        public int compare(Student o1, Student o2) {
+//            return Double.compare(o1.getId(), o2.getId());
+//        }
+//    }
+//
 
 }

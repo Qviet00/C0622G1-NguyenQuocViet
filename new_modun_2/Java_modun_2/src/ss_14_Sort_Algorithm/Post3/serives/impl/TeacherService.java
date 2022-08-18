@@ -1,10 +1,9 @@
 package ss_14_Sort_Algorithm.Post3.serives.impl;
+
 import ss_14_Sort_Algorithm.Post3.model.Teacher;
 import ss_14_Sort_Algorithm.Post3.serives.ITeacherService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class TeacherService implements ITeacherService {
     private static Scanner scanner = new Scanner(System.in);
@@ -13,7 +12,7 @@ public class TeacherService implements ITeacherService {
     static {
         teachers.add(new Teacher(1, "Hai TD", "1/1/1990", "nam", "tutor"));
         teachers.add(new Teacher(2, "Cong TT", "2/02/1995", "nam", "tutor"));
-        teachers.add(new Teacher(2, "Chanh TT", "3/03/1985", "nam", "tutor"));
+        teachers.add(new Teacher(3, "Chanh TT", "3/03/1985", "nam", "tutor"));
     }
 
     @Override
@@ -37,7 +36,7 @@ public class TeacherService implements ITeacherService {
         if (teacher == null) {
             System.out.println("Not fond");
         } else {
-            System.out.println("Ok detele ID " + teacher.getId() );
+            System.out.println("Ok detele ID " + teacher.getId());
             System.out.println("1 . Yes");
             System.out.println("2 . No");
             int choice = Integer.parseInt(scanner.nextLine());
@@ -85,15 +84,44 @@ public class TeacherService implements ITeacherService {
 
     @Override
     public void sortTeacher() {
-        while (true){
-            System.out.println("1.Sort ID");
-            System.out.println("2.Sort Name");
-            System.out.println("3.Cancel");
-            System.out.print("Enter option: ");
-            int choice= Integer.parseInt(scanner.nextLine());
-
+//        while (true) {
+//            System.out.println("1.Sort ID");
+//            System.out.println("2.Sort Name");
+//            System.out.println("3.Cancel");
+//            System.out.print("Enter option: ");
+//            int choice = Integer.parseInt(scanner.nextLine());
+//            switch (choice) {
+//                case 1: {
+//                    teachers.sort(new sortID());
+//                    for (Teacher teacher : teachers) System.out.println(teacher);
+//                    break;
+//                }
+//                case 2: {
+//                    teachers.sort(new sortName());
+//                    for (Teacher teacher : teachers) System.out.println(teacher);
+//                    break;
+//                }
+//                case 3:
+//                    return;
+//                default:
+//                    System.out.println("Reset");
+//                    break;
+//            }
+//        }
+        boolean isSwap = true;
+        Teacher temp;
+        for (int i = 0; i < teachers.size() - 1 && isSwap; i++) {
+            isSwap = false;
+            for (int j = 0; j < teachers.size() - 1 - i; j++) {
+                if (teachers.get(j).getName().compareTo(teachers.get(j + 1).getName()) > 0) {
+                    isSwap = true;
+                    temp = teachers.get(j + 1);
+                    teachers.set(j + 1, teachers.get(j));
+                    teachers.set(j, temp);
+                }
+            }
         }
-
+        displayAllTeacher();
     }
 
     private Teacher findTeacherName() {
@@ -143,4 +171,20 @@ public class TeacherService implements ITeacherService {
         String qualification = scanner.nextLine();
         return new Teacher(id, name, dateOfBirth, sex, qualification);
     }
+//
+//    private static class sortName implements Comparator<Teacher> {
+//
+//        @Override
+//        public int compare(Teacher o1, Teacher o2) {
+//            return o1.getName().compareTo(o2.getName());
+//        }
+//    }
+//
+//    private static class sortID implements Comparator<Teacher> {
+//
+//        @Override
+//        public int compare(Teacher o1, Teacher o2) {
+//            return Double.compare(o1.getId(), o2.getId());
+//        }
+//    }
 }
