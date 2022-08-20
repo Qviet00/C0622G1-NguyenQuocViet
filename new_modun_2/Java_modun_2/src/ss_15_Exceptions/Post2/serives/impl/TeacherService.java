@@ -2,6 +2,7 @@ package ss_15_Exceptions.Post2.serives.impl;
 
 import ss_15_Exceptions.Post2.model.Teacher;
 import ss_15_Exceptions.Post2.serives.ITeacherService;
+import ss_15_Exceptions.utils.exception.UntilException;
 
 import java.util.*;
 
@@ -39,7 +40,8 @@ public class TeacherService implements ITeacherService {
             System.out.println("Ok detele ID " + teacher.getId());
             System.out.println("1 . Yes");
             System.out.println("2 . No");
-            int choice = Integer.parseInt(scanner.nextLine());
+            int choice = 0;
+            choice=(int) checkEdgeTwo(choice);
             if (choice == 1) {
                 teachers.remove(teacher);
                 System.out.println("Detele ok");
@@ -55,7 +57,8 @@ public class TeacherService implements ITeacherService {
             System.out.println("2.Search name");
             System.out.println("3.Cancel");
             System.out.println("Enter option");
-            int choice = Integer.parseInt(scanner.nextLine());
+            int choice = 0;
+            choice=(int) checkEdgeThree(choice);
             switch (choice) {
                 case 1:
                     Teacher teacher = this.findTeacherID();
@@ -137,7 +140,8 @@ public class TeacherService implements ITeacherService {
 
     private Teacher findTeacherID() {
         System.out.print("Enter  id: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id =0;
+        id=(int) checkEdgeOne(id);
         for (Teacher teacher : teachers) {
             if (teacher.getId() == id) {
                 return teacher;
@@ -147,20 +151,9 @@ public class TeacherService implements ITeacherService {
     }
 
     private Teacher infoTeacher() {
-        int id;
-        do {
-            System.out.print("Enter id: ");
-            id = Integer.parseInt(scanner.nextLine());
-            boolean isCheck = true;
-            for (Teacher teacher : teachers) {
-                if (teacher.getId() == id) {
-                    System.out.println("Reset id");
-                    isCheck = false;
-                    break;
-                }
-            }
-            if (isCheck) break;
-        } while (true);
+        int id=0;
+        System.out.println("Enter ID: ");
+        id=(int) checkEdgeOne(id);
         System.out.print("Enter name: ");
         String name = scanner.nextLine();
         System.out.print("Enter birthday: ");
@@ -187,4 +180,58 @@ public class TeacherService implements ITeacherService {
 //            return Double.compare(o1.getId(), o2.getId());
 //        }
 //    }
+public static double checkEdgeOne(double i) {
+    Scanner src = new Scanner(System.in);
+    while (true) {
+        try {
+            i = Double.parseDouble(src.nextLine());
+            if (i < 0) {
+                throw new UntilException("Số nhập phải lớn hơn 0 và nhỏ hơn 6, nhập lại nge: ");
+            }
+            break;
+        } catch (UntilException e) {
+            System.out.print(e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.print("Bạn nhập không phải là số, nhập lại nghe: ");
+        }
+
+    }
+    return i;
+}
+    public static double checkEdgeTwo(double i) {
+        Scanner src = new Scanner(System.in);
+        while (true) {
+            try {
+                i = Double.parseDouble(src.nextLine());
+                if (i < 0 || i >2) {
+                    throw new UntilException("Số nhập phải lớn hơn 0 và nhỏ hơn 6, nhập lại nge: ");
+                }
+                break;
+            } catch (UntilException e) {
+                System.out.print(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.print("Bạn nhập không phải là số, nhập lại nghe: ");
+            }
+
+        }
+        return i;
+    }
+    public static double checkEdgeThree(double i) {
+        Scanner src = new Scanner(System.in);
+        while (true) {
+            try {
+                i = Double.parseDouble(src.nextLine());
+                if (i < 0 || i > 6) {
+                    throw new UntilException("Số nhập phải lớn hơn 0 và nhỏ hơn 6, nhập lại nge: ");
+                }
+                break;
+            } catch (UntilException e) {
+                System.out.print(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.print("Bạn nhập không phải là số, nhập lại nghe: ");
+            }
+
+        }
+        return i;
+    }
 }
