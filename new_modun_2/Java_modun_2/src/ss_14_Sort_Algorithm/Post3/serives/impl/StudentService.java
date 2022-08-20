@@ -10,9 +10,9 @@ public class StudentService implements IStudentService {
     private static List<Student> students = new ArrayList<>();
 
     static {
-        students.add(new Student(1, "Tran Van Nam", "12/12/1999", "nam", "C06G1", 1));
-        students.add(new Student(2, "Nguyen Cat Yen", "11/11/1998", "nu", "C06G1", 2));
-        students.add(new Student(3, "Nguyen Thanh Hai", "10/10/1997", "nam", "C06G1", 3));
+        students.add(new Student(1, "Trần Văn Nam", "12/12/1999", "nam", "C06G1", 1));
+        students.add(new Student(2, "Nguyễn Cát Yên", "11/11/1998", "nu", "C06G1", 2));
+        students.add(new Student(3, "Nguyễn Thanh Hải", "10/10/1997", "nam", "C06G1", 3));
     }
 
 
@@ -25,6 +25,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public void displayAllStudent() {
+        System.out.println("-Danh sách đây bạn:");
         for (Student student : students
         ) {
             System.out.println(student);

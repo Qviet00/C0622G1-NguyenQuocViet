@@ -19,7 +19,7 @@ public class TeacherOption {
             System.out.println("4.Search teacher");
             System.out.println("5.Sort teacher");
             System.out.println("6.Exit");
-            System.out.print("Option 1 -> 6: ");
+            System.out.print("* Nhập lựa chọn theo số: 1 -> 6. ");
             int choice2 = Integer.parseInt(scanner.nextLine());
             switch (choice2) {
                 case 1:

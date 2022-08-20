@@ -11,14 +11,14 @@ public class Option {
         while (true) {
             System.out.println("1. Teacher.");
             System.out.println("2. Student.");
-            System.out.print(" Enter option: ");
+            System.out.print("* Nhập lựa chọn theo số:  ");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
                 teacherController.optionTeacher();
             } else if (choice == 2) {
                 studentController.optionStudent();
             }else {
-                System.out.println("Reset option");
+                System.out.println("Không đúng,Nhập lại: ");
             }
         }
     }

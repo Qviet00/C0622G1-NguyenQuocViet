@@ -12,14 +12,14 @@ public class StudentOption {
     public void optionStudent() {
         while (true) {
             System.out.println("---------------------------------------------");
-            System.out.println("Hello");
+            System.out.println("* Hello *");
             System.out.println("1.Display student");
             System.out.println("2.Add student");
             System.out.println("3.Detele student: ");
             System.out.println("4.Search student: ");
             System.out.println("5.Sort student: ");
             System.out.println("6.Exit");
-            System.out.print("enter option 1 -> 6: ");
+            System.out.print("* Nhập lựa chọn theo số( 1 -> 6 ): ");
             int choice1 = Integer.parseInt(scanner.nextLine());
             switch (choice1) {
                 case 1:
