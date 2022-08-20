@@ -1,5 +1,8 @@
 package ss_15_Exceptions.Post1;
 
+
+import ss_15_Exceptions.utils.exception.UntilException;
+
 import java.util.Scanner;
 
 public class IllegalTriangleException {
@@ -26,25 +29,19 @@ public class IllegalTriangleException {
     public static double checkEdge(double i) {
         Scanner src = new Scanner(System.in);
         while (true) {
-            i = Double.parseDouble(src.nextLine());
+            try {
+                i = Double.parseDouble(src.nextLine());
+                if (i < 0) {
+                    throw new UntilException("Số nhập phải lớn hơn 0, nhập lại nge: ");
+                }
+                break;
+            } catch (UntilException e) {
+                System.out.print(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.print("Bạn nhập không phải là số, nhập lại nghe: ");
+            }
 
         }
+        return i;
     }
 }
-//}
-//        while (true) {
-//        try {
-//            System.out.print("Mời bạn nhập điểm: ");
-//            point = Double.parseDouble(scanner.nextLine());
-//            if(point <0 || point >100) {
-//                throw new PointException("Bạn không thể nhập điểm nhỏ hơn 0 hoặc lớn hơn 100");
-//            }
-//            break;
-//        }catch (NumberFormatException e) {
-//            System.out.println("Bạn nhập không phải là số. Yêu cầu nhập lại.");
-//        } catch (PointException p) {
-//            System.err.println(p.getMessage());
-//        } catch (Exception e) {
-//​
-//        }
-

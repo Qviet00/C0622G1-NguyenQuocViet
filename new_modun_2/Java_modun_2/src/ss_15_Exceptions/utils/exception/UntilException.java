@@ -1,4 +1,4 @@
-package ss_15_Exceptions.Post1;
+package ss_15_Exceptions.utils.exception;
 
 public class UntilException extends Exception{
     public UntilException(String message) {
