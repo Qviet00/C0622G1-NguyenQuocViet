@@ -1,11 +1,9 @@
-package ss_14_Sort_Algorithm.Post3.serives.impl;
+package ss_15_Exceptions.Post2.serives.impl;
 
-import ss_14_Sort_Algorithm.Post3.model.Teacher;
-import ss_14_Sort_Algorithm.Post3.serives.ITeacherService;
+import ss_15_Exceptions.Post2.model.Teacher;
+import ss_15_Exceptions.Post2.serives.ITeacherService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class TeacherService implements ITeacherService {
     private static Scanner scanner = new Scanner(System.in);
