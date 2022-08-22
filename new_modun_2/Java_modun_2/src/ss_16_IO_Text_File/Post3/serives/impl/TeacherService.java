@@ -108,17 +108,17 @@ public  class TeacherService implements ITeacherService {
     @Override
     public void searchTeacher() {
         while (true) {
-            System.out.println("1.Search ID");
-            System.out.println("2.Search name");
-            System.out.println("3.Cancel");
-            System.out.println("Enter option");
+            System.out.println("1.Tìm theo ID");
+            System.out.println("2.Tìm theo name");
+            System.out.println("3.Huỷ");
+            System.out.println("Nhập lựa chọn");
             int choice = 0;
             choice= (int) checked.Checked(choice,4);
             switch (choice) {
                 case 1:
                     Teacher teacher = this.findTeacherID();
                     if (teacher == null) {
-                        System.out.println("Not fond");
+                        System.out.println("Not found");
                     } else {
                         System.out.println(teacher);
                     }
@@ -126,7 +126,7 @@ public  class TeacherService implements ITeacherService {
                 case 2:
                     Teacher teacher1 = this.findTeacherName();
                     if (teacher1 == null) {
-                        System.out.println("Not fond");
+                        System.out.println("Not found");
                     } else {
                         System.out.println(teacher1);
                     }
@@ -170,9 +170,9 @@ public  class TeacherService implements ITeacherService {
     }
 
     private Teacher findTeacherID() {
-        System.out.print("Enter  id: ");
+        System.out.print("Nhập id: ");
         int id = 0;
-        checked.Checked(id, 1000000000);
+        checked.CheckedOne(id);
         for (Teacher teacher : teachers) {
             if (teacher.getId() == id) {
                 return teacher;
@@ -182,16 +182,15 @@ public  class TeacherService implements ITeacherService {
     }
 
     private Teacher infoTeacher() {
-        int id;
+        int id=0;
         while (true) {
             try {
                 System.out.print("Mời bạn nhập id: ");
-                id = Integer.parseInt(src.nextLine());
+                checked.CheckedOne(id);
                 boolean check = true;
                 for (Teacher teacher : teachers) {
                     if (teacher.getId() == id) {
-                        System.out.println("ID bị trùng, mời bạn nhập lại id");
-                        id = Integer.parseInt(src.nextLine());
+                        System.out.print("ID bị trùng, mời bạn nhập lại id: ");
                         check = false;
                         break;
                     }
@@ -226,11 +225,11 @@ public  class TeacherService implements ITeacherService {
             try {
                 System.out.print("Mời bạn nhập ngày sinh: ");
                 dateOfBirth = src.nextLine();
-                if ("\\d+\\d+\\W+\\d+\\d+\\W+\\d+\\d+\\d+\\d".matches(dateOfBirth)) {
-                    throw new UntilException("Dữ liệu không đúng định dạng");
+                if (!"([0-9]{2})/([0-9]{2})/([0-9]{4})".matches(dateOfBirth)) {
+                    throw new UntilException("Không đúng định dạng");
                 }
                 if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {
-                    throw new UntilException("Dữ liệu không đúng định dạng");
+                    throw new UntilException("Không đúng định dạng");
                 }
                 break;
             } catch (Exception e) {
@@ -240,10 +239,10 @@ public  class TeacherService implements ITeacherService {
         String sex;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập giới tính: ");
+                System.out.print("Nhập giới tính: ");
                 sex = src.nextLine();
                 if (!sex.equals("nam") && (!sex.equals("nu"))) {
-                    throw new UntilException("Dữ liệu bạn nhập không hợp lệ");
+                    throw new UntilException("Nhập không hợp lệ");
                 }
                 break;
             } catch (Exception e) {
@@ -254,12 +253,12 @@ public  class TeacherService implements ITeacherService {
         String qualificationStr;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập trình độ chuyên môn: ");
+                System.out.print("Nhập trình độ chuyên môn: ");
                 qualification = src.nextLine();
                 for (int i = 0; i < name.length(); i++) {
                     qualificationStr = "";
                     if ((qualificationStr + name.charAt(i)).matches("\\d+")) {
-                        throw new UntilException("Dữ liệu bạn nhập ko hợp lệ");
+                        throw new UntilException("Nhập ko hợp lệ");
                     }
                 }
                 break;

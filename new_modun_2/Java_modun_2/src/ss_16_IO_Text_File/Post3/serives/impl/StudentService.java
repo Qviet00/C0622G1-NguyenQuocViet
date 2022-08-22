@@ -82,7 +82,7 @@ public class StudentService implements IStudentService {
             System.out.println("Not found");
         } else {
             System.out.println("Muốn xóa: " + student.getId());
-            System.out.println("1 . Yes");
+            System.out.println("1 .Yes");
             System.out.println("2 .No");
             int choice = Integer.parseInt(src.nextLine());
             if (choice == 1) {
@@ -94,7 +94,9 @@ public class StudentService implements IStudentService {
 
     private Student findStudentID() {
         System.out.print("Nhập id: ");
-        int id = Integer.parseInt(src.nextLine());
+        double id = 0;
+        checked.CheckedOne(id);
+
         for (Student student : students) {
             if (student.getId() == id) {
                 return student;
@@ -165,23 +167,22 @@ public class StudentService implements IStudentService {
     }
 
     private Student infoStudent() {
-        int id;
+        int id = 0;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập id: ");
-                id = Integer.parseInt(src.nextLine());
+                System.out.print("Nhập id: ");
+                checked.CheckedOne(id);
                 boolean check = true;
                 for (Student student : students) {
                     if (student.getId() == id) {
-                        System.out.println("ID bị trùng, mời bạn nhập lại id");
-                        id = Integer.parseInt(src.nextLine());
+                        System.out.print("ID bị trùng,Nhập lại id: ");
                         check = false;
                         break;
                     }
                 }
                 if (check) break;
             } catch (NumberFormatException e) {
-                System.out.println("Mời bạn nhập lại id");
+                System.out.println("Nhập lại id");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -190,13 +191,13 @@ public class StudentService implements IStudentService {
         String name;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập tên: ");
+                System.out.print("Nhập tên: ");
                 name = (src.nextLine());
                 String str;
                 for (int i = 0; i < name.length(); i++) {
                     str = "";
                     if ("\\d +".matches(str + name.charAt(i))) {
-                        throw new UntilException("Tên bạn nhập ko hợp lệ");
+                        throw new UntilException("Tên bạn nhập ko đúng");
                     }
                 }
 
@@ -208,13 +209,13 @@ public class StudentService implements IStudentService {
         String dateOfBirth;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập ngày sinh: ");
+                System.out.print("Nhập ngày sinh: ");
                 dateOfBirth = src.nextLine();
-                if ("\\d+\\d+\\W+\\d+\\d+\\W+\\d+\\d+\\d+\\d".matches(dateOfBirth)) {
-                    throw new UntilException("Dữ liệu không đúng định dạng nhập lại");
+                if (!"([0-9]{2})/([0-9]{2})/([0-9]{4})".matches(dateOfBirth)) {
+                    throw new UntilException("Dữ liệu không đúng ,nhập lại");
                 }
-                if (Integer.parseInt(dateOfBirth.substring(6)) > 2016) {
-                    throw new UntilException("Dữ liệu không đúng định dạng");
+                if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {
+                    throw new UntilException("Dữ liệu không đúng ");
                 }
                 break;
             } catch (Exception e) {
@@ -227,7 +228,7 @@ public class StudentService implements IStudentService {
                 System.out.print("Mời bạn nhập giới tính: ");
                 sex = src.nextLine();
                 if (!sex.equals("nam") && (!sex.equals("nu"))) {
-                    throw new UntilException("Dữ liệu bạn nhập không hợp lệ");
+                    throw new UntilException("Sai rồi, nhập lại: ");
                 }
                 break;
             } catch (Exception e) {
@@ -240,11 +241,11 @@ public class StudentService implements IStudentService {
                 System.out.print("Mời bạn nhập điểm: ");
                 point = Double.parseDouble(src.nextLine());
                 if (point < 0 || point > 100) {
-                    throw new UntilException("Điểm bạn nhập không hợp lệ");
+                    throw new UntilException("Điểm bạn nhập không đúng");
                 }
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("Dữ liệu nhập không đúng định dạng");
+                System.out.println("Dữ liệu nhập không đúng");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -252,10 +253,10 @@ public class StudentService implements IStudentService {
         String nameClass;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập tên lớp: ");
+                System.out.print("Nhập tên lớp: ");
                 nameClass = src.nextLine();
                 if ("\\D+\\d+\\d+\\d+\\d+\\D+\\d".matches(nameClass)) {
-                    throw new UntilException("Tên lớp không hợp lệ");
+                    throw new UntilException("Tên lớp không đúng");
                 }
                 break;
             } catch (Exception e) {

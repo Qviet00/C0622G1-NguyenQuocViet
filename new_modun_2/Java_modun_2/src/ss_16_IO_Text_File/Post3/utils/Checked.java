@@ -21,4 +21,20 @@ public  class Checked {
         }
         return i;
     }
+    public void CheckedOne(double i) {
+        Scanner src = new Scanner(System.in);
+        while (true) {
+            try {
+                i = Double.parseDouble(src.nextLine());
+                if (i < 0) {
+                    throw new UntilException("Số nhập phải lớn hơn 0 và nhỏ hơn 3, nhập lại nge: ");
+                }
+                break;
+            } catch (UntilException e) {
+                System.out.print(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.print("Bạn nhập không phải là số, nhập lại nghe: ");
+            }
+        }
+    }
 }

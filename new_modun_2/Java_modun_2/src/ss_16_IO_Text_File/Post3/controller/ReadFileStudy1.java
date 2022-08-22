@@ -16,5 +16,4 @@ public class ReadFileStudy1 {
         }
         bufferedReader.close();
     }
-
 }
