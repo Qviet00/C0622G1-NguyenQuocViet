@@ -211,7 +211,7 @@ public class StudentService implements IStudentService {
             try {
                 System.out.print("Nhập ngày sinh: ");
                 dateOfBirth = src.nextLine();
-                if (!"([0-9]{2})/([0-9]{2})/([0-9]{4})".matches(dateOfBirth)) {
+                if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
                     throw new UntilException("Dữ liệu không đúng ,nhập lại");
                 }
                 if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {

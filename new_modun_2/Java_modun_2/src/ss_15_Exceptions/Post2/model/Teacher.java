@@ -1,4 +1,6 @@
-package ss_16_IO_Text_File.Post3.model;
+package ss_15_Exceptions.Post2.model;
+
+import ss_16_IO_Text_File.Post3.model.Person;
 
 public class Teacher extends Person {
     private String qualification;

@@ -1,4 +1,4 @@
-package ss_16_IO_Text_File.Post3.serives.impl;
+package ss_15_Exceptions.Post2.serives.impl;
 
 import ss_16_IO_Text_File.Post3.model.Teacher;
 import ss_16_IO_Text_File.Post3.serives.ITeacherService;
@@ -225,7 +225,7 @@ public  class TeacherService implements ITeacherService {
             try {
                 System.out.print("Mời bạn nhập ngày sinh: ");
                 dateOfBirth = src.nextLine();
-                if (!"([0-9]{2})/([0-9]{2})/([0-9]{4})".matches(dateOfBirth)) {
+                if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
                     throw new UntilException("Không đúng định dạng");
                 }
                 if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {
