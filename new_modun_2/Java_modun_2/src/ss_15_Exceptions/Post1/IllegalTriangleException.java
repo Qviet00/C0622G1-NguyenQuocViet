@@ -1,13 +1,13 @@
 package ss_15_Exceptions.Post1;
 
 
-import ss_15_Exceptions.utils.exception.UntilException;
+import ss_16_IO_Text_File.Post3.utils.UntilException;
 
 import java.util.Scanner;
 
 public class IllegalTriangleException {
     public static void main(String[] args) {
-        System.out.println("Cho tam gíac ABC");
+        System.out.println("Cho tam giác ABC");
         double edgeA = 0;
         double edgeB = 0;
         double edgeC = 0;

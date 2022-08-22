@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49a9cac6-8cae-437a-9e73-23229f6306b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ss_16_IO_Text_File/Post2/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss_16_IO_Text_File/Post2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss_16_IO_Text_File/Post2/text" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/nguyen_quoc_viet_C0622G1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/ss_6_inheritance_ss_1_practice_java_ss_2_exercise_java_Post1_Model_Main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A_modun_2/ss_15_Exceptions/Post1/IllegalTriangleException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A_modun_2/ss_15_Exceptions/Post1/IllegalTriangleException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A_modun_2/ss_15_Exceptions/Post2/serives/impl/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A_modun_2/ss_15_Exceptions/Post2/serives/impl/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_15_Exceptions/Post1/IllegalTriangleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss_15_Exceptions/Post1/IllegalTriangleException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/bai_1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/out/production/untitled/ss_Introduction_to_Java/BAI_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/src/ss_Introduction_to_Java/BAI_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss_1_Introduction to Java/untitled/src/ss_Introduction_to_Java/Test.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ss_11_DSA_Stack_Queue/ss_1_practice/Post1/model/ManageVehicle.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ss_15_Exceptions/Post2/serives/impl/TeacherService.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ss_6_inheritance/ss_1_practice_java/ss_2_exercise_java/Post1/Model/Main.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2D2Fns0xhlEWFcIOW536ROIy3kn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/nguyen_quoc_viet_C0622G1/new_modun_2/Java_modun_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;testing.instrumented.configuration&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ss_13_Search_Algorithm.Post2" />
+      <recent name="ss_12_Java_Collection_Framework.serivese.impl" />
+      <recent name="ss_11_DSA_Stack_Queue.ss_1_practice.Post1.serivese.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_2\Java_modun_2\src\ss_14_Sort_Algorithm" />
+      <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_2\Java_modun_2\src\ss_15_Exception" />
+      <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_2\Java_modun_2\src\ss_13_Sort_Algorithm" />
+      <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_2\Java_modun_2\src\ss_11_DSA_Stack_Queue\Post5" />
+      <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_2\Java_modun_2\src\ss_11_DSA_Stack_Queue\Post4" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ss_16_IO_Text_File.Post2.Main">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_13_Search_Algorithm.Post2.BinarySearch" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exception.Post2.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2" />
+    </configuration>
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_13_Search_Algorithm.Post2.BinarySearch" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_13_Search_Algorithm.ss_13_Sort_Algorithm.Post3.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IllegalTriangleException" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_15_Exception.Post3.IllegalTriangleException" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exception.Post2.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2" />
+    </configuration>
+    <configuration name="IllegalTriangleException" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_15_Exceptions.Post1.IllegalTriangleException" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exception.Post1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_14_Sort_Algorithm.Post2.InsertSort" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_14_Sort_Algorithm.Post2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_15_Exceptions.Post2.view.Main" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exceptions.Post2.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_1_introduction_to_java.ss_1_practice_java.MainA" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exception.Post1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Users\qkiet\.jdks\jdk-20" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="A_modun_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ss_15_Exceptions.Post1.IllegalTriangleException" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_15_Exceptions.Post1.IllegalTriangleException" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exceptions.Post1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ss_15_Exceptions.Post1.IllegalTriangleException" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="MAIN_CLASS_NAME" value="ss_15_Exceptions.Post1.IllegalTriangleException" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exception.Post2.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2" />
+    </configuration>
+    <configuration name="ss_15_Exceptions.Post1.IllegalTriangleException" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_15_Exceptions.Post1.IllegalTriangleException" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_15_Exception.Post2.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2" />
+    </configuration>
+    <configuration name="ss_16_IO_Text_File.Post2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_16_IO_Text_File.Post2.Main" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_16_IO_Text_File.Post2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ss_6_inheritance.ss_1_practice_java.ss_1_practice_java.post1.Post2.Main" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ss_6_inheritance.ss_1_practice_java.ss_1_practice_java.post1.Post2.Main" />
+      <module name="A_modun_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss_6_inheritance.ss_1_practice_java.ss_1_practice_java.post1.Post2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="" />
+      <option name="jdkPath" value="Default" />
+      <option name="language" value="" />
+      <option name="specificationPath" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.IllegalTriangleException" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ss_6_inheritance.ss_1_practice_java.ss_1_practice_java.post1.Post2.Main" />
+      <item itemvalue="Application.ss_6_inheritance.ss_1_practice_java.ss_2_exercise_java.Post1.Model.Main" />
+      <item itemvalue="Application.BinarySearch" />
+      <item itemvalue="Application.ss_15_Exceptions.Post1.IllegalTriangleException" />
+      <item itemvalue="Application.ss_16_IO_Text_File.Post2.Main" />
+      <item itemvalue="Application.MainA" />
+      <item itemvalue="Application.InsertSort" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ss_16_IO_Text_File.Post2.Main" />
+        <item itemvalue="Application.MainA" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.InsertSort" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49a9cac6-8cae-437a-9e73-23229f6306b1" name="Changes" comment="" />
+      <created>1659889445712</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659889445712</updated>
+      <workItem from="1659889447803" duration="306000" />
+      <workItem from="1659935574980" duration="254000" />
+      <workItem from="1659936367998" duration="297000" />
+      <workItem from="1659939676744" duration="8337000" />
+      <workItem from="1659949427017" duration="1542000" />
+      <workItem from="1659967348311" duration="79000" />
+      <workItem from="1659967639444" duration="364000" />
+      <workItem from="1659969206549" duration="518000" />
+      <workItem from="1659970066854" duration="164000" />
+      <workItem from="1659970252509" duration="3334000" />
+      <workItem from="1660007636637" duration="17733000" />
+      <workItem from="1660045555672" duration="3411000" />
+      <workItem from="1660052970847" duration="1014000" />
+      <workItem from="1660097835923" duration="2307000" />
+      <workItem from="1660112700396" duration="12032000" />
+      <workItem from="1660140502317" duration="4000" />
+      <workItem from="1660145350740" duration="2641000" />
+      <workItem from="1660173271202" duration="1242000" />
+      <workItem from="1660179480825" duration="625000" />
+      <workItem from="1660180245768" duration="376000" />
+      <workItem from="1660181659896" duration="2070000" />
+      <workItem from="1660183769534" duration="66000" />
+      <workItem from="1660184129594" duration="543000" />
+      <workItem from="1660185039145" duration="565000" />
+      <workItem from="1660185635171" duration="1746000" />
+      <workItem from="1660198656089" duration="11031000" />
+      <workItem from="1660224866472" duration="7785000" />
+      <workItem from="1660258990038" duration="2645000" />
+      <workItem from="1660266414340" duration="9093000" />
+      <workItem from="1660286587088" duration="4433000" />
+      <workItem from="1660298538786" duration="1152000" />
+      <workItem from="1660317713133" duration="9137000" />
+      <workItem from="1660327031952" duration="2265000" />
+      <workItem from="1660373974576" duration="1050000" />
+      <workItem from="1660393860639" duration="536000" />
+      <workItem from="1660396140569" duration="267000" />
+      <workItem from="1660406260432" duration="2398000" />
+      <workItem from="1660408809082" duration="645000" />
+      <workItem from="1660439775828" duration="462000" />
+      <workItem from="1660442727466" duration="12219000" />
+      <workItem from="1660486271807" duration="2171000" />
+      <workItem from="1660533451886" duration="20791000" />
+      <workItem from="1660571774843" duration="8302000" />
+      <workItem from="1660606426946" duration="1024000" />
+      <workItem from="1660620288221" duration="18396000" />
+      <workItem from="1660651566689" duration="328000" />
+      <workItem from="1660656745941" duration="6881000" />
+      <workItem from="1660692538215" duration="1528000" />
+      <workItem from="1660706613964" duration="5548000" />
+      <workItem from="1660717681547" duration="12460000" />
+      <workItem from="1660740818878" duration="2328000" />
+      <workItem from="1660743274806" duration="78000" />
+      <workItem from="1660749855979" duration="1988000" />
+      <workItem from="1660793910937" duration="15802000" />
+      <workItem from="1660823951941" duration="360000" />
+      <workItem from="1660826709535" duration="13000" />
+      <workItem from="1660826941429" duration="94000" />
+      <workItem from="1660836450152" duration="1054000" />
+      <workItem from="1660879741123" duration="6857000" />
+      <workItem from="1660921112522" duration="2425000" />
+      <workItem from="1660964877676" duration="252000" />
+      <workItem from="1660966741982" duration="139000" />
+      <workItem from="1660966913466" duration="302000" />
+      <workItem from="1660967373405" duration="1772000" />
+      <workItem from="1660969195124" duration="6631000" />
+      <workItem from="1660977350456" duration="3599000" />
+      <workItem from="1660982234937" duration="391000" />
+      <workItem from="1661139051177" duration="409000" />
+      <workItem from="1661139484326" duration="1003000" />
+      <workItem from="1661140553613" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
