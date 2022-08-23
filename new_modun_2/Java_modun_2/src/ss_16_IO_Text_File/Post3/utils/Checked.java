@@ -21,7 +21,7 @@ public  class Checked {
         }
         return i;
     }
-    public void CheckedOne(double i) {
+    public int CheckedOne(double i) {
         Scanner src = new Scanner(System.in);
         while (true) {
             try {
@@ -36,5 +36,6 @@ public  class Checked {
                 System.out.print("Bạn nhập không phải là số, nhập lại nghe: ");
             }
         }
+        return (int) i;
     }
 }

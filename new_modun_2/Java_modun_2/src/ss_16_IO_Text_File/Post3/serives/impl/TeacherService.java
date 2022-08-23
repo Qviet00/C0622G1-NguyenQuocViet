@@ -186,7 +186,7 @@ public  class TeacherService implements ITeacherService {
         while (true) {
             try {
                 System.out.print("Mời bạn nhập id: ");
-                checked.CheckedOne(id);
+                id=checked.CheckedOne(id);
                 boolean check = true;
                 for (Teacher teacher : teachers) {
                     if (teacher.getId() == id) {
@@ -225,7 +225,7 @@ public  class TeacherService implements ITeacherService {
             try {
                 System.out.print("Mời bạn nhập ngày sinh: ");
                 dateOfBirth = src.nextLine();
-                if (!"([0-9]{2})/([0-9]{2})/([0-9]{4})".matches(dateOfBirth)) {
+                if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
                     throw new UntilException("Không đúng định dạng");
                 }
                 if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {

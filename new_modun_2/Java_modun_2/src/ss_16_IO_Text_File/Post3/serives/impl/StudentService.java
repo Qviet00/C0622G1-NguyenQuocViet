@@ -171,7 +171,7 @@ public class StudentService implements IStudentService {
         while (true) {
             try {
                 System.out.print("Nhập id: ");
-                checked.CheckedOne(id);
+                id= checked.CheckedOne(id);
                 boolean check = true;
                 for (Student student : students) {
                     if (student.getId() == id) {

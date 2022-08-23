@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class StudentOption {
-    private static Scanner scanner = new Scanner(System.in);
     private IStudentService studentService = new StudentService();
 
     public void optionStudent() throws IOException {

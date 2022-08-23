@@ -14,7 +14,7 @@ public class Option {
         while (true) {
             System.out.println("1. Teacher.");
             System.out.println("2. Student.");
-            System.out.print("* Nhập lựa chọn theo số:  ");
+            System.out.print("* Nhập lựa chọn theo số: ");
             double choice = 0;
             Checked checked = new Checked();
             choice=checked.Checked(choice, 3);

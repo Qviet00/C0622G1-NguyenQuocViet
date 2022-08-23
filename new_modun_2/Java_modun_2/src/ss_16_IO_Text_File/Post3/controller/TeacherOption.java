@@ -5,10 +5,8 @@ import ss_16_IO_Text_File.Post3.serives.impl.TeacherService;
 import ss_16_IO_Text_File.Post3.utils.Checked;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class TeacherOption {
-    private static Scanner scanner = new Scanner(System.in);
     private ITeacherService teacherService = new TeacherService();
 
     public void optionTeacher() throws IOException {

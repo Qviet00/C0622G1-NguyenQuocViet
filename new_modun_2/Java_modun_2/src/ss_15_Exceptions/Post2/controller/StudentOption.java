@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class StudentOption {
-    private static Scanner scanner = new Scanner(System.in);
     private IStudentService studentService = new StudentService();
 
     public void optionStudent() throws IOException {
@@ -37,6 +36,7 @@ public class StudentOption {
                     break;
                 case 4:
                     studentService.searchStudent();
+                    break;
                 case 5:
                     studentService.sortStudent();
                     break;
