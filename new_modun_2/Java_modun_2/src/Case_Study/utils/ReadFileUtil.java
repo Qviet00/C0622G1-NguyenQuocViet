@@ -1,4 +1,4 @@
-package ss_16_IO_Text_File.Post3.utils;
+package Case_Study.utils;
 
 import ss_16_IO_Text_File.Post3.model.Student;
 

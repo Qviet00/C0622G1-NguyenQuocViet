@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 
 public class StudentService implements IStudentService {
+    public static final String SRC_SS_16_IO_TEXT_FILE_POST_3_DATA_STUDENT = "src/ss_16_IO_Text_File/Post3/data/student";
     private static Scanner src = new Scanner(System.in);
     private static List<Student> students = new ArrayList<>();
     Checked checked = new Checked();
@@ -29,7 +30,7 @@ public class StudentService implements IStudentService {
     }
 
     private void writeFile(List<Student> students) throws IOException {
-        File file = new File("src/ss_16_IO_Text_File/Post3/data/student");
+        File file = new File(SRC_SS_16_IO_TEXT_FILE_POST_3_DATA_STUDENT);
        FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         for (Student student : students) {
@@ -41,7 +42,7 @@ public class StudentService implements IStudentService {
     }
 
     private static List<Student> readFile() throws IOException {
-        File file = new File("src/ss_16_IO_Text_File/Post3/data/student");
+        File file = new File(SRC_SS_16_IO_TEXT_FILE_POST_3_DATA_STUDENT);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         List<Student> students = new ArrayList<>();
@@ -104,6 +105,16 @@ public class StudentService implements IStudentService {
         }
         return null;
     }
+    private Student findStudentName() {
+        System.out.println("Nhập tên: ");
+        String name = src.nextLine();
+        for (Student student : students) {
+            if (student.getName().contains(name)) {
+                return student;
+            }
+        }
+        return null;
+    }
 
     public void searchStudent() {
 
@@ -155,16 +166,7 @@ public class StudentService implements IStudentService {
         displayAllStudent();
     }
 
-    private Student findStudentName() {
-        System.out.println("Nhập tên: ");
-        String name = src.nextLine();
-        for (Student student : students) {
-            if (student.getName().contains(name)) {
-                return student;
-            }
-        }
-        return null;
-    }
+
 
     private Student infoStudent() {
         int id = 0;
