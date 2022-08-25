@@ -1,6 +1,8 @@
 package Case_Study.models;
 
-public class RentalContract extends Booking {
+public class RentalContract {
+    private String idBooking;
+    private String codeContract;
     private String numberContracts;
     private double depositInAdvance;
     private double paymentTotal;
@@ -8,14 +10,9 @@ public class RentalContract extends Booking {
     public RentalContract() {
     }
 
-    public RentalContract(String numberContracts, double depositInAdvance, double paymentTotal) {
-        this.numberContracts = numberContracts;
-        this.depositInAdvance = depositInAdvance;
-        this.paymentTotal = paymentTotal;
-    }
-
-    public RentalContract(String id, String codeBooking, String numberContracts, double depositInAdvance, double paymentTotal) {
-        super(id, codeBooking);
+    public RentalContract(String idBooking, String codeContract, String numberContracts, double depositInAdvance, double paymentTotal) {
+        this.idBooking = idBooking;
+        this.codeContract = codeContract;
         this.numberContracts = numberContracts;
         this.depositInAdvance = depositInAdvance;
         this.paymentTotal = paymentTotal;
@@ -27,6 +24,22 @@ public class RentalContract extends Booking {
 
     public void setNumberContracts(String numberContracts) {
         this.numberContracts = numberContracts;
+    }
+
+    public String getIdBooking() {
+        return idBooking;
+    }
+
+    public void setIdBooking(String idBooking) {
+        this.idBooking = idBooking;
+    }
+
+    public String getCodeContract() {
+        return codeContract;
+    }
+
+    public void setCodeContract(String codeContract) {
+        this.codeContract = codeContract;
     }
 
     public double getDepositInAdvance() {
@@ -47,7 +60,7 @@ public class RentalContract extends Booking {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s", this.getId(), this.getCodeBooking(), getNumberContracts(),
+        return String.format("%s,%s,%s,%s,%s", getNumberContracts(), getCodeContract(), getNumberContracts(),
                 getDepositInAdvance(), getPaymentTotal());
     }
 }

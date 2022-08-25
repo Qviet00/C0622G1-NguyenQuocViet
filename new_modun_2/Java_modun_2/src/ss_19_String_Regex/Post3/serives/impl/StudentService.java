@@ -1,9 +1,8 @@
-package ss_16_IO_Text_File.Post3.serives.impl;
+package ss_19_String_Regex.Post3.serives.impl;
 
 import ss_16_IO_Text_File.Post3.model.Student;
 import ss_16_IO_Text_File.Post3.serives.IStudentService;
 import ss_16_IO_Text_File.Post3.utils.Checked;
-import ss_16_IO_Text_File.Post3.utils.ReadFileUtil;
 import ss_16_IO_Text_File.Post3.utils.UntilException;
 
 import java.io.*;
@@ -25,15 +24,15 @@ public class StudentService implements IStudentService {
 
     @Override
     public void addStudent() throws IOException {
-        Student student= this.infoStudent();
-        students=readFile();
+        Student student = this.infoStudent();
+        students = readFile();
         students.add(student);
         writeFile(students);
     }
 
     private void writeFile(List<Student> students) throws IOException {
         File file = new File(path);
-       FileWriter fileWriter = new FileWriter(file);
+        FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         for (Student student : students) {
             bufferedWriter.write(student.toString());
@@ -65,12 +64,12 @@ public class StudentService implements IStudentService {
             System.out.println(line);
         }
         bufferedReader.close();
-        return  students;
+        return students;
     }
 
     @Override
     public void displayAllStudent() throws IOException {
-        students=readFile();
+        students = readFile();
         System.out.println("-Danh sách đây bạn:");
         for (Student student : students
         ) {
@@ -107,6 +106,7 @@ public class StudentService implements IStudentService {
         }
         return null;
     }
+
     private Student findStudentName() {
         System.out.println("Nhập tên: ");
         String name = src.nextLine();
@@ -169,13 +169,12 @@ public class StudentService implements IStudentService {
     }
 
 
-
     private Student infoStudent() {
         int id = 0;
         while (true) {
             try {
                 System.out.print("Nhập id: ");
-                id= checked.CheckedOne(id);
+                id = checked.CheckedOne(id);
                 boolean check = true;
                 for (Student student : students) {
                     if (student.getId() == id) {
@@ -195,18 +194,15 @@ public class StudentService implements IStudentService {
         String name;
         while (true) {
             try {
-                System.out.print("Nhập tên: ");
-                name = (src.nextLine());
-                String str;
-                for (int i = 0; i < name.length(); i++) {
-                    str = "";
-                    if ("\\d {5-50}".matches(str + name.charAt(i))) {
-                        throw new UntilException("Tên bạn nhập ko đúng");
-                    }
+                System.out.print("Nhập Tên: ");
+                name = src.nextLine();
+                if (!name.matches("^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯẠẢẤẦẨẪẬẮẰẲẴẶ" +
+                        "ẸẺẼỀỂưạảấầẩẫậắằẳẵặẹẻẽềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+                        "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$")) {
+                    throw new UntilException("Không đúng ,nhập lại: ");
                 }
-
                 break;
-            } catch (UntilException e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -218,7 +214,8 @@ public class StudentService implements IStudentService {
                 if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
                     throw new UntilException("Dữ liệu không đúng ,nhập lại");
                 }
-                if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {
+                int year=Integer.parseInt(dateOfBirth.substring(6));
+                if (year > 1990 || year < 2007) {
                     throw new UntilException("Dữ liệu không đúng ");
                 }
                 break;
@@ -226,12 +223,12 @@ public class StudentService implements IStudentService {
                 System.out.println(e.getMessage());
             }
         }
-        String sex;
+        String sexy;
         while (true) {
             try {
                 System.out.print("Mời bạn nhập giới tính: ");
-                sex = src.nextLine();
-                if (!sex.equals("nam") && (!sex.equals("nu"))) {
+                sexy = src.nextLine();
+                if (!sexy.equals("Nam") && !sexy.equals("Nu") && !sexy.equals("nam") && !sexy.equals("nu")) {
                     throw new UntilException("Sai rồi, nhập lại: ");
                 }
                 break;
@@ -243,7 +240,8 @@ public class StudentService implements IStudentService {
         while (true) {
             try {
                 System.out.print("Mời bạn nhập điểm: ");
-                point = Double.parseDouble(src.nextLine());
+                point =0;
+                point = checked.CheckedOne(point);
                 if (point < 0 || point > 100) {
                     throw new UntilException("Điểm bạn nhập không đúng");
                 }
@@ -267,7 +265,6 @@ public class StudentService implements IStudentService {
                 System.out.println(e.getMessage());
             }
         }
-        return new Student(id, name, dateOfBirth, sex, nameClass, point);
-
+        return new Student(id, name, dateOfBirth, sexy, nameClass, point);
     }
 }

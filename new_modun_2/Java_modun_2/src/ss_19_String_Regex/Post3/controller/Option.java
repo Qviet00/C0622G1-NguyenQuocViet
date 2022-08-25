@@ -1,12 +1,12 @@
-package ss_16_IO_Text_File.Post3.controller;
+package ss_19_String_Regex.Post3.controller;
 
 import ss_16_IO_Text_File.Post3.utils.Checked;
 
 import java.io.IOException;
 
 public class Option {
-    StudentOption studentController = new StudentOption();
-    TeacherOption teacherController = new TeacherOption();
+    StudentOption studentOption= new StudentOption();
+    TeacherOption teacherOption =new TeacherOption();
 
     public void option() throws IOException {
         while (true) {
@@ -17,10 +17,10 @@ public class Option {
             Checked checked = new Checked();
             choice=checked.Checked(choice, 3);
             if (choice == 1) {
-                teacherController.optionTeacher();
+                teacherOption.optionTeacher();
                 break;
             } else if (choice == 2) {
-                studentController.optionStudent();
+                studentOption.optionStudent();
                 break;
             }
         }

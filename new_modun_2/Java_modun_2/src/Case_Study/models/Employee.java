@@ -1,6 +1,7 @@
 package Case_Study.models;
 
 public class Employee extends ManagementSystem {
+    private String idEmployee;
     private String level;
     private String location;
     private String salary;
@@ -8,7 +9,16 @@ public class Employee extends ManagementSystem {
     public Employee() {
     }
 
-    public Employee(String level, String location, String salary) {
+    public String getIdEmployee() {
+        return idEmployee;
+    }
+
+    public void setIdEmployee(String idEmployee) {
+        this.idEmployee = idEmployee;
+    }
+
+    public Employee(String id, String level, String location, String salary) {
+        this.idEmployee = id;
         this.level = level;
         this.location = location;
         this.salary = salary;
@@ -16,7 +26,8 @@ public class Employee extends ManagementSystem {
 
     public Employee(String id, String name, String birthDay, String grand, double numberCard,
                     String numberPhone, String email, String level, String location, String salary) {
-        super(id, name, birthDay, grand, numberCard, numberPhone, email);
+        super(name, birthDay, grand, numberCard, numberPhone, email);
+        this.idEmployee =id;
         this.level = level;
         this.location = location;
         this.salary = salary;
@@ -48,7 +59,7 @@ public class Employee extends ManagementSystem {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s", this.getId(), this.getName(),
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s", getIdEmployee(), this.getName(),
                 this.getBirthDay(), this.getGrand(), this.getNumberCard(), this.getNumberPhone(), this.getEmail(), getLevel(),
                 getLocation(), getSalary());
     }

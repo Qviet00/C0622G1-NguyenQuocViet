@@ -1,9 +1,9 @@
-package ss_16_IO_Text_File.Post3.serives.impl;
+package ss_19_String_Regex.Post3.serives.impl;
 
 import ss_16_IO_Text_File.Post3.model.Teacher;
-import ss_16_IO_Text_File.Post3.serives.ITeacherService;
 import ss_16_IO_Text_File.Post3.utils.Checked;
 import ss_16_IO_Text_File.Post3.utils.UntilException;
+import ss_19_String_Regex.Post3.serives.ITeacherService;
 
 import java.io.*;
 import java.util.*;
@@ -13,31 +13,17 @@ public  class TeacherService implements ITeacherService {
     private static List<Teacher> teachers = new ArrayList<>();
     Checked checked = new Checked();
 
-    static {
-        teachers.add(new Teacher(1, "Hai TD", "1/1/1990", "nam", "tutor"));
-        teachers.add(new Teacher(2, "Cong TT", "2/02/1995", "nam", "tutor"));
-        teachers.add(new Teacher(3, "Chanh TT", "3/03/1985", "nam", "tutor"));
-    }
-
     @Override
     public void displayAllTeacher() throws IOException {
-        teachers=readFile();
-        System.out.println("-Danh sách đây bạn:");
-        for (Teacher student : teachers
-        ) {
-            System.out.println(student);
-        }
-
 
     }
 
     @Override
     public void addTeacher() throws IOException {
         List<Teacher> teachers = readFile();
-        Teacher teacher= this.infoTeacher();
+        Teacher teacher = this.infoTeacher();
         teachers.add(teacher);
         writeFile(teachers);
-
     }
 
     private void writeFile(List<Teacher> teachers) throws IOException {
@@ -69,21 +55,11 @@ public  class TeacherService implements ITeacherService {
             teacher.setDateOfBirth((info[2]));
             teacher.setSex((info[3]));
             teacher.setQualification(info[4]);
-           teachers.add(teacher);
+            teachers.add(teacher);
             System.out.println(line);
         }
         bufferedReader.close();
-        return  teachers;
-    }
-
-    @Override
-    public void displayAllStudent() throws IOException {
-        teachers=readFile();
-        System.out.println("-Danh sách đây bạn:");
-        for (Teacher teacher : teachers
-        ) {
-            System.out.println(teacher);
-        }
+        return teachers;
     }
 
     @Override
@@ -113,7 +89,7 @@ public  class TeacherService implements ITeacherService {
             System.out.println("3.Huỷ");
             System.out.println("Nhập lựa chọn");
             int choice = 0;
-            choice= (int) checked.Checked(choice,4);
+            choice = (int) checked.Checked(choice, 4);
             switch (choice) {
                 case 1:
                     Teacher teacher = this.findTeacherID();
@@ -182,11 +158,11 @@ public  class TeacherService implements ITeacherService {
     }
 
     private Teacher infoTeacher() {
-        int id=0;
+        int id = 0;
         while (true) {
             try {
                 System.out.print("Mời bạn nhập id: ");
-                id=checked.CheckedOne(id);
+                id = checked.CheckedOne(id);
                 boolean check = true;
                 for (Teacher teacher : teachers) {
                     if (teacher.getId() == id) {
@@ -205,31 +181,29 @@ public  class TeacherService implements ITeacherService {
         String name;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập tên: ");
-                name = (src.nextLine());
-                String str;
-                for (int i = 0; i < name.length(); i++) {
-                    str = "";
-                    if ("\\d+".matches(str + name.charAt(i))) {
-                        throw new UntilException("Tên bạn nhập ko hợp lệ");
-                    }
+                System.out.print("Nhập Tên: ");
+                name = src.nextLine();
+                if (!name.matches("^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯẠẢẤẦẨẪẬẮẰẲẴẶ" +
+                        "ẸẺẼỀỂưạảấầẩẫậắằẳẵặẹẻẽềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+                        "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$")) {
+                    throw new UntilException("Không đúng ,nhập lại: ");
                 }
-
                 break;
-            } catch (UntilException e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
         String dateOfBirth;
         while (true) {
             try {
-                System.out.print("Mời bạn nhập ngày sinh: ");
+                System.out.print("Nhập ngày sinh: ");
                 dateOfBirth = src.nextLine();
                 if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
-                    throw new UntilException("Không đúng định dạng");
+                    throw new UntilException("Dữ liệu không đúng ,nhập lại");
                 }
-                if (Integer.parseInt(dateOfBirth.substring(6)) > 2022) {
-                    throw new UntilException("Không đúng định dạng");
+                int year = Integer.parseInt(dateOfBirth.substring(6));
+                if (year > 1980 || year < 2000) {
+                    throw new UntilException("Dữ liệu không đúng ");
                 }
                 break;
             } catch (Exception e) {
@@ -241,7 +215,7 @@ public  class TeacherService implements ITeacherService {
             try {
                 System.out.print("Nhập giới tính: ");
                 sex = src.nextLine();
-                if (!sex.equals("nam") && (!sex.equals("nu"))) {
+                if (!sex.equals("nam") && !sex.equals("nu") && !sex.equals("Nam") && !sex.equals("Nu")) {
                     throw new UntilException("Nhập không hợp lệ");
                 }
                 break;

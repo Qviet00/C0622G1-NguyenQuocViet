@@ -1,28 +1,21 @@
 package Case_Study.models;
 
-public abstract class Booking extends Customer {
+public  class Booking{
     private String codeBooking;
     private String startDate;
     private String endDate;
+    private String codeId;
     private String serviceName;
     private String typeService;
 
     public Booking() {
     }
 
-    public Booking(String codeBooking, String startDate) {
+    public Booking(String codeBooking, String startDate, String endDate, String codeId,String serviceName, String typeService) {
         this.codeBooking = codeBooking;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.serviceName = serviceName;
-        this.typeService = typeService;
-    }
-
-    public Booking(String id, String codeBooking, String startDate, String endDate, String serviceName, String typeService) {
-        super(id);
-        this.codeBooking = codeBooking;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        this.codeId =codeId;
         this.serviceName = serviceName;
         this.typeService = typeService;
     }
@@ -51,6 +44,14 @@ public abstract class Booking extends Customer {
         this.endDate = endDate;
     }
 
+    public String getCodeId() {
+        return codeId;
+    }
+
+    public void setCodeId(String codeId) {
+        this.codeId = codeId;
+    }
+
     public String getServiceName() {
         return serviceName;
     }
@@ -69,7 +70,7 @@ public abstract class Booking extends Customer {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s", this.getId(), getCodeBooking(), getStartDate(),
-                getEndDate(), getServiceName(), getTypeService());
+        return String.format("%s,%s,%s,%s,%s,%s", getCodeBooking(), getStartDate(),
+                getEndDate(),getCodeId(), getServiceName(), getTypeService());
     }
 }

@@ -1,7 +1,6 @@
 package Case_Study.models;
 
 public abstract class ManagementSystem {
-    private String id;
     private String name;
     private String birthDay;
     private String grand;
@@ -12,9 +11,8 @@ public abstract class ManagementSystem {
     public ManagementSystem() {
     }
 
-    public ManagementSystem(String id, String name, String birthDay, String grand,
+    public ManagementSystem(String name, String birthDay, String grand,
                             double numberCard, String numberPhone, String email) {
-        this.id = id;
         this.name = name;
         this.birthDay = birthDay;
         this.grand = grand;
@@ -23,13 +21,6 @@ public abstract class ManagementSystem {
         this.email = email;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -81,7 +72,7 @@ public abstract class ManagementSystem {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s",getId(),getName(),getBirthDay(),getGrand(),
+        return String.format("%s,%s,%s,%s,%s,%s",getName(),getBirthDay(),getGrand(),
                 getNumberCard(),getNumberPhone(),getEmail());
     }
 }
