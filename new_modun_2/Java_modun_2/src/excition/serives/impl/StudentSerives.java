@@ -18,7 +18,7 @@ public class StudentSerives implements IsStudent {
 
     @Override
     public void disPlayStudent() {
-        students = this.readFileStudent();
+        students = readFileStudent();
         for (Student student : students
         ) {
             System.out.println(student);
@@ -30,8 +30,12 @@ public class StudentSerives implements IsStudent {
         Student student=this.infoStudent();
         List<Student> studentList=new ArrayList<>();
         studentList.add(student);
-        System.out.println("Thêm mới thành công.");
         WriteFile.writeFile(SRC_EXCITION_DATA_STUDENT_CSV,true,convertListStudentToListString(studentList));
+        for (Student st : students
+        ) {
+            System.out.println(st);
+        }
+        System.out.println("Thêm mới thành công.");
 
     }
 
@@ -62,13 +66,14 @@ public class StudentSerives implements IsStudent {
             System.out.println("Dữ liệu trong file không có.");
             return null;
         } else {
-            String[] propertiesOfStudent;
+            String[] readOfStudent;
             Student student;
             for (int i = 0; i < studentList.size(); i++) {
-                propertiesOfStudent = studentList.get(i).split(",");
-                if (propertiesOfStudent.length == 6) {
-                    student = new Student(Double.parseDouble(propertiesOfStudent[0]), propertiesOfStudent[1],
-                            propertiesOfStudent[2], propertiesOfStudent[3], propertiesOfStudent[4], Double.parseDouble(propertiesOfStudent[5]));
+                readOfStudent = studentList.get(i).split(",");
+                if (readOfStudent.length == 6) {
+                    student = new Student(Double.parseDouble(readOfStudent[0]), readOfStudent[1],
+                            readOfStudent[2], readOfStudent[3], readOfStudent[4],
+                            Double.parseDouble(readOfStudent[5]));
                     students.add(student);
                 }
             }
@@ -79,7 +84,6 @@ public class StudentSerives implements IsStudent {
     private String convertStudentToString(Student student) {
         return student.getId() + "," + student.getName() + "," + student.getBirthday() + "," + student.getPoint() + "," + student.getNameClass();
     }
-
     private List<String> convertListStudentToListString(List<Student> students) {
         List<String> strings = new ArrayList<>();
         for (Student student : students) {

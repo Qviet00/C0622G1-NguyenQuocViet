@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 
 public  class TeacherService implements ITeacherService {
+    public static final String path = "src/ss_16_IO_Text_File/Post3/data/teachear";
     private static Scanner src = new Scanner(System.in);
     private static List<Teacher> teachers = new ArrayList<>();
     Checked checked = new Checked();
@@ -27,7 +28,7 @@ public  class TeacherService implements ITeacherService {
     }
 
     private void writeFile(List<Teacher> teachers) throws IOException {
-        File file = new File("src/ss_16_IO_Text_File/Post3/data/teachear");
+        File file = new File(path);
         FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         for (Teacher teacher : teachers) {
@@ -39,7 +40,7 @@ public  class TeacherService implements ITeacherService {
     }
 
     private static List<Teacher> readFile() throws IOException {
-        File file = new File("src/ss_16_IO_Text_File/Post3/data/teachear");
+        File file = new File(path);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         List<Teacher> teachers = new ArrayList<>();
@@ -183,9 +184,7 @@ public  class TeacherService implements ITeacherService {
             try {
                 System.out.print("Nhập Tên: ");
                 name = src.nextLine();
-                if (!name.matches("^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯẠẢẤẦẨẪẬẮẰẲẴẶ" +
-                        "ẸẺẼỀỂưạảấầẩẫậắằẳẵặẹẻẽềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
-                        "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$")) {
+                if (!name.matches("\\p{Lu}\\p{Ll}+(\\s\\p{Lu}\\p{Ll}+)*")) {
                     throw new UntilException("Không đúng ,nhập lại: ");
                 }
                 break;

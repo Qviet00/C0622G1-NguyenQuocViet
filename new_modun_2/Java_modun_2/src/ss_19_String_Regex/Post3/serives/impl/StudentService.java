@@ -9,8 +9,8 @@ import java.io.*;
 import java.util.*;
 
 public class StudentService implements IStudentService {
-    public static final String SRC_SS_16_IO_TEXT_FILE_POST_3_DATA_STUDENT = "src/ss_16_IO_Text_File/Post3/data/student";
-    public static final String path = SRC_SS_16_IO_TEXT_FILE_POST_3_DATA_STUDENT;
+    public static final String SRC_SS_19_IO_TEXT_FILE_POST_3_DATA_STUDENT = "src/ss_19_IO_Text_File/Post3/data/student";
+    public static final String path = SRC_SS_19_IO_TEXT_FILE_POST_3_DATA_STUDENT;
     private static Scanner src = new Scanner(System.in);
     private static List<Student> students = new ArrayList<>();
     Checked checked = new Checked();
@@ -196,9 +196,7 @@ public class StudentService implements IStudentService {
             try {
                 System.out.print("Nhập Tên: ");
                 name = src.nextLine();
-                if (!name.matches("^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯẠẢẤẦẨẪẬẮẰẲẴẶ" +
-                        "ẸẺẼỀỂưạảấầẩẫậắằẳẵặẹẻẽềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
-                        "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$")) {
+                if (!name.matches("\\p{Lu}\\p{Ll}+(\\s\\p{Lu}\\p{Ll}+)*")) {
                     throw new UntilException("Không đúng ,nhập lại: ");
                 }
                 break;

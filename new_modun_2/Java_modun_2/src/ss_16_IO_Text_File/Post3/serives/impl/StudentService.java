@@ -4,6 +4,8 @@ import ss_16_IO_Text_File.Post3.model.Student;
 import ss_16_IO_Text_File.Post3.serives.IStudentService;
 import ss_16_IO_Text_File.Post3.utils.Checked;
 import ss_16_IO_Text_File.Post3.utils.UntilException;
+import ss_19_String_Regex.Post3.utils.ReadFileUtil;
+import ss_19_String_Regex.Post3.utils.WriteFileUtil;
 
 import java.io.*;
 import java.util.*;
@@ -18,9 +20,9 @@ public class StudentService implements IStudentService {
     @Override
     public void addStudent() throws IOException {
         Student student = this.infoStudent();
-        students = readFile();
+        students = ReadFileUtil.readStudentFile(path);
         students.add(student);
-        writeFile(students);
+        WriteFileUtil.writeStudentFile(path,students);
     }
 
     private void writeFile(List<Student> students) throws IOException {
@@ -206,7 +208,7 @@ public class StudentService implements IStudentService {
                 if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
                     throw new UntilException("Không đúng ,nhập lại: ");
                 }
-                if (Integer.parseInt(dateOfBirth.substring(6)) > 1990){
+                if (Integer.parseInt(dateOfBirth.substring(6)) > 2007){
                     throw new UntilException("Không đúng,Nhập lại:  ");
                 }
                 break;
