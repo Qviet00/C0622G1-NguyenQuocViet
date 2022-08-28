@@ -1,6 +1,6 @@
 package ss_17_IO_Binary_File_Serialization.Post1.controller;
 
-import excition.Until.Checked;
+import Case_Study.utils.Checked;
 import ss_17_IO_Binary_File_Serialization.Post1.services.IsProduct;
 import ss_17_IO_Binary_File_Serialization.Post1.services.impl.ProductServices;
 
@@ -19,7 +19,7 @@ public class Option {
             System.out.println("4. Exit.");
             System.out.print("Nhập lựa chọn: ");
             int value = 0;
-            value = (int) Checked.Checked(value,4);
+            value = (int) Checked.checked(value,4);
             switch (value) {
                 case 1: {
                     isProduct.disPlayProduct();

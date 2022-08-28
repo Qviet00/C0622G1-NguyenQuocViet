@@ -1,6 +1,6 @@
 package ss_17_IO_Binary_File_Serialization.Post1.services.impl;
 
-import excition.Until.Checked;
+import Case_Study.utils.Checked;
 import ss_17_IO_Binary_File_Serialization.Post1.model.Product;
 import ss_17_IO_Binary_File_Serialization.Post1.services.IsProduct;
 
@@ -69,7 +69,7 @@ public class ProductServices implements IsProduct {
         products = readDataFromFile(path);
         System.out.print("Mời bạn nhập vào id tìm: ");
         int id = 0;
-        id = Checked.CheckedOne(id);
+        id = Checked.checkedOne(id);
         for (Product product : products) {
             if (product.getId() == id) {
                 return product;
