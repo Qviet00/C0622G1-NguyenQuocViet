@@ -6,7 +6,7 @@ public class Employee extends ManagementSystem {
     private String location;
     private String salary;
 
-    public Employee(String s) {
+    public Employee(String s, String name, String dateOfBirth, String grand, String numberCard, String numberPhone, String email, String typeGuest, String address) {
     }
 
     public String getIdEmployee() {
