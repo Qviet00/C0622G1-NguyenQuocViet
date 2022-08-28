@@ -293,8 +293,8 @@ public class Employeeservices implements IsEmployeeService {
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            for (Employee em : employees) {
-                bufferedWriter.write(em.toString());
+            for (Employee emp : employees) {
+                bufferedWriter.write(emp.toString());
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();
@@ -315,8 +315,8 @@ public class Employeeservices implements IsEmployeeService {
         return null;
     }
 
-    public String getEditInfo(String edit) {
-        System.out.print("Nhập " + edit + " mới: ");
+    public String getEditInfo(String i) {
+        System.out.print("Nhập " + i + " mới: ");
         return src.nextLine();
     }
 
