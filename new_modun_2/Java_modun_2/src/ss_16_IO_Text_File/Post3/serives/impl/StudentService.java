@@ -190,9 +190,7 @@ public class StudentService implements IStudentService {
             try {
                 System.out.print("Nhập Tên: ");
                 name = src.nextLine();
-                if (!name.matches("^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
-                        "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
-                        "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$")) {
+                if (!name.matches("\\p{Lu}\\p{Ll}+(\\s\\p{Lu}\\p{Ll}+)*")) {
                     throw new UntilException("Không đúng ,nhập lại: ");
                 }
                 break;

@@ -1,4 +1,4 @@
-package Case_Study.models.Managerment;
+package Case_Study.models.Facility;
 
 import Case_Study.models.Facility.Facility;
 

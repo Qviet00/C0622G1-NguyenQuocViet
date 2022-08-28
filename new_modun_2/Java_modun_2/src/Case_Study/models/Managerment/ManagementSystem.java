@@ -4,7 +4,7 @@ public abstract class ManagementSystem {
     private String name;
     private String birthDay;
     private String grand;
-    private double numberCard;
+    private String numberCard;
     private String numberPhone;
     private String email;
 
@@ -12,7 +12,7 @@ public abstract class ManagementSystem {
     }
 
     public ManagementSystem(String name, String birthDay, String grand,
-                            double numberCard, String numberPhone, String email) {
+                            String numberCard, String numberPhone, String email) {
         this.name = name;
         this.birthDay = birthDay;
         this.grand = grand;
@@ -46,11 +46,11 @@ public abstract class ManagementSystem {
         this.grand = grand;
     }
 
-    public double getNumberCard() {
+    public String getNumberCard() {
         return numberCard;
     }
 
-    public void setNumberCard(double numberCard) {
+    public void setNumberCard(String numberCard) {
         this.numberCard = numberCard;
     }
 

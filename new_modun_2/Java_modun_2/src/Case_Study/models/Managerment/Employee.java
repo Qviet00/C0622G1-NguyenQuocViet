@@ -1,6 +1,4 @@
-package Case_Study.models.Facility;
-
-import Case_Study.models.Managerment.ManagementSystem;
+package Case_Study.models.Managerment;
 
 public class Employee extends ManagementSystem {
     private String idEmployee;
@@ -8,7 +6,7 @@ public class Employee extends ManagementSystem {
     private String location;
     private String salary;
 
-    public Employee() {
+    public Employee(String s) {
     }
 
     public String getIdEmployee() {
@@ -19,17 +17,17 @@ public class Employee extends ManagementSystem {
         this.idEmployee = idEmployee;
     }
 
-    public Employee(String id, String level, String location, String salary) {
-        this.idEmployee = id;
+    public Employee(String idEmployee, String level, String location, String salary) {
+        this.idEmployee = idEmployee;
         this.level = level;
         this.location = location;
         this.salary = salary;
     }
 
-    public Employee(String id, String name, String birthDay, String grand, double numberCard,
+    public Employee(String idEmployee, String name, String birthDay, String grand, String numberCard,
                     String numberPhone, String email, String level, String location, String salary) {
         super(name, birthDay, grand, numberCard, numberPhone, email);
-        this.idEmployee =id;
+        this.idEmployee =idEmployee;
         this.level = level;
         this.location = location;
         this.salary = salary;

@@ -1,6 +1,4 @@
-package Case_Study.models.Facility;
-
-import Case_Study.models.Managerment.ManagementSystem;
+package Case_Study.models.Managerment;
 
 public class Customer extends ManagementSystem {
     private String idCustomer;
@@ -10,16 +8,16 @@ public class Customer extends ManagementSystem {
     public Customer() {
     }
 
-    public Customer(String id, String typeGuest, String address) {
-        this.idCustomer = id ;
+    public Customer(String idCustomer, String typeGuest, String address) {
+        this.idCustomer = idCustomer ;
         this.typeGuest = typeGuest;
         this.address = address;
     }
 
-    public Customer(String id, String name, String birthDay, String grand, double numberCard,
+    public Customer(String idCustomer, String name, String birthDay, String grand, String numberCard,
                     String numberPhone, String email, String typeGuest, String address) {
         super(name, birthDay, grand, numberCard, numberPhone, email);
-        this.idCustomer =id;
+        this.idCustomer =idCustomer;
         this.typeGuest = typeGuest;
         this.address = address;
     }

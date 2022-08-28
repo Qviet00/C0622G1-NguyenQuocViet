@@ -8,7 +8,7 @@ public  class Booking{
     private String serviceName;
     private String typeService;
 
-    public Booking() {
+    public Booking(String idEmployee, String name, String dateOfBirth, String grand, String numberCard, String numberPhone, String email, String level, String location, String salary) {
     }
 
     public Booking(String codeBooking, String startDate, String endDate, String codeId,String serviceName, String typeService) {

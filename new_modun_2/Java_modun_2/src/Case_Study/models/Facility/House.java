@@ -1,25 +1,22 @@
-package Case_Study.models.Managerment;
+package Case_Study.models.Facility;
 
 import Case_Study.models.Facility.Facility;
 
-public class Villa extends Facility {
+public class House extends Facility {
     private String roomStandard;
-    private double poolArea;
     private int numberFloors;
 
-    public Villa() {
+    public House() {
     }
 
-    public Villa(String roomStandard, double poolArea, int numberFloors) {
+    public House(String roomStandard, int numberFloors) {
         this.roomStandard = roomStandard;
-        this.poolArea = poolArea;
         this.numberFloors = numberFloors;
     }
 
-    public Villa(String serviceName, double usableArea, double rentalCosts, int peopleMax, String rentalType, String roomStandard, double poolArea, int numberFloors) {
+    public House(String serviceName, double usableArea, double rentalCosts, int peopleMax, String rentalType, String roomStandard, int numberFloors) {
         super(serviceName, usableArea, rentalCosts, peopleMax, rentalType);
         this.roomStandard = roomStandard;
-        this.poolArea = poolArea;
         this.numberFloors = numberFloors;
     }
 
@@ -29,14 +26,6 @@ public class Villa extends Facility {
 
     public void setRoomStandard(String roomStandard) {
         this.roomStandard = roomStandard;
-    }
-
-    public double getPoolArea() {
-        return poolArea;
-    }
-
-    public void setPoolArea(double poolArea) {
-        this.poolArea = poolArea;
     }
 
     public int getNumberFloors() {
@@ -49,8 +38,8 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s,%s", this.getServiceName(),
+        return String.format("%s,%s,%s,%s,%s,%s,%s", this.getServiceName(),
                 this.getUsableArea(), this.getRentalCosts(), this.getPeopleMax(), this.getRentalType(),
-                getRoomStandard(), getPoolArea(), getNumberFloors());
+                getRoomStandard(), getNumberFloors());
     }
 }
