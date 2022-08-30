@@ -16,7 +16,7 @@ public class PromotionController {
             System.out.println("3. Return main menu.");
             System.out.print("Mời nhập lựa chọn(1-3): ");
             double value = 0;
-            value=Checked.checked(value,3);
+            value=Checked.checked(value,3,0);
             switch ((int) value){
                 case 1:
                     isPromotionService.displayListCustomersUseService();

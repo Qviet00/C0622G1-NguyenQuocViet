@@ -17,7 +17,7 @@ public class CustomerController {
             System.out.println("4. Return main menu.");
             System.out.print("Mời nhập lựa chọn(1-4): ");
             double value = 0;
-            value = Checked.checked(value, 4);
+            value = Checked.checked(value,4,0);
             switch ((int) value) {
                 case 1:
                     isCustomerService.displayListCustomers();

@@ -1,12 +1,12 @@
 package Case_Study.models.Facility;
 
-import Case_Study.models.Facility.Facility;
 
 public class House extends Facility {
     private String roomStandard;
     private int numberFloors;
 
-    public House() {
+    public House(String roomStandard) {
+        this.roomStandard = roomStandard;
     }
 
     public House(String roomStandard, int numberFloors) {
@@ -14,8 +14,8 @@ public class House extends Facility {
         this.numberFloors = numberFloors;
     }
 
-    public House(String serviceName, double usableArea, double rentalCosts, int peopleMax, String rentalType, String roomStandard, int numberFloors) {
-        super(serviceName, usableArea, rentalCosts, peopleMax, rentalType);
+    public House( String idService,String serviceName, double usableArea, double rentalCosts, int peopleMax, String rentalType, String roomStandard, int numberFloors) {
+        super(idService,serviceName,  usableArea, rentalCosts, peopleMax, rentalType);
         this.roomStandard = roomStandard;
         this.numberFloors = numberFloors;
     }
@@ -38,7 +38,7 @@ public class House extends Facility {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s", this.getServiceName(),
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s",this.getIdService(), this.getServiceName(),
                 this.getUsableArea(), this.getRentalCosts(), this.getPeopleMax(), this.getRentalType(),
                 getRoomStandard(), getNumberFloors());
     }

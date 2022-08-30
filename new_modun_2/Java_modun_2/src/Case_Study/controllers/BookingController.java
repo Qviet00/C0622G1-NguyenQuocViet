@@ -19,7 +19,7 @@ public class BookingController {
             System.out.println("6. Return main menu.");
             System.out.print("Mời nhập lựa chọn(1-6): ");
             double value = 0;
-            value = Checked.checked(value, 6);
+            value = Checked.checked(value,6,0);
             switch ((int) value) {
                 case 1:
                     isBookingService.addNewBooking();

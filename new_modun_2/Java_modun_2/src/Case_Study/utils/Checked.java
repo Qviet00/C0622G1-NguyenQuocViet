@@ -2,15 +2,15 @@ package Case_Study.utils;
 
 import java.util.Scanner;
 
-public  class Checked {
+public class Checked {
 
-    public static double checked(double i, int n) {
+    public static double checked(double i,int n, int m) {
         Scanner src = new Scanner(System.in);
         while (true) {
             try {
                 i = Double.parseDouble(src.nextLine());
-                if (i < 0 || i > n) {
-                    throw new UntilException("Số nhập phải lớn hơn 0 và nhỏ hơn "+n+", nhập lại nge: ");
+                if (i <= m || i > n) {
+                    throw new UntilException("Số nhập phải lớn hơn 0 và nhỏ hơn " + n + ", nhập lại nge: ");
                 }
                 break;
             } catch (UntilException e) {
@@ -21,12 +21,13 @@ public  class Checked {
         }
         return i;
     }
-    public static int checkedOne(double i) {
+
+    public static int checkedOne(double i,int n) {
         Scanner src = new Scanner(System.in);
         while (true) {
             try {
                 i = Double.parseDouble(src.nextLine());
-                if (i < 0) {
+                if (i <n) {
                     throw new UntilException("Số nhập phải lớn hơn 0 , nhập lại nge: ");
                 }
                 break;

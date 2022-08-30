@@ -17,7 +17,7 @@ public class EmployeeController {
             System.out.println("4. Return main menu.");
             System.out.print(" Mời Nhập lựa chọn(1-4): ");
             double value = 0;
-            value = Checked.checked(value, 4);
+            value = Checked.checked(value,4,0);
             switch ((int) value) {
                 case 1:
                     isEmployeeManagement.displayListEmployees();

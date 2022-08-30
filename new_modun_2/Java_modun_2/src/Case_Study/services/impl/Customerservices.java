@@ -2,6 +2,7 @@ package Case_Study.services.impl;
 
 import Case_Study.models.Managerment.Customer;
 import Case_Study.services.IsCustomerService;
+import Case_Study.utils.CheckDay;
 import Case_Study.utils.Checked;
 import Case_Study.utils.ReadFileUtil;
 import ss_16_IO_Text_File.Post3.utils.UntilException;
@@ -30,7 +31,7 @@ public class Customerservices implements IsCustomerService {
 
     @Override
     public void addNewCustomer() {
-       customers = readFileCustomer();
+        customers = readFileCustomer();
         Customer customer = this.infoCustomer();
         customers.add(customer);
         System.out.println("Thêm khách hàng thành công");
@@ -63,7 +64,7 @@ public class Customerservices implements IsCustomerService {
             System.out.println("9. Địa chỉ");
             System.out.println("10. Thoát");
             System.out.print("Chọn nội dung cần chỉnh sửa 1 -> 10: ");
-            choose = Checked.checked(choose, 11);
+            choose = Checked.checked(choose, 11, 0);
             switch ((int) choose) {
                 case 1:
                     customer.setIdCustomer(getEditInfo("Mã khách hàng"));
@@ -87,7 +88,7 @@ public class Customerservices implements IsCustomerService {
                     customer.setEmail(getEditInfo("Email"));
                     break;
                 case 8:
-                   customer.setTypeGuest(getEditInfo("Loại khách"));
+                    customer.setTypeGuest(getEditInfo("Loại khách"));
                     break;
                 case 9:
                     customer.setAddress(getEditInfo("Đại chỉ"));
@@ -99,7 +100,7 @@ public class Customerservices implements IsCustomerService {
             writeFile(customers);
             System.out.println("Bạn có muốn tiếp tục chỉnh sửa?");
             System.out.print("Vui lòng chọn 1 (Có) - 2 (Không): ");
-            choose = Checked.checked(choose, 3);
+            choose = Checked.checked(choose, 3, 0);
             if (choose != 1) {
                 return;
             }
@@ -132,7 +133,7 @@ public class Customerservices implements IsCustomerService {
             try {
                 System.out.print("Nhập Tên: ");
                 name = src.nextLine();
-                if (!name.matches("\\p{Lu}\\p{Ll}+(\\s\\p{Lu}\\p{Ll}+)*")) {
+                if (!name.matches("[\\p{Lu}\\p{Ll}+(\\s\\p{Lu}\\p{Ll})*]{5,50}")) {
                     throw new UntilException("Tên không đúng ,nhập lại: ");
                 }
                 break;
@@ -140,23 +141,8 @@ public class Customerservices implements IsCustomerService {
                 System.out.println(e.getMessage());
             }
         }
-        String dateOfBirth;
-        while (true) {
-            try {
-                System.out.print("Nhập ngày sinh: ");
-                dateOfBirth = src.nextLine();
-                if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
-                    throw new UntilException("Không đúng ,nhập lại: ");
-                }
-                if (Integer.parseInt(dateOfBirth.substring(6)) > 2007
-                        || Integer.parseInt(dateOfBirth.substring(6)) < 1990) {
-                    throw new UntilException("Không đúng,Nhập lại:  ");
-                }
-                break;
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        String dateOfBirth = null;
+        dateOfBirth = CheckDay.checkDay(dateOfBirth);
         String grand;
         while (true) {
             try {
@@ -216,7 +202,7 @@ public class Customerservices implements IsCustomerService {
             }
         }
         String typeGuest;
-        while (true) {
+        while (true)
             try {
                 System.out.print("Mời bạn nhập loại khách: ");
                 typeGuest = String.format(src.nextLine());
@@ -230,7 +216,6 @@ public class Customerservices implements IsCustomerService {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-        }
         String address;
         while (true) {
             try {
@@ -270,6 +255,7 @@ public class Customerservices implements IsCustomerService {
         }
         return customers;
     }
+
     private static void writeFile(List<Customer> customers) {
         try {
             File file = new File(PATH);
@@ -286,6 +272,7 @@ public class Customerservices implements IsCustomerService {
         }
 
     }
+
     private Customer findCustomer() {
         System.out.print("Mời bạn nhập mã khách hàng: ");
         String id = src.nextLine();
@@ -296,6 +283,7 @@ public class Customerservices implements IsCustomerService {
         }
         return null;
     }
+
     public String getEditInfo(String i) {
         System.out.print("Nhập " + i + " mới: ");
         return src.nextLine();

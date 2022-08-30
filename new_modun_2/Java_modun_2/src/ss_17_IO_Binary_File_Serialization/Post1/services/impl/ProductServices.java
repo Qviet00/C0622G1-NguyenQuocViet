@@ -69,7 +69,7 @@ public class ProductServices implements IsProduct {
         products = readDataFromFile(path);
         System.out.print("Mời bạn nhập vào id tìm: ");
         int id = 0;
-        id = Checked.checkedOne(id);
+        id = Checked.checkedOne(id,0);
         for (Product product : products) {
             if (product.getId() == id) {
                 return product;

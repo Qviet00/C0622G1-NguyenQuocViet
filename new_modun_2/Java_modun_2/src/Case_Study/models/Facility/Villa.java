@@ -1,6 +1,5 @@
 package Case_Study.models.Facility;
 
-import Case_Study.models.Facility.Facility;
 
 public class Villa extends Facility {
     private String roomStandard;
@@ -9,15 +8,9 @@ public class Villa extends Facility {
 
     public Villa() {
     }
-
-    public Villa(String roomStandard, double poolArea, int numberFloors) {
-        this.roomStandard = roomStandard;
-        this.poolArea = poolArea;
-        this.numberFloors = numberFloors;
-    }
-
-    public Villa(String serviceName, double usableArea, double rentalCosts, int peopleMax, String rentalType, String roomStandard, double poolArea, int numberFloors) {
-        super(serviceName, usableArea, rentalCosts, peopleMax, rentalType);
+    public Villa(String idService,String serviceName, double usableArea, double rentalCosts, int peopleMax, String rentalType,
+                 String roomStandard, double poolArea, int numberFloors) {
+        super(idService,serviceName, usableArea, rentalCosts, peopleMax, rentalType);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numberFloors = numberFloors;
@@ -49,7 +42,7 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s,%s", this.getServiceName(),
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s",this.getIdService(), this.getServiceName(),
                 this.getUsableArea(), this.getRentalCosts(), this.getPeopleMax(), this.getRentalType(),
                 getRoomStandard(), getPoolArea(), getNumberFloors());
     }

@@ -2,6 +2,7 @@ package Case_Study.services.impl;
 
 import Case_Study.models.Managerment.Employee;
 import Case_Study.services.IsEmployeeService;
+import Case_Study.utils.CheckDay;
 import Case_Study.utils.Checked;
 import Case_Study.utils.ReadFileUtil;
 import ss_16_IO_Text_File.Post3.utils.UntilException;
@@ -61,7 +62,7 @@ public class Employeeservices implements IsEmployeeService {
             System.out.println("10. Mức lương");
             System.out.println("11. Thoát");
             System.out.print("Chọn nội dung cần chỉnh sửa 1 -> 11: ");
-            choose = Checked.checked(choose, 12);
+            choose = Checked.checked(choose, 12, 0);
             switch ((int) choose) {
                 case 1:
                     employee.setIdEmployee(getEditInfo("Mã nhân viên"));
@@ -100,7 +101,7 @@ public class Employeeservices implements IsEmployeeService {
             writeFile(employees);
             System.out.println("Bạn có muốn tiếp tục chỉnh sửa?");
             System.out.print("Vui lòng chọn 1 (Có) - 2 (Không): ");
-            choose = Checked.checked(choose, 3);
+            choose = Checked.checked(choose, 3, 0);
             if (choose != 1) {
                 return;
             }
@@ -140,23 +141,8 @@ public class Employeeservices implements IsEmployeeService {
                 System.out.println(e.getMessage());
             }
         }
-        String dateOfBirth;
-        while (true) {
-            try {
-                System.out.print("Nhập ngày sinh: ");
-                dateOfBirth = src.nextLine();
-                if (!dateOfBirth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
-                    throw new UntilException("Không đúng ,nhập lại: ");
-                }
-                if (Integer.parseInt(dateOfBirth.substring(6)) > 2007
-                        || Integer.parseInt(dateOfBirth.substring(6)) < 1990) {
-                    throw new UntilException("Không đúng,Nhập lại:  ");
-                }
-                break;
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        String dateOfBirth = null;
+        dateOfBirth = CheckDay.checkDay(dateOfBirth);
         String grand;
         while (true) {
             try {
@@ -320,4 +306,14 @@ public class Employeeservices implements IsEmployeeService {
         return src.nextLine();
     }
 
+    public void sortEmployee() {
+        Comparator<Employee> compareByName = new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return o1.getIdEmployee().compareTo(o2.getIdEmployee());
+            }
+        };
+    }
 }
+
+

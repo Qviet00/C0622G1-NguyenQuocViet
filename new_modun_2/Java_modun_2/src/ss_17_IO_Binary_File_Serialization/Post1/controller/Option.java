@@ -19,7 +19,7 @@ public class Option {
             System.out.println("4. Exit.");
             System.out.print("Nhập lựa chọn: ");
             int value = 0;
-            value = (int) Checked.checked(value,4);
+            value = (int) Checked.checked(value,4,0);
             switch (value) {
                 case 1: {
                     isProduct.disPlayProduct();

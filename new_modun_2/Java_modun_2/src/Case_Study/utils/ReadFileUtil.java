@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadFileUtil {
-    public static List<String> readFile(String path)  {
+    public static List<String> readFile(String path) {
         File file = new File(path);
-        FileReader fileReader = null;
+        FileReader fileReader;
         try {
             fileReader = new FileReader(file);
         } catch (FileNotFoundException e) {
@@ -19,7 +19,7 @@ public class ReadFileUtil {
         List<String> strings = new ArrayList<>();
         while (true) {
             try {
-                if (!((line = bufferedReader.readLine()) != null)) break;
+                if ((line = bufferedReader.readLine()) == null) break;
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

@@ -1,5 +1,7 @@
 package Case_Study.models.Managerment;
 
+import java.util.Comparator;
+
 public abstract class ManagementSystem {
     private String name;
     private String birthDay;
