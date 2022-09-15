@@ -58,6 +58,13 @@ public class Employee extends ManagementSystem {
     }
 
     @Override
+    public String infoString() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s", getIdEmployee(), this.getName(),
+                this.getBirthDay(), this.getGrand(), this.getNumberCard(), this.getNumberPhone(), this.getEmail(), getLevel(),
+                getLocation(), getSalary());
+    }
+
+    @Override
     public String toString() {
         return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s", getIdEmployee(), this.getName(),
                 this.getBirthDay(), this.getGrand(), this.getNumberCard(), this.getNumberPhone(), this.getEmail(), getLevel(),

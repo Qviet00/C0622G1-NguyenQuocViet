@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CheckDay {
     public static  String checkDay(String day){
         Scanner scanner =new Scanner(System.in);
-        System.out.println("Nhập ngày sinh theo dd/MM/yyyy: ");
+        System.out.print("Nhập ngày sinh theo dd/MM/yyyy: ");
         day= scanner.nextLine();
         LocalDate dateNow = LocalDate.now();
         boolean check;

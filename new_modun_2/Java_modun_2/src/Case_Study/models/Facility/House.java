@@ -36,6 +36,14 @@ public class House extends Facility {
         this.numberFloors = numberFloors;
     }
 
+
+    @Override
+    public String infoString() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s",this.getIdService(), this.getServiceName(),
+                this.getUsableArea(), this.getRentalCosts(), this.getPeopleMax(), this.getRentalType(),
+                getRoomStandard(), getNumberFloors());
+    }
+
     @Override
     public String toString() {
         return String.format("%s,%s,%s,%s,%s,%s,%s,%s",this.getIdService(), this.getServiceName(),

@@ -6,7 +6,6 @@ import Case_Study.models.Facility.Room;
 import Case_Study.models.Facility.Villa;
 import Case_Study.services.IsFacilityService;
 import Case_Study.utils.Checked;
-import Case_Study.utils.ReadFacility;
 import Case_Study.utils.WriteFacility;
 import ss_16_IO_Text_File.Post3.utils.UntilException;
 
@@ -38,38 +37,13 @@ public class Facilitiservices implements IsFacilityService {
             choice = Checked.checked(choice, 4, 0);
             switch ((int) choice) {
                 case 1:
-                    System.out.println("->Villa<-");
-                    Map<Facility, Integer> villas = readVilla(PATHVILLA);
-
-                    if (villas.isEmpty()) {
-                        System.out.println("Phòng Villa trống.");
-                    } else {
-                        for (Facility villa : villas.keySet()) {
-                            System.out.println(villa + " Đang sử dụng: " + villas.get(villa));
-                        }
-                    }
+                    displayVilla();
                     break;
                 case 2:
-                    System.out.println("->House<-");
-                    Map<Facility, Integer> houses = readHouse(PATHHOUSE);
-                    if (houses.isEmpty()) {
-                        System.out.println("Phòng House trống");
-                    } else {
-                        for (Facility house : houses.keySet()) {
-                            System.out.println(house + " Đang sử dụng: " + houses.get(house));
-                        }
-                    }
+                    displayHouse();
                     break;
                 case 3:
-                    System.out.println("->Room<-");
-                    Map<Facility, Integer> rooms = readRoom(PATHROOM);
-                    if (rooms.isEmpty()) {
-                        System.out.println("Phòng Room trống");
-                    } else {
-                        for (Facility room : rooms.keySet()) {
-                            System.out.println(room + " Đang sử dụng: " + rooms.get(room));
-                        }
-                    }
+                    displayRoom();
                     break;
                 case 4:
                     return;
@@ -123,54 +97,101 @@ public class Facilitiservices implements IsFacilityService {
             choice = Checked.checked(choice, 4, 0);
             switch ((int) choice) {
                 case 1:
-                    System.out.println("->Villa<-");
-                    Map<Facility, Integer> villas = ReadFacility.readFacilityFile(PATHVILLA);
-                    if (villas.isEmpty()) {
-                        System.out.println("Không có bảo trì");
-                    } else {
-                        for (Facility villa : villas.keySet()) {
-                            if (villas.get(villa) > 5) {
-                                System.out.println(villa + " được bảo trì: " + villas.get(villa));
-                            } else {
-                                System.out.println("Không có bảo trì");
-                            }
-                        }
-                    }
+                    displayVillaMaintenance();
                     break;
                 case 2:
-                    System.out.println("->House<-");
-                    Map<Facility, Integer> houses = ReadFacility.readFacilityFile(PATHHOUSE);
-                    if (houses.isEmpty()) {
-                        System.out.println("Không có bảo trì");
-                    } else {
-                        for (Facility house : houses.keySet()) {
-                            if (houses.get(house) > 5) {
-                                System.out.println(house + " được bảo trì: " + houses.get(house));
-                            } else {
-                                System.out.println("Không có bảo trì");
-                            }
-                        }
-                    }
+                    displayHouseMaintenance();
                     break;
                 case 3:
-                    System.out.println("->Room<-");
-                    Map<Facility, Integer> rooms = ReadFacility.readFacilityFile(PATHROOM);
-                    if (rooms.isEmpty()) {
-                        System.out.println("Không có phòng nào đang được bảo trì");
-                    } else {
-                        for (Facility room : rooms.keySet()) {
-                            if (rooms.get(room) >= 5) {
-                                System.out.println(room + " được bảo trì: " + rooms.get(room));
-                            } else {
-                                System.out.println("Không có bảo trì");
-                            }
-                        }
-                    }
+                    displayRoomMaintenance();
                     break;
                 case 4:
                     return;
             }
         }
+    }
+
+    private void displayVilla() {
+        System.out.println("->Villa<-");
+        Map<Facility, Integer> villas = readVilla(PATHVILLA);
+
+        if (villas.isEmpty()) {
+            System.out.println("Phòng Villa trống.");
+        } else {
+            for (Facility villa : villas.keySet()) {
+                System.out.println(villa + " Đang sử dụng: " + villas.get(villa));
+            }
+        }
+
+    }
+
+    private void displayHouse() {
+        System.out.println("->House<-");
+        Map<Facility, Integer> houses = readHouse(PATHHOUSE);
+        if (houses.isEmpty()) {
+            System.out.println("Phòng House trống");
+        } else {
+            for (Facility house : houses.keySet()) {
+                System.out.println(house + " Đang sử dụng: " + houses.get(house));
+            }
+        }
+
+    }
+
+    private void displayRoom() {
+        System.out.println("->Room<-");
+        Map<Facility, Integer> rooms = readRoom(PATHROOM);
+        if (rooms.isEmpty()) {
+            System.out.println("Phòng Room trống");
+        } else {
+            for (Facility room : rooms.keySet()) {
+                System.out.println(room + " Đang sử dụng: " + rooms.get(room));
+            }
+        }
+    }
+
+    private void displayVillaMaintenance() {
+        System.out.println("->Villa<-");
+        Map<Facility, Integer> villas = readVilla(PATHVILLA);
+        if (villas.isEmpty()) {
+            System.out.println("Không có bảo trì");
+        } else {
+            for (Facility villa : villas.keySet()) {
+                if (villas.get(villa) == 5) {
+                    System.out.println(villa + "=> Đang được bảo trì");
+                }
+            }
+        }
+    }
+
+    private void displayHouseMaintenance() {
+        System.out.println("->House<-");
+        Map<Facility, Integer> houses = readHouse(PATHHOUSE);
+        if (houses.isEmpty()) {
+            System.out.println("Không có bảo trì");
+        } else {
+            for (Facility house : houses.keySet()) {
+                if (houses.get(house) == 5) {
+                    System.out.println(house + "=> Đang được bảo trì");
+                }
+            }
+        }
+
+    }
+
+    private void displayRoomMaintenance() {
+        System.out.println("->Room<-");
+        Map<Facility, Integer> rooms = readRoom(PATHROOM);
+        if (rooms.isEmpty()) {
+            System.out.println("Không có bảo trì");
+        } else {
+            for (Facility room : rooms.keySet()) {
+                if (rooms.get(room)== 5) {
+                    System.out.println(room + "=> Đang được bảo trì");
+                }
+            }
+        }
+
     }
 
 
@@ -256,13 +277,6 @@ public class Facilitiservices implements IsFacilityService {
         }
 
         return new Room(idSeriver, serviceName, usableArea, rentalCosts, (int) peopleMax, rentalType, serviceFree);
-    }
-
-    private void addRoom() {
-        Map<Facility, Integer> facilityRoom = new LinkedHashMap<>();
-        Room room = this.infoRoom();
-        facilityRoom.put(room, 1);
-        WriteFacility.writeFacility(PATHROOM, facilityRoom, true);
     }
 
     private House infoHouse() {
@@ -352,13 +366,6 @@ public class Facilitiservices implements IsFacilityService {
 
         return new House(idSeriver, serviceName, usableArea, rentalCosts, (int) peopleMax, rentalType,
                 roomStandard, numberFloors);
-    }
-
-    private void addHouse() {
-        Map<Facility, Integer> houses = new LinkedHashMap<>();
-        House house = this.infoHouse();
-        houses.put(house, 1);
-        WriteFacility.writeFacility(PATHHOUSE, houses, true);
     }
 
     private Villa infoVilla() {
@@ -451,6 +458,20 @@ public class Facilitiservices implements IsFacilityService {
 
         return new Villa(idSeriver, serviceName, usablePoolArea, rentalCosts, (int) peopleMax, rentalType,
                 roomStandard, usableArea, numberFloors);
+    }
+
+    private void addRoom() {
+        Map<Facility, Integer> facilityRoom = new LinkedHashMap<>();
+        Room room = this.infoRoom();
+        facilityRoom.put(room, 1);
+        WriteFacility.writeFacility(PATHROOM, facilityRoom, true);
+    }
+
+    private void addHouse() {
+        Map<Facility, Integer> houses = new LinkedHashMap<>();
+        House house = this.infoHouse();
+        houses.put(house, 1);
+        WriteFacility.writeFacility(PATHHOUSE, houses, true);
     }
 
     private void addVilla() {

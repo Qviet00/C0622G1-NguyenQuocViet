@@ -6,4 +6,9 @@ public interface IsCustomerService {
     void addNewCustomer();
 
     void editCustomer();
+
+    void delete();
+
+    void search();
+    void sorts();
 }

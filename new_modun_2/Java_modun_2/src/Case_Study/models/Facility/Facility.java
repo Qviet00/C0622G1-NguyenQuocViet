@@ -69,9 +69,17 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
+    public abstract String infoString();
+
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s", getIdService(), getServiceName(), getUsableArea(),
-                getRentalCosts(), getPeopleMax(), getRentalType());
+        return "Facility{" +
+                "idService='" + idService + '\'' +
+                ", serviceName='" + serviceName + '\'' +
+                ", usableArea=" + usableArea +
+                ", rentalCosts=" + rentalCosts +
+                ", peopleMax=" + peopleMax +
+                ", rentalType='" + rentalType + '\'' +
+                '}';
     }
 }

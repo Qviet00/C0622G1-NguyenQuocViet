@@ -8,10 +8,8 @@ public  class Booking{
     private String serviceName;
     private String typeService;
 
-    public Booking(String idEmployee, String name, String dateOfBirth, String grand, String numberCard, String numberPhone, String email, String level, String location, String salary) {
-    }
-
-    public Booking(String codeBooking, String startDate, String endDate, String codeId,String serviceName, String typeService) {
+    public Booking(String codeBooking, String startDate, String endDate, String codeId, String serviceName,
+                   String typeService) {
         this.codeBooking = codeBooking;
         this.startDate = startDate;
         this.endDate = endDate;

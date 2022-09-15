@@ -1,6 +1,5 @@
 package Case_Study.models.Managerment;
 
-import java.util.Comparator;
 
 public abstract class ManagementSystem {
     private String name;
@@ -71,6 +70,7 @@ public abstract class ManagementSystem {
     public void setEmail(String email) {
         this.email = email;
     }
+    public abstract String infoString();
 
     @Override
     public String toString() {

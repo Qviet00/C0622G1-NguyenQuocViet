@@ -9,8 +9,7 @@ import java.io.*;
 import java.util.*;
 
 public class StudentService implements IStudentService {
-    public static final String SRC_SS_19_IO_TEXT_FILE_POST_3_DATA_STUDENT = "src/ss_19_IO_Text_File/Post3/data/student";
-    public static final String path = SRC_SS_19_IO_TEXT_FILE_POST_3_DATA_STUDENT;
+    public static final String PATH = "src/ss_19_String_Regex/Post3/data/student";
     private static Scanner src = new Scanner(System.in);
     private static List<Student> students = new ArrayList<>();
     Checked checked = new Checked();
@@ -31,7 +30,7 @@ public class StudentService implements IStudentService {
     }
 
     private void writeFile(List<Student> students) throws IOException {
-        File file = new File(path);
+        File file = new File(PATH);
         FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         for (Student student : students) {
@@ -43,7 +42,7 @@ public class StudentService implements IStudentService {
     }
 
     private static List<Student> readFile() throws IOException {
-        File file = new File(path);
+        File file = new File(PATH);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         List<Student> students = new ArrayList<>();
@@ -70,6 +69,7 @@ public class StudentService implements IStudentService {
     @Override
     public void displayAllStudent() throws IOException {
         students = readFile();
+        sortStudent();
         System.out.println("-Danh sách đây bạn:");
         for (Student student : students
         ) {
@@ -170,7 +170,7 @@ public class StudentService implements IStudentService {
 
 
     private Student infoStudent() {
-        int id = 0;
+       int id = 0;
         while (true) {
             try {
                 System.out.print("Nhập id: ");

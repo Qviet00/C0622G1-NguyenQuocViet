@@ -6,4 +6,8 @@ public interface IsEmployeeService {
     void addNewEmployee();
 
     void editEmployee();
+    void  delete();
+
+    void search();
+    void sorts();
 }

@@ -30,7 +30,7 @@ public class ReadFileUtil {
         String[] info;
         for (String line : strings) {
             info = line.split(",");
-            students.add(new Student(Integer.parseInt(info[0]), info[1], Double.parseDouble(info[2])));
+            students.add(new Student(Integer.parseInt(info[0]), info[1],info[2],info[3],info[4],Double.parseDouble(info[5])));
         }
 
         return students;

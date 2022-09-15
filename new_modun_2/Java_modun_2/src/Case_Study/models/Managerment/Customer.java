@@ -8,6 +8,13 @@ public class Customer extends ManagementSystem {
     public Customer() {
     }
 
+    @Override
+    public String infoString() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s", getIdCustomer(), this.getName(),
+                this.getBirthDay(), this.getGrand(), this.getNumberCard(), this.getNumberPhone(),
+                this.getEmail(), getTypeGuest(), getAddress());
+    }
+
     public Customer(String idCustomer, String typeGuest, String address) {
         this.idCustomer = idCustomer ;
         this.typeGuest = typeGuest;

@@ -18,7 +18,6 @@ public class WriteFileUtil {
             throw new RuntimeException(e);
         }
     }
-
     public static void writeEmployee(String path,boolean t, List<String> convertListEmployeeToListString) {
         StringBuilder data = new StringBuilder();
         for (String em : convertListEmployeeToListString) {
