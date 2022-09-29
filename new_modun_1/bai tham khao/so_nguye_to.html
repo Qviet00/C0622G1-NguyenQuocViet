@@ -6,10 +6,25 @@
 </head>
 <body>
 <script>
+
+    let arr = [[1, 2, 3], [3, 4, 5], [6, 7, 8]]
+    let arrOne = new Array(1)
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (isprime(arr[i][j])) {
+                for (let k = 0; k < arrOne.length; k++) {
+                    if (arr[i][j] !== arrOne[k]) {
+                        arrOne.push(arr[i][j])
+                        continue;
+                    }
+                }
+            }
+        }
+    }
+    document.write(arrOne)
+
     function isprime(n) {
-
         let giaTri = 1;
-
         if (n < 2) {
             return giaTri = 0
         }

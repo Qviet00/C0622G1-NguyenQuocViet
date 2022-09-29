@@ -23,25 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dff2cc-912f-48a3-b6e0-cb3fcdfe5ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/ss_11_DSA_Stack_Queue/ss_1_practice/Post1/GenericStackClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/ss_11_DSA_Stack_Queue/ss_1_practice/Post1/MyGenericStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/ss_11_DSA_Stack_Queue/ss_2_exercise/Post5/Post1/Controller/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/ss_11_DSA_Stack_Queue/ss_2_exercise/Post5/Post1/Model/InvertElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/ss_11_DSA_Stack_Queue/ss_2_exercise/Post5/Post2/Controller/countCharacter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/ss_11_DSA_Stack_Queue/ss_2_exercise/Post5/Post3/Controller/ConvertBinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nguyen_quoc_viet_C0622G1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nguyen_quoc_viet_C0622G1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/out/production/Java_modun_2/ss_10_DSA_list/Controller/Controller$Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/out/production/Java_modun_2/ss_10_DSA_list/Controller/Controller$Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/out/production/Java_modun_2/ss_10_DSA_list/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/new_modun_2/Java_modun_2/src/out/production/Java_modun_2/ss_10_DSA_list/Controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/bai_1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/out/production/untitled/ss_Introduction_to_Java/BAI_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/src/ss_Introduction_to_Java/BAI_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_modun_2/ss_1_Introduction to Java/untitled/src/ss_Introduction_to_Java/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_modun_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../new_modun_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_modun_3/module_3" beforeDir="false" afterPath="$PROJECT_DIR$/../new_modun_3/module_3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,24 +41,25 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CIjiZPXpi5pNMrQedwNPgeMpBO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/nguyen_quoc_viet_C0622G1/new_modun_2/Java_modun_2/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/nguyen_quoc_viet_C0622G1/new_modun_2/Java_modun_2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.bai_1">
     <configuration name="bai_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="new_modun_2.ss_1_co_so_du_lieu_quan_he.bai_1" />
@@ -144,6 +128,8 @@
       <workItem from="1658971789417" duration="8437000" />
       <workItem from="1659187181943" duration="364000" />
       <workItem from="1660286566685" duration="19000" />
+      <workItem from="1663342216222" duration="27000" />
+      <workItem from="1663343603586" duration="15000" />
     </task>
     <servers />
   </component>

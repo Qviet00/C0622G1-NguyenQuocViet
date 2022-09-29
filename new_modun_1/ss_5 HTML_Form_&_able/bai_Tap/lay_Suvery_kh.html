@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>LAY SUVERY KH</title>
+    <style>
+        h1{color: #90B138;
+        text-align: center}
+        #p1{color: red}
+        #img{
+            display: block;  margin-left: auto;  margin-right: auto;  width: 40%;;
+        }
+    </style>
 </head>
 <body>
 <form action="Lay_suvery_kh.html" method="get">
     <h1>Market Research Survey</h1>
-    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <img id="img" src="https://znews-photo.zingcdn.me/w960/Uploaded/qhj_yvobvhfwbv/2018_07_18/Nguyen_Huy_Binh1.jpg" alt="ảnh ở đây">
+    <h3 id="p1">Please take a few moments to complete this satisfaction survey.</h3>
     <hr style="border-top: dotted 1px;"/>
     <p><strong>What is your age range?</strong></p>
     <select style="width: 50%">
@@ -50,7 +59,7 @@
             <td>Cent</td>
         </tr>
     </table>
-    <p><strong>What features would you like t see in the new product</strong></p>
+    <p ><strong >What features would you like t see in the new product</strong></p>
 
     <textarea rows="10" cols="70" name="description">
             Enter description here...
@@ -66,10 +75,18 @@
         </tr>
         <tr>
             <td>Our prooduc are pricel fairly</td>
-            <td style="text-align:center"><input type="radio" name="a"><br>1</td>
-            <td style="text-align:center"><input type="radio" name="b"><br>2</td>
-            <td style="text-align:center"><input type="radio" name="c"><br>3</td>
-            <td style="text-align:center"><input type="radio" name="d"><br>4</td>
+            <td style="text-align:center"><label>
+                <input type="radio" name="a">
+            </label><br>1</td>
+            <td style="text-align:center"><label>
+                <input type="radio" name="b">
+            </label><br>2</td>
+            <td style="text-align:center"><label>
+                <input type="radio" name="c">
+            </label><br>3</td>
+            <td style="text-align:center"><label>
+                <input type="radio" name="d">
+            </label><br>4</td>
         </tr>
         <tr style="background-color: skyblue">
             <td>Our prooduc are pricel fairly</td>
@@ -88,7 +105,7 @@
 
     </table>
     <br>
-    <input type="submit" name="submit" value="submit" size="20cm">
+    <input type="submit" name="submit" value="Submit" size="20cm">
 </form>
 
 </body>
