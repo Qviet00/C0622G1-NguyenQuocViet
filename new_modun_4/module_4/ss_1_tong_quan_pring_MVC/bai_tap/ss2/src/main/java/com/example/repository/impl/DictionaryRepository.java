@@ -8,7 +8,7 @@ import java.util.Locale;
 @Repository
 public class DictionaryRepository implements IDictionaryRepository {
     String[] arr1 = {"i", "is", "yes","this","that"};
-    String[] arr2 = {"tôi", "là", "có", "đây","kia"};
+    String[] arr2 = {"toi", "la", "co", "day","kia"};
 
     @Override
     public String search(String word) {

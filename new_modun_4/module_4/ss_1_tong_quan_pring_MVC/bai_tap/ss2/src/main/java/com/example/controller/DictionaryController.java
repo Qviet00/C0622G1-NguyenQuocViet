@@ -20,8 +20,8 @@ public class DictionaryController {
 
     @PostMapping("")
     public String search(@RequestParam String word, Model model) {
-        String trans = iDictionaryService.search(word);
-        model.addAttribute("result", trans);
+        String on = iDictionaryService.search(word);
+        model.addAttribute("on", on);
         model.addAttribute("word", word);
         return "/result";
     }

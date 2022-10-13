@@ -12,10 +12,10 @@
 </head>
 <body>
 <h2>Dictionary</h2>
-<form action="" method="get">
+<form action="" method="post">
     <input type="text" name="word">
     <button type="submit">Search</button>
 </form>
-<h2>Kết quả là: ${trans} </h2>
+<h2>Kết quả là: ${on} </h2>
 </body>
 </html>
