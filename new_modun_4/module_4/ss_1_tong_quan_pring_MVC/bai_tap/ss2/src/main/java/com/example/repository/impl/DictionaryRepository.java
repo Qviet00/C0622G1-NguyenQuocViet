@@ -1,21 +1,23 @@
 package com.example.repository.impl;
 
-import com.example.model.Dictionary;
 import com.example.repository.IDictionaryRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Locale;
 
+@Repository
 public class DictionaryRepository implements IDictionaryRepository {
-    private static List<Dictionary> dictionaries = new ArrayList<>();
-    static{
-        dictionaries.add(new Dictionary("i","tôi"));
-        dictionaries.add(new Dictionary("is","là"));
-        dictionaries.add(new Dictionary("yes","có"));
-        dictionaries.add(new Dictionary("this","Đây"));
-        dictionaries.add(new Dictionary("that","kia"));}
+    String[] arr1 = {"i", "is", "yes","this","that"};
+    String[] arr2 = {"tôi", "là", "có", "đây","kia"};
+
     @Override
-    public List<Dictionary> searchAll() {
-        return dictionaries;
+    public String search(String word) {
+        String result = "Không tìm thấy";
+        for (int i = 0; i < arr1.length; i++) {
+            if (word.toLowerCase(Locale.ROOT).equals(arr1[i])) {
+                result = arr2[i];
+            }
+        }
+        return result;
     }
 }
