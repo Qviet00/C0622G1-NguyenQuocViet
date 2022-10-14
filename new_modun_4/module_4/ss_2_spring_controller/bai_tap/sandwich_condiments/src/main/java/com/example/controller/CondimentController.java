@@ -22,7 +22,6 @@ public class CondimentController {
         model.addAttribute("condimentList", condimentList);
         return "index";
     }
-
     @GetMapping("/result")
     public String result(@RequestParam("condiment") String[] condiment, Model model) {
         model.addAttribute("condimentList", iCondimentService.findAll());

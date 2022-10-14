@@ -12,17 +12,19 @@
     <title>$Title$</title>
 </head>
 <body>
-<h1>Sandwich Condiments</h1>
+<center>
+<h1>Bảng báo gia vị cho Sandwich</h1>
+<p>---------------------------------------------</p>
 <form action="/result">
     <c:forEach var="condiment" items="${condimentList}">
         <input type="checkbox" value="${condiment.name}" name="condiment">${condiment.name}
     </c:forEach>
-    <button type="submit">Save</button>
+        <button type="submit">Save</button>
 </form>
-<hr>
-<p>Co cac gia vi di kem la:</p>
+<p>---------------------------------------------</p>
 <c:forEach var="condiment" items="${condiment}">
-    <p>${condiment}</p>
+    <p>Gia vị đi kèm: ${condiment}</p>
 </c:forEach>
+</center>
 </body>
 </html>

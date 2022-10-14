@@ -12,10 +12,10 @@ public class CondimentRepository implements ICondimentRepository {
     private static List<Condiment> condimentList = new ArrayList<>();
 
     static {
-        condimentList.add(new Condiment("Lettuce"));
-        condimentList.add(new Condiment("Tomato"));
-        condimentList.add(new Condiment("Mustard"));
-        condimentList.add(new Condiment("sprouts"));
+        condimentList.add(new Condiment("Rau diếp cá"));
+        condimentList.add(new Condiment("Cà chua"));
+        condimentList.add(new Condiment("Mù tạc"));
+        condimentList.add(new Condiment("Dưa chua"));
     }
 
     @Override
