@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2daca72a-6b2e-4ca6-a775-45c19a8e0702" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/java/com/codegym/controller/ProductControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/product/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/repository/IProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/repository/impl/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/build/classes/java/main/com/codegym/service/impl/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/libs/excercise-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/repository/IProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/repository/impl/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/service/impl/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/product/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/webapp/WEB-INF/views/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/product/src/main/webapp/WEB-INF/views/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/IProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/IProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/impl/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/views/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/views/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/views/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tomcat-9.0.65/webapps/ROOT/WEB-INF/views/update.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2GKPkItH1CJbRvp6jzjtSpn2bFC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bai_tap/product" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2daca72a-6b2e-4ca6-a775-45c19a8e0702" name="Changes" comment="" />
+      <created>1666134443691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666134443691</updated>
+      <workItem from="1666134445081" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
