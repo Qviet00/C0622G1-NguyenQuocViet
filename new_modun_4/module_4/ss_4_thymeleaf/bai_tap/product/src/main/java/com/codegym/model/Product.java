@@ -11,6 +11,7 @@ public class Product {
     }
 
     public Product(int id, String nameOfProduct, double price, String description, String madeIn) {
+
         this.id = id;
         this.nameOfProduct = nameOfProduct;
         this.price = price;
