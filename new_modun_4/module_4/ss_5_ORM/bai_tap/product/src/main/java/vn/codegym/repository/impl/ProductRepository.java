@@ -19,8 +19,7 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public List<Product> findAll() {
-        TypedQuery<Product> query = entityManager
-                .createQuery("select s from Product as s", Product.class);
+        TypedQuery<Product> query = entityManager.createQuery("select s from Product as s", Product.class);
         return query.getResultList();
     }
 

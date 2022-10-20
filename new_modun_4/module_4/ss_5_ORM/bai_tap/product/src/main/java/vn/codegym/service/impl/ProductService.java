@@ -1,12 +1,13 @@
 package vn.codegym.service.impl;
 
+import org.springframework.stereotype.Service;
 import vn.codegym.model.Product;
 import vn.codegym.repository.IProductRepository;
 import vn.codegym.repository.impl.ProductRepository;
 import vn.codegym.service.IProductService;
 
 import java.util.List;
-
+@Service
 public class ProductService implements IProductService {
     private IProductRepository productRepository=new ProductRepository();
     @Override
