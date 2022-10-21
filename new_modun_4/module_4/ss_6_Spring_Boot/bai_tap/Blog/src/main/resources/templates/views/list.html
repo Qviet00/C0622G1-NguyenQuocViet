@@ -6,21 +6,21 @@
 </head>
 <body>
 <h2>Trang danh sach blog</h2>
-<a href="/create">Them moi blog</a>
+<a href="/blog/create">Thêm mới Blog</a>
 <table>
     <tr>
         <th>STT</th>
-        <th>Ten tac pham</th>
-        <th>Delete</th>
-        <th>Update</th>
-        <th>Detail</th>
+        <th>Tên tác phẩm</th>
+        <th>Xóa</th>
+        <th>Sửa</th>
+        <th>Chi Tiết</th>
     </tr>
     <tr th:each="blog, loop : ${blogList}">
         <td th:text="${loop.count}"></td>
         <td th:text="${blog.tittle}"></td>
-        <td><a th:href="@{delete/(id=${blog.id})}">Delete</a></td>
-        <td><a th:href="@{update/(id=${blog.id})}">Update</a></td>
-        <td><a th:href="@{detail/(id=${blog.id})}">Detail</a></td>
+        <td><a th:href="@{delete/(id=${blog.id})}">Xóa</a></td>
+        <td><a th:href="@{update/(id=${blog.id})}">Sửa</a></td>
+        <td><a th:href="@{detail/(id=${blog.id})}">Chi Tiết</a></td>
     </tr>
 </table>
 </body>

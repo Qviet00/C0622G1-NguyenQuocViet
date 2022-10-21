@@ -6,14 +6,14 @@
 </head>
 <body>
 <h2>Trang tao moi</h2>
-<form action="/saveCreate" method="post" th:object="${blog}">
-    <p>Tittle<input type="text" th:field="*{tittle}"></input></p>
-    <p>Content<input type="text" th:field="*{content}"></input></p>
-    <p>Authority<input type="text" th:field="*{authority}"></input></p>
+<p><a href="/blog">Quay ve trang list</a></p>
+<form action="/blog/saveCreate" method="post" th:object="${blog}">
+    <p>Tittle<input type="text" th:field="*{tittle}"></p>
+    <p>Content<input type="text" th:field="*{content}"></p>
+    <p>Authority<input type="text" th:field="*{authority}"></p>
     <p>
-        <button type="submit">Luu</button>
+        <button type="submit" value="Create blog">Luu</button>
     </p>
 </form>
-<a href="/">Quay ve trang list</a>
 </body>
 </html>

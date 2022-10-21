@@ -6,7 +6,8 @@
 </head>
 <body>
 <h2>Trang update</h2>
-<form action="/saveUpdate" method="post" th:object="${blog}">
+<a href="/blog">Quay ve trang list</a>
+<form action="/blog/saveUpdate" method="post" th:object="${blog}">
     <input type="hidden" th:field="*{id}">
     <p>Tittle<input type="text" th:field="*{tittle}"></input></p>
     <p>Content<input type="text" th:field="*{content}"></input></p>
@@ -15,6 +16,6 @@
         <button type="submit">Luu</button>
     </p>
 </form>
-<a href="/">Quay ve trang list</a>
+
 </body>
 </html>

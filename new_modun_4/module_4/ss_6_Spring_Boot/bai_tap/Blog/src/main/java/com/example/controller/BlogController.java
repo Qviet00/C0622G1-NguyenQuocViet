@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -18,44 +20,53 @@ public class BlogController {
     @GetMapping("")
     public String list(Model model) {
         model.addAttribute("blogList", iBlogService.findAll());
-        return "list";
+        return "/views/list";
     }
 
     @GetMapping("/create")
     public String showCreate(Model model) {
         model.addAttribute("blog", new Blog());
-        return "create";
+        return "/views/create";
     }
 
     @PostMapping("/saveCreate")
-    public String saveCreate(@ModelAttribute Blog blog) {
+    public String saveCreate(@ModelAttribute Blog blog, RedirectAttributes redirectAttributes) {
         iBlogService.save(blog);
-        return "redirect:/";
+        redirectAttributes.addFlashAttribute("message",
+                "Create blog: " +blog.getTittle() + " OK!");
+        return "redirect:/blog";
+    }
+    @GetMapping("/delete/{id}")
+    public ModelAndView showDeleteForm(@PathVariable int id) {
+        Optional<Blog> customer = iBlogService.findId(id);
+            ModelAndView modelAndView = new ModelAndView("/views/delete");
+            modelAndView.addObject("blogList", customer.get());
+            return modelAndView;
     }
 
-    @GetMapping("/delete")
-    public String delete(@RequestParam int id) {
-        iBlogService.delete(id);
-        return "redirect:/";
+    @PostMapping("/delete")
+    public String deleteCustomer(@ModelAttribute("blogList") Blog blog) {
+        iBlogService.delete(blog.getId());
+        return "redirect:/blog";
     }
 
     @GetMapping("/update")
     public String showUpdate(@RequestParam int id, Model model) {
         Optional<Blog> blog = iBlogService.findId(id);
         model.addAttribute("blog", blog.get());
-        return "update";
+        return "views/update";
     }
 
     @PostMapping("/saveUpdate")
     public String saveUpdate(@ModelAttribute Blog blog) {
         iBlogService.update(blog);
-        return "redirect:/";
+        return "redirect:/blog";
     }
 
-    @GetMapping("/detail")
+    @GetMapping("/detail/{id}")
     public String detail(@RequestParam int id, Model model) {
         Optional<Blog> blog = iBlogService.findId(id);
         model.addAttribute("blog", blog.get());
-        return "detail";
+        return "views/detail";
     }
 }
