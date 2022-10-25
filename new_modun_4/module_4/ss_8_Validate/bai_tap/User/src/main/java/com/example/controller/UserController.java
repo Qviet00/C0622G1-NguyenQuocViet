@@ -12,11 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
@@ -33,22 +30,43 @@ public class UserController {
         model.addAttribute("userList", iUserService.findAll(pageable));
         return "/views/list";
     }
+
     @GetMapping("/create-new")
-    public String create(Model model){
+    public String create(Model model) {
         model.addAttribute("userDto", new UserDto());
         return "/views/create";
     }
+
     @PostMapping("/create-add")
-    public  String addCreate(@ModelAttribute("userDto") @Validated UserDto userDto,
-                             BindingResult bindingResult){
-        new UserDto().validate(userDto,bindingResult);
-        if (bindingResult.hasErrors()){
+    public String addCreate(@ModelAttribute("userDto") @Validated UserDto userDto,
+                            BindingResult bindingResult) {
+        new UserDto().validate(userDto, bindingResult);
+        if (bindingResult.hasErrors()) {
             return "/views/create";
         }
-        User user =new User();
-        BeanUtils.copyProperties(userDto,user);
+        User user = new User();
+        BeanUtils.copyProperties(userDto, user);
         iUserService.create(user);
-        return "/views/list";
+        return "redirect:/user/list";
     }
 
+    @GetMapping("/edit-new/{id}")
+    public String editNew(@PathVariable int id, Model model) {
+        model.addAttribute("userDto", iUserService.findById(id).get());
+        return "/views/edit";
+    }
+
+    @PostMapping("/edit-add")
+    public String editAdd(@ModelAttribute("userDto") @Validated UserDto userDto,
+                          BindingResult bindingResult) {
+        new UserDto().validate(userDto, bindingResult);
+        if (bindingResult.hasErrors()) {
+            return "/views/edit";
+        }
+        User user = new User();
+        user.setId(userDto.getId());
+        BeanUtils.copyProperties(userDto, user);
+        iUserService.create(user);
+        return "redirect:/user/list";
+    }
 }

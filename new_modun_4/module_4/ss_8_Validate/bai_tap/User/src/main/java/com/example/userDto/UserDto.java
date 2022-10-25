@@ -3,9 +3,17 @@ package com.example.userDto;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.*;
-
+@Entity
 public class UserDto implements Validator {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
 
     @NotBlank(message ="Không để trống")
     private String firstName;
@@ -23,12 +31,20 @@ public class UserDto implements Validator {
     public UserDto() {
     }
 
-    public UserDto(String firstName, String lastName, String phoneNumber, int age, String email) {
+    public UserDto(int id,String firstName, String lastName, String phoneNumber, int age, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.age = age;
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {

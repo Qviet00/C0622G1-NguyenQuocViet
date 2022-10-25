@@ -8,13 +8,15 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserService implements IUserService {
     @Autowired
     private IUserRepository userRepository;
 
     @Override
-    public Page<User> findAll( Pageable pageable) {
+    public Page<User> findAll(Pageable pageable) {
         return userRepository.findAll(pageable);
     }
 
@@ -24,7 +26,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public Object findAll() {
-        return userRepository.findAll();
+    public Optional<User> findById(int id) {
+        return userRepository.findById(id);
     }
+
 }

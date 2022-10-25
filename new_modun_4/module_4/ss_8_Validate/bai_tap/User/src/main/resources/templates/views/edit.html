@@ -5,12 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Add new customer</h1>
-<p>
-    <a href="/user/list">Back to Customer list</a>
-</p>
-<table>
-<form action="/user/create-add" method="post" th:object="${userDto}">
+<h1>Edit user</h1>
+<a href="/user/list">Back List User</a>
+<form action="/user/edit-add" method="post" th:object="${userDto}">
     <p>First Name: <input type="text" th:field="*{firstName}"></p>
     <p style="color: red"  th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" ></p>
     <p>Last Name: <input type="text" th:field="*{lastName}"></p>
@@ -23,6 +20,5 @@
     <p style="color: red"  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" ></p>
     <button type="submit">Save</button>
 </form>
-</table>
 </body>
 </html>
