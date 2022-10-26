@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>View book</h3>
+<p>
+    <a th:href="@{/templates/book}">
+        Back to book list
+    </a>
+</p>
+<div id="detail">
+    <div class="prodetail">
+        <label>Name:</label>
+        <label th:text="${book.name}"></label>
+    </div>
+    <div class="prodetail">
+        <label>Count:</label>
+        <label th:text="${book.count}"></label>
+    </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

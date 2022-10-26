@@ -67,7 +67,7 @@ public class CustomerController {
         model.addAttribute("customerList", customerList);
         return "/views/list";
     }
-    @GetMapping("/search")
+    @GetMapping("/sarch")
     public String searchCustomer(@RequestParam(value = "firstName") String firstName, Model model){
         List<Customer> customerList = iCustomerService.searchByName(firstName);
         model.addAttribute("customerList",customerList);

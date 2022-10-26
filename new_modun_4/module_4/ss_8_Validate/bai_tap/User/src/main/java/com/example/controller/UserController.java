@@ -5,6 +5,7 @@ import com.example.service.IUserService;
 import com.example.userDto.UserDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -69,4 +71,11 @@ public class UserController {
         iUserService.create(user);
         return "redirect:/user/list";
     }
+    @GetMapping("/search")
+    public String searchUser(@PageableDefault(value = 4) Pageable pageable,String firstName, Model model){
+        Page<User> userList= iUserService.searchByName(firstName,pageable);
+        model.addAttribute("userList",userList);
+        return "/views/list";
+    }
+
 }
