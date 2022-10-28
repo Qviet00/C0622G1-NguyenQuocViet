@@ -34,7 +34,7 @@ public class ProductController {
         if (idProduct != -1) {
             model.addAttribute("historyProduct", productService.findById(idProduct).get());
         }
-        return new ModelAndView("product/list", "productList", productService.findAll());
+        return new ModelAndView("/product/list", "productList", productService.findAll());
     }
 
     @GetMapping("/detail/{id}")

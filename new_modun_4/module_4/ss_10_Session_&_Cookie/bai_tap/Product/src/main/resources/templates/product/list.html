@@ -4,14 +4,14 @@
 <head>
     <title>Title</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="w1idth=device-width, 1nitlaL-scatez1, shrink-to-f1t=no">
-    <link rel="styLesheet" th:href="@{/css/bootstrap.css}">
+    <meta name="viewport" content="width=device-width, initial-scale, shrink-to-fit=no">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="coL-md-8">
-            <table class=”table">
+        <div class="col-md-8">
+            <table class="table">
                 <thead>
                 <tr>
                     <th>No.</th>
@@ -41,11 +41,11 @@
                 </tbody>
             </table>
         </div>
-        <div cLass="coL-md-4" th:if="${historyProduct}">
+        <div cLass="col-md-4" th:if="${historyProduct}">
             <div cLass="card sticky-top border-8">
                 <img th:src="${historyProduct.image}" cLass="card-img-top">
                 <div cLass="card-body">
-                    <h4 cLass="card-titLe" th:text="${historyProduct.name}"></h4>
+                    <h4 cLass="card-title" th:text="${historyProduct.name}"></h4>
                     <p cLass="card-text" th:text="${historyProduct.price}"></p>
 
                 </div>

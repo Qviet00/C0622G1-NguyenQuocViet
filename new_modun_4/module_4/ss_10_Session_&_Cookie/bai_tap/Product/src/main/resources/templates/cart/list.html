@@ -4,13 +4,13 @@
 <head>
     <titLe>TitLe</titLe>
     <meta charset="utf-8">
-    <meta name="viewport" content="w1idth=device-width, 1nitlaL-scatez1, shrink-to-f1t=no">
-    <Link rel="styLesheet" th:href="@{/css/bootstrap.css}">
+    <meta name="viewport" content="width=device-width, initial-scale, shrink-to-fit=no">
+    <Link rel="stylesheet" th:href="@{/css/bootstrap.css}">
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <table class="tabLe" th:if="${cart !=null && cart.getProductMap().size() > 0}">
+        <table class="table" th:if="${cart !=null && cart.getProductMap().size() > 0}">
             <thead>
             <tr>
                 <th>NO.</th>
@@ -23,14 +23,14 @@
             <tbody>
             <tr th:each="productMap,Y: ${cart.productMap}">
                 <td th:text="${Y.count} "></td>
-                <td th:text="${productMap.key.name} ">Samsung 6aLaxy Note</td>
+                <td th:text="${productMap.key.name} ">Samsung Galaxy Note</td>
                 <td><img th:src="${productMap.key.image}" styLe=".,.."></td>
                 <td th:text="${productMap.key.price}">29990990</td>
                 <td th:text="${productMap.value}">10</td>
             </tr>
             </tbody>
             </table>
-            <div class="aLert aLert-warning" roLe="aLert" th:if="${cart == null || cart.getProductMap().size() == 6}">
+            <div class="alert alert-warning" roLe="alert" th:if="${cart == null || cart.getProductMap().size() == 6}">
                 Cart Empty.
             </div>
     </div>
