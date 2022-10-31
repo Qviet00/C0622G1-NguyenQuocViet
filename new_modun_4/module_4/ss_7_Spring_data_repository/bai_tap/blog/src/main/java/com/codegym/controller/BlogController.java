@@ -34,7 +34,6 @@ public class BlogController {
         Page<Blog> blogList = this.blogService.findByTitleContaining(keywordVal, pageable);
         model.addAttribute("blogs", blogList);
         model.addAttribute("keywordVal", keywordVal);
-
         return "/list_blog";
     }
 

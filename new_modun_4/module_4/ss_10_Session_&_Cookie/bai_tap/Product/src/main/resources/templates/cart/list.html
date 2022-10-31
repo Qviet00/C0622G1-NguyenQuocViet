@@ -24,7 +24,7 @@
             <tr th:each="productMap,Y: ${cart.productMap}">
                 <td th:text="${Y.count} "></td>
                 <td th:text="${productMap.key.name} ">Samsung Galaxy Note</td>
-                <td><img th:src="${productMap.key.image}" styLe=".,.."></td>
+                <td><img th:src="${productMap.key.image}" style=".,.."></td>
                 <td th:text="${productMap.key.price}">29990990</td>
                 <td th:text="${productMap.value}">10</td>
             </tr>
