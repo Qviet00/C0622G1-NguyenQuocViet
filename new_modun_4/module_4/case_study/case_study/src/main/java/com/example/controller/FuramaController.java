@@ -40,9 +40,9 @@ public class FuramaController {
     }
 
     @GetMapping("/listFacility")
-    public String lisFacility(Model model, @PageableDefault(size = 5) Pageable pageable,@RequestParam Optional<String> key) {
+    public String lisFacility(Model model, @PageableDefault(size = 5) Pageable pageable, Optional<String> key) {
         String keywordVal = key.orElse("");
-        Page<Facility> facilities = this.iFacilityService.findAllByFacilityName(keywordVal, pageable);
+        Page<Facility> facilities = this.iFacilityService.findAllByFacilityName(pageable);
         model.addAttribute("facility", facilities);
         model.addAttribute("facilityType", iFacilityTypeService.findAll());
         model.addAttribute("rentType", iRentTypeService.findAll());
@@ -79,6 +79,12 @@ public class FuramaController {
 
         iFacilityService.add(facility);
         redirectAttributes.addFlashAttribute("msg", "Thêm mới thành công");
+        return "redirect:/listFacility";
+    }
+
+    @PostMapping("/deleteFacility")
+    public String deleteFacility(@ModelAttribute("facilityList") Facility facility){
+        iFacilityService.delete(facility.getFacilityId());
         return "redirect:/listFacility";
     }
 }

@@ -53,8 +53,8 @@ public class FacilityService implements IFacilityService {
     }
 
     @Override
-    public Page<Facility> findAllByFacilityName(String name, Pageable pageable) {
-        return facilityRepository.findAllByFacilityName(name, pageable);
+    public Page<Facility> findAllByFacilityName(Pageable pageable) {
+        return facilityRepository.findAll(pageable);
     }
 
     @Override

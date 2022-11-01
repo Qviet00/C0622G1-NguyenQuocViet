@@ -51,7 +51,7 @@
             <td th:text="${facilityNew.rentType.rentTypeName}"></td>
             <td th:text="${facilityNew.facilityType.facilityTypeName}"></td>
             <td>
-                <button th:attr="onclick = |delete1 ('${facilityNew.facilityId}','${facilityNew.facilityName}')|" class="btn btn-primary" data-bs-toggle="modal"
+                <button th:attr="onclick = |delete1 (${facilityNew.facilityId},${facilityNew.facilityName})|" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#exampleModal1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-trash3"
