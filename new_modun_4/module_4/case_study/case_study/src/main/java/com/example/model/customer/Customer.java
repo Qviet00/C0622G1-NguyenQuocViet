@@ -28,6 +28,16 @@ public class Customer {
     @Column (name = "address")
     private String address;
 
+    private int status;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     @ManyToOne
     @JoinColumn(name = "customer_type_id", referencedColumnName = "customer_type_id")
     private TypeCustomer typeCustomer;

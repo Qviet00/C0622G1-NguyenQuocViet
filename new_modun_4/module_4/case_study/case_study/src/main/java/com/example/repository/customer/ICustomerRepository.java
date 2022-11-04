@@ -12,7 +12,7 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
     @Query(
             value = "select * from furama.customer where customer_name like %:nameSearch% " +
                     "and email like %:email% " +
-                    "and customer_type_id like %:customer_type_id% ",
+                    "and customer_type_id like %:customer_type_id% and status = 0",
             nativeQuery = true)
     Page<Customer> findAllByNameAndAdress(@Param("nameSearch") String nameSearch,
                                           @Param("email")String email,

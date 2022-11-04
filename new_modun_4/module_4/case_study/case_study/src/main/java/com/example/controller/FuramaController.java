@@ -70,7 +70,9 @@ public class FuramaController {
 
     @GetMapping("/deleteCustomer")
     public String deleteCustomer(@RequestParam int deleteId) {
-        customerService.delete(deleteId);
+        Customer customer = customerService.findById(deleteId).get();
+        customer.setStatus(1);
+        customerService.save(customer);
         return "redirect:/listCustomer";
     }
 
