@@ -22,7 +22,7 @@ public class BlogController {
     @Autowired
     private ICategoryService iCategoryService;
 
-    @GetMapping("/")
+    @GetMapping("/mo")
     public String list(@PageableDefault (size = 5) Pageable pageable, Model model) {
         model.addAttribute("blogList", iBlogService.findAll(pageable));
         model.addAttribute("category",iCategoryService.findAll());

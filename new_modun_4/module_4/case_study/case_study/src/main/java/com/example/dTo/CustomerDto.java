@@ -1,4 +1,4 @@
-package com.example.dTo;
+package com.example.dto;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -15,6 +15,79 @@ public class CustomerDto implements Validator {
             "viết hoa.")
     private String customerName;
     private String dateOfBirth;
+
+    public int getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(int customerCode) {
+        this.customerCode = customerCode;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public String getIdentify() {
+        return identify;
+    }
+
+    public void setIdentify(String identify) {
+        this.identify = identify;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTypeCustomer() {
+        return typeCustomer;
+    }
+
+    public void setTypeCustomer(String typeCustomer) {
+        this.typeCustomer = typeCustomer;
+    }
+
     private int gender;
     @NotBlank
     @Pattern(regexp = "^[0-9]{9}$", message = "Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX\n" +

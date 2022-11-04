@@ -28,6 +28,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().formLogin().defaultSuccessUrl("/").permitAll().and().authorizeRequests().anyRequest().authenticated();
+        http.csrf().disable().formLogin().loginPage("/login")
+                .defaultSuccessUrl("/").permitAll().and().authorizeRequests()
+                .antMatchers("/").hasAnyRole("user").antMatchers("/blog/**").hasAnyRole("admin").anyRequest().authenticated();
     }
 }

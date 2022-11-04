@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 
@@ -18,47 +17,29 @@ public class FacilityService implements IFacilityService {
     @Autowired
     private IFacilityRepository facilityRepository;
     @Override
-    public List<Facility> finAll() {
-        return facilityRepository.findAll();
-    }
-
-    @Override
-    public void update(Facility facility) {
+    public void save(Facility facility) {
         facilityRepository.save(facility);
 
-    }
-
-    @Override
-    public void add(Facility facility) {
-        if(facility.getFacilityType().getFacilityTypeId()==1){
-            facility.setFacilityFree(null);
-        }
-        if (facility.getFacilityType().getFacilityTypeId()==2){
-            facility.setPoolArea(null);
-            facility.setFacilityFree(null);
-        }
-        if(facility.getFacilityType().getFacilityTypeId()==3){
-            facility.setStandardRoom(null);
-            facility.setNumberOfFloor(null);
-            facility.setPoolArea(null);
-            facility.setDescriptionOtherConvenience(null);
-        }
-        facilityRepository.save(facility);
-
-    }
-
-    @Override
-    public Optional<Facility> findId(int id) {
-        return facilityRepository.findById(id);
-    }
-
-    @Override
-    public Page<Facility> findAllByFacilityName(Pageable pageable) {
-        return facilityRepository.findAll(pageable);
     }
 
     @Override
     public void delete(int id) {
         facilityRepository.deleteById(id);
+
+    }
+
+    @Override
+    public Optional<Facility> findById(int id) {
+        return facilityRepository.findById(id);
+    }
+
+    @Override
+    public Page<Facility> findAllByFacility(Pageable pageable) {
+        return facilityRepository.findAll(pageable);
+    }
+
+    @Override
+    public Page<Facility> findAllByNameAndAdress(String name, String facelityType, Pageable pageable) {
+        return findAllByNameAndAdress(name,facelityType,pageable);
     }
 }
