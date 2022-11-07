@@ -1,4 +1,4 @@
-package com.example.dto;
+package com.example.dtoCustomerAndFacility;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
