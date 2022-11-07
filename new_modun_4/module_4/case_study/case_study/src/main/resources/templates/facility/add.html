@@ -20,15 +20,17 @@
 <nav th:replace="~{common :: html_header}"></nav>
 <div id="img_bg">
     <h3 class="text-center mt-3">Add New Service</h3>
-    <form class="w-50 container-fluid mt-3 shadow bg-light" method="post" action="/saveAddFacility" th:object="${facility}">
+    <form class="w-50 container-fluid mt-3 shadow bg-light" method="post" action="/facilitySave" th:object="${facility}">
         <div class="row">
             <div class="mb-3">
                 <label class="form-label mt-3 text-success fw-bold">Chọn dịch vụ</label>
                 <select onchange="serviceInput()" id="select" name="service" th:field="*{facilityType}"
                         class="form-control">
-                    <option value="0">None</option>
-                    <option th:each="facilityNew1 : ${facilityTypeNew}" th:value="${facilityNew1.facilityTypeId}"
-                            th:text="${facilityNew1.facilityTypeName}"></option>
+                    <option value="0" selected>Chọn</option>
+                    <option th:each="facilityNew1 : ${facilityTypeNew}"
+                            th:value="${facilityNew1.getFacilityTypeId()}"
+                            th:text="${facilityNew1.getFacilityTypeName()}">
+                    </option>
                 </select>
             </div>
         </div>
@@ -95,9 +97,13 @@
 </div>
 <footer th:replace=" ~{common :: html_footer}"></footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+
+</script>
 <script>
     serviceInput();
-
     function serviceInput() {
         let type = document.getElementById("select").value;
         console.log(type)

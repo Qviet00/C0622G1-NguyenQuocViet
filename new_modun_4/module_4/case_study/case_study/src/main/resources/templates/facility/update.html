@@ -14,7 +14,7 @@
     <div class="mb-3">
         <label class="form-label mt-3">Chọn dịch vụ</label>
         <select onchange="serviceInput()" id="select" name="service" th:field="*{facilityType}">
-            <option value="0">Chọn</option>
+            <option value="0" selected>Chọn</option>
             <option th:each="facilityNew : ${facilityTypeNew}" th:value="${facilityNew.facilityTypeId}" th:text="${facilityNew.facilityTypeName}"></option>
         </select>
     </div>

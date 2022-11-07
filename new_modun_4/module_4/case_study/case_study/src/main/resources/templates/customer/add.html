@@ -56,8 +56,12 @@
     <div class="mb-3">
         <label class="form-label">Loại Khách Hàng</label>
         <select th:field="*{typeCustomer}">
-            <option th:each="typeCus : ${type}" th:value="${typeCus.idTypeCustomer}"
-                    th:text="${typeCus.nameOfTypeCustomer}"></option>
+            <option value="0" selected>Chọn</option>
+            <option th:each="typeCus : ${type}"
+                    th:value="${typeCus.idTypeCustomer}"
+                    th:text="${typeCus.nameOfTypeCustomer}">
+
+            </option>
         </select>
     </div>
     <div class="modal-footer">

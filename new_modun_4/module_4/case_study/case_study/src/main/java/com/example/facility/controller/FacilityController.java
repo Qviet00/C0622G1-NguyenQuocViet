@@ -1,11 +1,5 @@
-package com.example.controller;
+package com.example.facility.controller;
 
-
-import com.example.customer.model.Customer;
-import com.example.customer.model.TypeCustomer;
-import com.example.customer.service.ICustomerService;
-import com.example.customer.service.ITypeCustomerService;
-import com.example.dtoCustomerAndFacility.CustomerDto;
 import com.example.dtoCustomerAndFacility.FacilityDto;
 import com.example.facility.model.Facility;
 import com.example.facility.model.FacilityType;
@@ -30,31 +24,13 @@ import javax.validation.Valid;
 
 
 @Controller
-public class FuramaController {
-
-    @GetMapping("/")
-    public String home() {
-        return "home";
-    }
-
-    @Autowired
-    private ICustomerService customerService;
-    @Autowired
-    private ITypeCustomerService typeCustomerService;
+public class FacilityController {
     @Autowired
     private IFacilityService facilityService;
     @Autowired
     private IFacilityTypeService facilityTypeService;
     @Autowired
     private IRentTypeService rentTypeService;
-
-    @GetMapping("/listCustomer")
-    public String searchTypeAndName(@RequestParam(defaultValue = "") String name, String email, String type, Model model,
-                                    @PageableDefault(size = 5) Pageable pageable) {
-        model.addAttribute("customer", customerService.findAllByNameAndAdress(name, email, type, pageable));
-        model.addAttribute("type", typeCustomerService.findAll());
-        return "/customer/list";
-    }
 
     @GetMapping("/listFacility")
     public String searchFacility(@RequestParam(defaultValue = "") String name, String facilityType, Model model,
@@ -65,37 +41,33 @@ public class FuramaController {
         return "/facility/list";
     }
 
-    @GetMapping("/customerAdd")
-    public String customerAdd(Model model) {
-        model.addAttribute("customerDto", new CustomerDto());
-        model.addAttribute("type", typeCustomerService.findAll());
-        return "customer/add";
-    }
+
     @GetMapping("/facilityAdd")
-    public String Facility(Model model){
+    public String facilityAdd(Model model) {
         model.addAttribute("facility", new FacilityDto());
-        model.addAttribute("facilitiTypeNew",facilityTypeService.findAll());
+        model.addAttribute("facilityTypeNew", facilityTypeService.findAll());
         model.addAttribute("rentTypeList", rentTypeService.findAll());
         return "facility/add";
     }
 
     @PostMapping("/facilitySave")
-    public String saveFacility(@ModelAttribute("facility")@Validated FacilityDto facilityDto,
-                               BindingResult bindingResult, Model model){
-        facilityDto.validate(facilityDto,bindingResult);
-        if (bindingResult.hasErrors()){
+    public String facilitySave(@ModelAttribute("facility") @Validated FacilityDto facilityDto,
+                               BindingResult bindingResult, Model model) {
+        facilityDto.validate(facilityDto, bindingResult);
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("facility", new FacilityDto());
             model.addAttribute("facilityTypeNew", facilityTypeService.findAll());
-            model.addAttribute("rentTypeList",rentTypeService.findAll());
+            model.addAttribute("rentTypeList", rentTypeService.findAll());
             return "facility/add";
         }
         Facility facility = new Facility();
-        BeanUtils.copyProperties(facilityDto,facility);
+        BeanUtils.copyProperties(facilityDto, facility);
 
         FacilityType facilityType = new FacilityType();
         facilityType.setFacilityTypeId(facilityDto.getFacilityType().getFacilityTypeId());
         facility.setFacilityType(facilityType);
 
-        RentType rentType =new RentType();
+        RentType rentType = new RentType();
         rentType.setRentTypeId(facilityDto.getRentType().getRentTypeId());
         facility.setRentType(rentType);
 
@@ -104,61 +76,12 @@ public class FuramaController {
 
     }
 
-    @PostMapping("/customerSave")
-    public String saveCustomer(@ModelAttribute("customerDto") @Validated CustomerDto customerDto,
-                               BindingResult bindingResult, Model model) {
-        customerDto.validate(customerDto, bindingResult);
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("customerDto", customerDto);
-            model.addAttribute("type", typeCustomerService.findAll());
-            return "/customer/add";
-        }
-        Customer customer = new Customer();
-        TypeCustomer typeCustomer = typeCustomerService.findById(Integer.parseInt(customerDto.getTypeCustomer()));
-        customer.setTypeCustomer(typeCustomer);
-        BeanUtils.copyProperties(customerDto, customer);
-        customerService.save(customer);
-        return "redirect:/listCustomer";
-    }
-
-
-    @GetMapping("/deleteCustomer")
-    public String deleteCustomer(@RequestParam int deleteId) {
-        Customer customer = customerService.findById(deleteId).get();
-        customer.setStatus(1);
-        customerService.save(customer);
-        return "redirect:/listCustomer";
-    }
-
     @GetMapping("/deleteFacility")
     public String deleteFacility(@RequestParam int deleteId) {
         Facility facility = facilityService.findById(deleteId).get();
         facility.setStatus(1);
         facilityService.save(facility);
         return "redirect:/listFacility";
-    }
-
-    @GetMapping("/updateCustomer")
-    public String updateCustomer(@RequestParam int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id).get());
-        model.addAttribute("type", typeCustomerService.findAll());
-        return "customer/update";
-    }
-
-    @PostMapping("/saveUpdateCustomer")
-    public String saveUpdateCustomer(@ModelAttribute("customer") @Validated CustomerDto customerDto,
-                                     BindingResult bindingResult, Model model) {
-        customerDto.validate(customerDto, bindingResult);
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("type", typeCustomerService.findAll());
-            return "customer/update";
-        }
-        Customer customer = new Customer();
-        TypeCustomer typeCustomer = typeCustomerService.findById(Integer.parseInt(customerDto.getTypeCustomer()));
-        customer.setTypeCustomer((typeCustomer));
-        BeanUtils.copyProperties(customerDto, customer);
-        customerService.save(customer);
-        return "redirect:/listCustomer";
     }
 
     @GetMapping("/updateFacility")
@@ -194,4 +117,5 @@ public class FuramaController {
         facilityService.save(facility);
         return "redirect:/listFacility";
     }
+
 }

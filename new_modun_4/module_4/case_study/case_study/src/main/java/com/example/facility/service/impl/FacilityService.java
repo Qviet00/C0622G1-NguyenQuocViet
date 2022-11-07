@@ -18,14 +18,14 @@ public class FacilityService implements IFacilityService {
     private IFacilityRepository facilityRepository;
     @Override
     public void add(Facility facility) {
-        if (facility.getFacilityType().getFacilityTypeId()==3){
+        if (facility.getFacilityType().getFacilityTypeId()==1){
             facility.setFacilityFree(null);
         }
         if (facility.getFacilityType().getFacilityTypeId()==2){
             facility.setPoolArea(null);
             facility.setFacilityFree(null);
         }
-        if (facility.getFacilityType().getFacilityTypeId()==1){
+        if (facility.getFacilityType().getFacilityTypeId()==3){
             facility.setStandardRoom(null);
             facility.setNumberOfFloor(null);
             facility.setPoolArea(null);
