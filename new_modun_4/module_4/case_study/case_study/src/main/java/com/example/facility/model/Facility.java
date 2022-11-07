@@ -1,32 +1,73 @@
-package com.example.dto;
+package com.example.facility.model;
 
-import com.example.facility.model.FacilityType;
-import com.example.facility.model.RentType;
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import com.example.contract.model.Contract;
 
-public class FacilityDto implements Validator {
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "facility")
+public class Facility {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "facility_id")
     private int facilityId;
-    @Pattern(regexp = "^([A-Z][a-z0-1]*)+(\\s[A-Z0-9][a-z0-9]*)*$",message = "Tên dịch vụ được phép chứa số. Và các kí tự đầu tiên của mỗi từ phải viết\n" +
-            "hoa.")
+    @Column(name = "facility_name")
     private String facilityName;
-    @NotNull(message = "Không được để trống, Nhập số")
+    @Column(name = "area")
     private Integer area;
-    @NotNull(message = "Không được để trống, Nhập số")
+    @Column(name = "cost")
     private Double cost;
+    @Column(name = "max_people")
     private Integer maxPeople;
+    @Column(name = "standard_room")
     private String standardRoom;
+    @Column(name = "description_other_convenience")
     private String descriptionOtherConvenience;
+    @Column(name = "pool_area")
     private Double poolArea;
+    @Column(name = "number_of_floor")
     private Integer numberOfFloor;
+    @Column(name = "facility_free")
     private String facilityFree;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    private int status;
+    @ManyToOne
+    @JoinColumn(name = "rent_type_id", referencedColumnName = "rent_type_id")
     private RentType rentType;
+    @ManyToOne
+    @JoinColumn(name = "facility_type_id", referencedColumnName = "facility_type_id")
     private FacilityType facilityType;
 
-    public FacilityDto() {
+    @OneToMany (mappedBy = "facility")
+    private List<Contract> contractList;
+
+    public Facility(int facilityId, String facilityName, Integer area, Double cost, Integer maxPeople, String standardRoom, String descriptionOtherConvenience, Double poolArea, Integer numberOfFloor, String facilityFree, RentType rentType, FacilityType facilityType, List<Contract> contractList) {
+        this.facilityId = facilityId;
+        this.facilityName = facilityName;
+        this.area = area;
+        this.cost = cost;
+        this.maxPeople = maxPeople;
+        this.standardRoom = standardRoom;
+        this.descriptionOtherConvenience = descriptionOtherConvenience;
+        this.poolArea = poolArea;
+        this.numberOfFloor = numberOfFloor;
+        this.facilityFree = facilityFree;
+        this.rentType = rentType;
+        this.facilityType = facilityType;
+        this.contractList = contractList;
+    }
+
+    public Facility() {
     }
 
     public int getFacilityId() {
@@ -109,7 +150,9 @@ public class FacilityDto implements Validator {
         this.facilityFree = facilityFree;
     }
 
-    public RentType getRentType() {return rentType;}
+    public RentType getRentType() {
+        return rentType;
+    }
 
     public void setRentType(RentType rentType) {
         this.rentType = rentType;
@@ -123,43 +166,11 @@ public class FacilityDto implements Validator {
         this.facilityType = facilityType;
     }
 
-    public FacilityDto(int facilityId, String facilityName, Integer area, Double cost, Integer maxPeople, String standardRoom, String descriptionOtherConvenience, Double poolArea, Integer numberOfFloor, String facilityFree, RentType rentType, FacilityType facilityType) {
-        this.facilityId = facilityId;
-        this.facilityName = facilityName;
-        this.area = area;
-        this.cost = cost;
-        this.maxPeople = maxPeople;
-        this.standardRoom = standardRoom;
-        this.descriptionOtherConvenience = descriptionOtherConvenience;
-        this.poolArea = poolArea;
-        this.numberOfFloor = numberOfFloor;
-        this.facilityFree = facilityFree;
-        this.rentType = rentType;
-        this.facilityType = facilityType;
+    public List<Contract> getContractList() {
+        return contractList;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
-
-    @Override
-    public void validate(Object target, Errors errors){
-        FacilityDto facilityDto = (FacilityDto) target;
-        if (facilityDto.numberOfFloor != null){
-            if (facilityDto.numberOfFloor<=0) {
-                errors.rejectValue("numberOfFloor","add.numberOfFloor","Số tầng phải là số nguyên dương");
-            }
-        }
-        if (facilityDto.cost != null){
-            if(facilityDto.cost<=0) {
-                errors.rejectValue("cost","add.cost","Giá phải là số dương.");
-            }
-        }
-        if (facilityDto.area!=null) {
-            if (facilityDto.area<=0) {
-                errors.rejectValue("area","add.area","Area phải là số dương.");
-            }
-        }
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
     }
 }
