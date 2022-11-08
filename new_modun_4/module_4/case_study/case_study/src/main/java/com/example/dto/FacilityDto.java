@@ -1,4 +1,4 @@
-package com.example.dtoCustomerAndFacility;
+package com.example.dto;
 
 import com.example.facility.model.FacilityType;
 import com.example.facility.model.RentType;

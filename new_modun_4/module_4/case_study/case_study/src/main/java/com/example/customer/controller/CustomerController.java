@@ -4,7 +4,7 @@ import com.example.customer.model.Customer;
 import com.example.customer.model.TypeCustomer;
 import com.example.customer.service.ICustomerService;
 import com.example.customer.service.ITypeCustomerService;
-import com.example.dtoCustomerAndFacility.CustomerDto;
+import com.example.dto.CustomerDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
