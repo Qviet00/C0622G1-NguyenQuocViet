@@ -24,7 +24,8 @@ public class ContractDetail {
     public ContractDetail() {
     }
 
-    public ContractDetail(int idContractDetail, int quantity, Contract contract, AttachFacility attachFacility) {
+
+    public ContractDetail(int idContractDetail, Contract contract, AttachFacility attachFacility) {
         this.idContractDetail = idContractDetail;
         this.quantity = quantity;
         this.contract = contract;

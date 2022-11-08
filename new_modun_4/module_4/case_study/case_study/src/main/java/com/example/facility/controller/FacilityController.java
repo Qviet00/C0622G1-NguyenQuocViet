@@ -117,5 +117,4 @@ public class FacilityController {
         facilityService.save(facility);
         return "redirect:/listFacility";
     }
-
 }
