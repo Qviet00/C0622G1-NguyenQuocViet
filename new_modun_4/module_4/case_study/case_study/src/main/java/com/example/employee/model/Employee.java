@@ -2,6 +2,8 @@ package com.example.employee.model;
 
 
 import com.example.contract.model.Contract;
+import com.example.login.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.List;
@@ -43,6 +45,12 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     private List<Contract> contractList;
 
+
+
+    @OneToOne(mappedBy = "employees")
+    @JsonBackReference
+    private User user;
+
     public Employee() {
     }
 
@@ -59,6 +67,13 @@ public class Employee {
         this.educationDegree = educationDegree;
         this.division = division;
         this.contractList = contractList;
+    }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getIdEmployee() {

@@ -23,7 +23,6 @@
 <div class="row">
     <div class="col-2"></div>
     <div class="col-10">
-        <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
             Add New Contact
         </button>
@@ -50,12 +49,15 @@
         <td th:text="${contractNew.getTotal()}"></td>
         <td>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    th:onclick="|getIdContract(${contractNew.getId()})|">
+                    th:attr="onclick=|getIdContract('${contractNew.id}')|">
                 +
             </button>
-            <button th:attr="onclick =|showListAF(${contractNew.getId()})|" type="button" class="btn btn-primary"
+            <button
+                    th:value="${contractNew.id}"
+                    type="button"
+                    class="btn btn-primary attachFacilityList"
                     data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Danh sách các dịch vụ đi kèm
+                Dịch vụ đi kèm
             </button>
         </td>
     </tr>
@@ -63,6 +65,7 @@
 </table>
 
 
+<!--phân trang-->
 <div class="row">
     <div class="col-2"></div>
     <div class="col-10">
@@ -88,8 +91,8 @@
     </div>
 </div>
 
+<!--Thêm mới hợp đồng chi tiết-->
 </div>
-<!--Thêm hop dong chi tiet-->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -102,13 +105,12 @@
                 <form action="/saveContractDetail" method="post">
                     <input type="hidden" name="idContract" id="idContract">
                     <select name="attachFacilityId">
-                        <option value=0>Chọn dịch vụ đi kèm</option>
                         <option th:each="attachFacilityNew : ${listAttachFacility}"
                                 th:value="${attachFacilityNew.idAttachFacilityId}"
                                 th:text="${attachFacilityNew.nameOfAttachFacility}">
                         </option>
                     </select>
-                    <input type="number" name="quantity">
+                    <input type="text" name="quantity" placeholder="Nhập số lượng">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Add</button>
@@ -123,7 +125,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel3">Modal Add New Contract</h5>
+                <h5 class="modal-title" id="exampleModalLabel3">Tạo mơi hợp đồng</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -131,7 +133,7 @@
                     <div class="mb-3">
                         <label class="form-label">Nhân Viên</label>
                         <select th:field="*{employee}">
-                            <option value=0  selected>Chọn nhân viên</option>
+                            <option value=0 selected>Chọn nhân viên</option>
                             <option th:each="employeeNew : ${employeeList}"
                                     th:value="${employeeNew.idEmployee}"
                                     th:text="${employeeNew.nameOfEmployee}">
@@ -190,7 +192,7 @@
             <div class="modal-body">
                 <table class="table table-striped table-hover mt-3 w-75 m-auto">
                     <thead class="table-primary">
-                    <th scope="col">Mã dịch vụ đi kèm</th>
+                    <th scope="col">Số thứ tự</th>
                     <th scope="col">Tên dịch vụ đi kèm</th>
                     <th scope="col">Gía</th>
                     <th scope="col">Đơn vị</th>
@@ -208,44 +210,41 @@
 </div>
 <footer th:replace=" ~{common :: html_footer}"></footer>
 </body>
-<script src="/js/jquery-3.6.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    function showListAF(id) {
-        $.ajax({
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            type: "GET",
-            url: "http://localhost:8080/listAttachFacility?id=" + id,
-            success: function (facilityList){
-                let listAF = facilityList
-                console.log(listAF)
-                let htmlStr = '';
-                if (listAF != null) {
-                    for (let i = 0; i < listAF.length; i++) {
-                        htmlStr += `<tr>
-                        <td>${listAF[i].idAttachFacilityId}</td>
-                        <td>${listAF[i].nameOfAttachFacility}</td>
-                        <td>${listAF[i].price}</td>
-                        <td>${listAF[i].unit}</td>
-                        <td>${listAF[i].status}</td>
-                        </tr>`;
-                    }
-                }
-                $("#see").html(htmlStr)
-            },
-            error: function (resultError) {
-            }
-        })
-    }
     function getIdContract(id) {
         $("#idContract").val(id);
-
     }
+
+    $(document).ready(function () {
+        $(".btn.btn-primary.attachFacilityList").click(function () {
+            let idContract = $(this).val();
+            $.ajax({
+                url: "http://localhost:8080/listAttachFacility?id=" + idContract,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    let tr = [];
+                    if (data != null) {
+                        for (let i = 0; i < data.length; i++) {
+                            tr.push("<tr>")
+                            tr.push("<td>" + (i+1) + "</td>");
+                            tr.push("<td>" + data[i].nameOfAttachFacility + "</td>");
+                            tr.push("<td>" + data[i].price + "</td>");
+                            tr.push("<td>" + data[i].unit + "</td>");
+                            tr.push("<td>" + data[i].status + "</td>");
+                            tr.push("</tr>")
+                        }
+                    }
+                    $("#see").empty();
+                    $("#see").append(tr.join(""))
+                },
+                error: function (resultError) {
+                }
+            })
+        })
+    })
 </script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

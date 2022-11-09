@@ -29,4 +29,10 @@ public interface IContractRepository extends JpaRepository<Contract, Integer> {
             "GROUP BY ct.contract_id",
             nativeQuery = true, countQuery = "select count(*) from contract")
     Page<ContractPage> showListConTract(Pageable pageable);
+
+//    select c.* , (ifnull(f.cost,0) + SUM(ifnull(cd.quantity,0)*ifnull(af.cost,0))) as tong_tien  from contract c
+//    left join facility f on c.facility_id = f.id
+//    left join contract_detail cd on cd.contract_id = c.id
+//    left join attach_facility af on cd.attach_facility_id = af.id
+//    where c.delete_status = 1  GROUP BY c.id;
 }
