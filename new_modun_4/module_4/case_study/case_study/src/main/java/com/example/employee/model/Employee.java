@@ -2,7 +2,7 @@ package com.example.employee.model;
 
 
 import com.example.contract.model.Contract;
-import com.example.login.User;
+import com.example.login.model.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
@@ -46,10 +46,18 @@ public class Employee {
     private List<Contract> contractList;
 
 
-
-    @OneToOne(mappedBy = "employees")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id", referencedColumnName = "id")
     @JsonBackReference
-    private User user;
+    private User users;
+
+    public User getUsers() {
+        return users;
+    }
+
+    public void setUsers(User users) {
+        this.users = users;
+    }
 
     public Employee() {
     }
@@ -67,13 +75,6 @@ public class Employee {
         this.educationDegree = educationDegree;
         this.division = division;
         this.contractList = contractList;
-    }
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public int getIdEmployee() {

@@ -1,4 +1,4 @@
-package com.codegym.model;
+package com.example.login.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class MyUserDetail implements {
+public class MyUserDetail implements UserDetails {
     private User user;
 
     public MyUserDetail(User user) {
@@ -18,10 +18,10 @@ public class MyUserDetail implements {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
-        for (Role role: user.getRoles()){
-            grantedAuthorityList.add(new SimpleGrantedAuthority((role.getName())));
+        for (Role role:user.getRoles()){
+            grantedAuthorityList.add(new SimpleGrantedAuthority(role.getName()));
         }
-        return grantedAuthorityList;
+        return  grantedAuthorityList;
     }
 
     @Override
