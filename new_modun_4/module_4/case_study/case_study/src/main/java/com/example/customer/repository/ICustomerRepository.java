@@ -15,6 +15,6 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
                     "and customer_type_id like %:customer_type_id% and status = 0",
             nativeQuery = true)
     Page<Customer> findAllByNameAndAdress(@Param("nameSearch") String nameSearch,
-                                          @Param("email")String email,
-                                          @Param("customer_type_id")String customer_type_id, Pageable pageable);
+                                          @Param("email") String email,
+                                          @Param("customer_type_id") String customer_type_id, Pageable pageable);
 }

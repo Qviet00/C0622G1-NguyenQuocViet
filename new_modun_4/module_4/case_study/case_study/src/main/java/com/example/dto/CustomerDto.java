@@ -4,6 +4,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 import java.time.Period;
@@ -100,6 +101,8 @@ public class CustomerDto implements Validator {
     @Pattern(regexp = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$", message = "Địa chỉ email phải đúng định dạng.")
     private String email;
     private String address;
+
+    @NotEmpty(message = "vui lòng chọn")
     private String typeCustomer;
 
     @Override

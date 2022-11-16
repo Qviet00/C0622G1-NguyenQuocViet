@@ -33,8 +33,7 @@ public class WedSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().formLogin().
                 defaultSuccessUrl("/").permitAll().and().
-                authorizeRequests().antMatchers("/customerAdd","/facilityAdd","/updateCustomer","/updateFacility")
-                .hasRole("admin").anyRequest().authenticated();
+                authorizeRequests().anyRequest().authenticated();
 
         http.authorizeRequests().and().rememberMe().tokenRepository(persistentTokenRepository())
                 .tokenValiditySeconds(1*24*60*60);

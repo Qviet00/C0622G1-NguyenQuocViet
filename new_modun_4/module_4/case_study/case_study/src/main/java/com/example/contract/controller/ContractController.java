@@ -36,7 +36,6 @@ public class ContractController {
     private IAttachFacilityService attachFacilityService;
     @Autowired
     private ICustomerService customerService;
-    @Autowired
     private IFacilityService facilityService;
     @Autowired
     private IEmployeeService employeeService;
@@ -62,7 +61,7 @@ public class ContractController {
 
         contractDto.validate(contractDto,bindingResult);
         if (bindingResult.hasFieldErrors()){
-            model.addAttribute("contractDto",contractDto);
+//            model.addAttribute("contractDto",contractDto);
             model.addAttribute("newContract", new Contract());
             model.addAttribute("contract", contractService.showListConTract(pageable));
             model.addAttribute("listAttachFacility", attachFacilityService.findAll());

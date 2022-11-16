@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<!--Trang List hợp đồng-->
+<div>
+    <div id="img_bg">
+        <h3 class="text-center mt-3">Trang Sản phẩm</h3></div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Add New Contact
+            </button>
+        </div>
+    </div>
+    <table class="table table-striped table-hover mt-3 w-75 m-auto" id="idct">
+        <thead class="table-primary">
+        <th scope="col">STT</th>
+        <th scope="col"> Tên Sản phẩm</th>
+        <th scope="col">Gía</th>
+        <th scope="col">Loại sản phẩm</th>
+        <th scope="col">Ngày Mua</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Tổng tiền</th>
+        <th scope="col">edit</th>
+        </thead>
+        <tr th:each="contractNew , loop : ${productionDto}">
+            <td th:text="${loop.count}"></td>
+            <td th:text="${contractNew.getNameProduction()}"></td>
+            <td th:text="${contractNew.getPoit()}"></td>
+            <td th:text="${contractNew.typeProduction}"></td>
+            <td th:text="${contractNew.getStarday()}"></td>
+            <td th:text="${contractNew.number}"></td>
+            <td th:text="${contractNew.getSummoney()}"></td>
+            <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        th:attr="onclick=|getIdContract('${contractNew.id}')|">
+                    edit
+                </button>
+            </td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+
+<!--phân trang-->
+<div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+            <nav aria-label="Page navigation example" class="mt-3">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" th:href="@{'/listProduction'(page=0)}">First
+                        Page</a></li>
+                    <li class="page-item"><a class="page-link"
+                                             th:href="@{'/listProduction'(page=${productionDto.number - 1})}"
+                                             th:if="${productionDto.hasPrevious()}">Previous</a></li>
+                    <li class="page-item"><a class="page-link"
+                                             th:href="@{'/listProduction'(page=${productionDto.number + 1})}"
+                                             th:if="${productionDto.hasNext()}">Next</a></li>
+                    <li class="page-item"><a class="page-link"
+                                             th:href="@{'/listProduction'(page=${productionDto.totalPages - 1})}">Last
+                        Page</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">
+                        <span th:text="${productionDto.number + 1}"></span>/<span th:text="${productionDto.totalPages}"></span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

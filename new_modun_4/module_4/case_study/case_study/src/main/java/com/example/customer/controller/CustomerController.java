@@ -32,8 +32,11 @@ public class CustomerController {
 
 
     @GetMapping("/listCustomer")
-    public String searchTypeAndName(@RequestParam(defaultValue = "") String name, String email, String type, Model model,
-                                    @PageableDefault(size = 5) Pageable pageable) {
+    public String searchTypeAndName(@RequestParam(defaultValue = "")
+                                        String name, String email,
+                                    String type, Model model,
+                                    @PageableDefault(size = 5)
+                                        Pageable pageable) {
         model.addAttribute("customer", customerService.findAllByNameAndAdress(name, email, type, pageable));
         model.addAttribute("type", typeCustomerService.findAll());
         return "/customer/list";
