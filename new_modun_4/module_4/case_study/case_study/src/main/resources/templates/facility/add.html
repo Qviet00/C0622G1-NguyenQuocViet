@@ -58,8 +58,10 @@
                 <div class="mb-3">
                     <label class="form-label text-success fw-bold">Kiểu thuê</label>
                     <select th:field="*{rentType}">
-                        <option th:each="type : ${rentTypeList}" th:value="${type.rentTypeId}"
-                                th:text="${type.rentTypeName}"></option>
+                        <option th:each="type : ${rentTypeList}"
+                                th:value="${type.rentTypeId}"
+                                th:text="${type.rentTypeName}">
+                        </option>
                     </select>
                 </div>
             </div>
