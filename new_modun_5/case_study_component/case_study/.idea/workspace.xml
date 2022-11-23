@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7245cabc-91cc-4130-b789-a5e5e5108b40" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../new_modun_3/module_3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../new_modun_3/module_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai_tap/demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai_tap/demo/demo/src/app/countdown-timer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/src/app/app.module.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HwEcXh4Vpgdly4I37zF0xz43NS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/nguyen_quoc_viet_C0622G1/new_modun_4/Module_4/case_study",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\nguyen_quoc_viet_C0622G1\\new_modun_5\\case_study_component\\case_study\\CaseStudy\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_5\case_study_component\case_study\CaseStudy\src\app\cusstomer" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7245cabc-91cc-4130-b789-a5e5e5108b40" name="Changes" comment="" />
+      <created>1669187829670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669187829670</updated>
+      <workItem from="1669187830959" duration="1859000" />
+      <workItem from="1669192433935" duration="1874000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
