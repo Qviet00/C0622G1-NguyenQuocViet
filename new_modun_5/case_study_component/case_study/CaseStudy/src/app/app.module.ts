@@ -8,6 +8,7 @@ import { AddCustomerComponent } from './cusstomer/add-customer/add-customer.comp
 import { ListFacilityComponent } from './facility/list-facility/list-facility.component';
 import { EditFacilityComponent } from './facility/edit-facility/edit-facility.component';
 import { AddFacilityComponent } from './facility/add-facility/add-facility.component';
+import { EditCustomerComponent } from './cusstomer/edit-customer/edit-customer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddFacilityComponent } from './facility/add-facility/add-facility.compo
     AddCustomerComponent,
     ListFacilityComponent,
     EditFacilityComponent,
-    AddFacilityComponent
+    AddFacilityComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,
