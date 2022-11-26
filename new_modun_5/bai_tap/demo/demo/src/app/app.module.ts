@@ -10,6 +10,10 @@ import { FormRegisterComponent } from './form-register/form-register.component';
 import { ProductServiceComponent } from './production/product-service/product-service.component';
 import { ProductListComponent } from './production/product/product-list/product-list.component';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductCreateComponent } from './production/product/product-create/product-create.component';
+import { ProductUpdateComponent } from './production/product/product-update/product-update.component';
+import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictionary-detail.component';
+import { DictionaryPageComponent } from './dictionary/dictionary-page/dictionary-page.component';
 
 const routes :Routes =[{
   path: 'production/list',
@@ -26,7 +30,11 @@ const routes :Routes =[{
     FormComponent,
     FormRegisterComponent,
     ProductServiceComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductCreateComponent,
+    ProductUpdateComponent,
+    DictionaryDetailComponent,
+    DictionaryPageComponent
   ],
   imports: [
     BrowserModule,

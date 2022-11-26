@@ -36,4 +36,14 @@ export class ProductService {
     return this.products;
   }
   constructor() { }
+
+  deleteById(id: number) {
+    for (let i = 0; i < this.products.length; i++) {
+      if (this.products[i].id === id) {
+        this.products.splice(i, 1);
+      }
+    }
+
+
+  }
 }
