@@ -21,14 +21,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/nguyen_quoc_viet_C0622G1/new_modun_5/case_study_prototype&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/nguyen_quoc_viet_C0622G1/new_modun_5/bai_tap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\nguyen_quoc_viet_C0622G1\new_modun_5\case_study\Furama\src\app\html\contracl" />
@@ -49,6 +49,7 @@
       <workItem from="1669211189485" duration="2091000" />
       <workItem from="1669214333252" duration="721000" />
       <workItem from="1669297301734" duration="121000" />
+      <workItem from="1669307837866" duration="174000" />
     </task>
     <servers />
   </component>
