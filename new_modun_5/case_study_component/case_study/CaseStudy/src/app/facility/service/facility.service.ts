@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Facility} from './model/facility';
+import {Facility} from '../model/facility';
 
 
 

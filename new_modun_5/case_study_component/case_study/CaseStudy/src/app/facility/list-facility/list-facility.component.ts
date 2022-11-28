@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Facility} from '../model/facility';
+import {FacilityService} from '../service/facility.service';
 
 @Component({
-  selector: 'app-list-facility',
-  templateUrl: './list-facility.component.html',
-  styleUrls: ['./list-facility.component.css']
+  selector: 'app-facility-list',
+  templateUrl: './facility-list.component.html',
+  styleUrls: ['./facility-list.component.css']
 })
-export class ListFacilityComponent implements OnInit {
+export class FacilityListComponent implements OnInit {
 
+  facilityList: Facility[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private facilityService: FacilityService
+  ) {
   }
 
+  ngOnInit(): void {
+    this.facilityList = this.facilityService.getAll();
+  }
 }
