@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import {Product} from "../model/product";
+import {Injectable} from '@angular/core';
+import {Product} from "../model/Product";
 
 @Injectable({
   providedIn: 'root'
@@ -30,19 +30,14 @@ export class ProductService {
     name: 'IPhone 11 Pro',
     price: 1895000,
     description: 'Like new'
-  }];
+
+  }]
+
+  constructor() {
+  }
 
   getAll() {
-    return this.products;
-  }
-  constructor() { }
-
-  deleteById(id: number) {
-    for (let i = 0; i < this.products.length; i++) {
-      if (this.products[i].id === id) {
-        this.products.splice(i, 1);
-      }
-    }
+    return this.products
   }
 
   saveProduct(product) {
@@ -61,4 +56,9 @@ export class ProductService {
     }
   }
 
+  deleteProduct(id: number){
+    this.products= this.products.filter(product=>{
+      return product.id!==id;
+    })
+  }
 }
