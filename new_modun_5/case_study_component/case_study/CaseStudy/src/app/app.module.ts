@@ -9,6 +9,8 @@ import { ListFacilityComponent } from './facility/list-facility/list-facility.co
 import { EditFacilityComponent } from './facility/edit-facility/edit-facility.component';
 import { AddFacilityComponent } from './facility/add-facility/add-facility.component';
 import { EditCustomerComponent } from './cusstomer/edit-customer/edit-customer.component';
+import { AddContraclComponent } from './contracl/add-contracl/add-contracl.component';
+import { ListContraclComponent } from './contracl/list-contracl/list-contracl.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EditCustomerComponent } from './cusstomer/edit-customer/edit-customer.c
     ListFacilityComponent,
     EditFacilityComponent,
     AddFacilityComponent,
-    EditCustomerComponent
+    EditCustomerComponent,
+    AddContraclComponent,
+    ListContraclComponent
   ],
   imports: [
     BrowserModule,
