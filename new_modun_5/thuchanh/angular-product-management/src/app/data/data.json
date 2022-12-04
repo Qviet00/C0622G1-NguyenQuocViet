@@ -1,0 +1,116 @@
+{
+  "product": [
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new",
+      "category": {
+        "id": 2,
+        "name": "Type2"
+      }
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "category": {
+        "id": 3,
+        "name": "Type3"
+      },
+      "description": "97%"
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": 7540000,
+      "category": {
+        "id": 4,
+        "name": "Type4"
+      },
+      "description": "98%"
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Promax",
+      "price": 1895000,
+      "description": "Like new",
+      "category": {
+        "id": 5,
+        "name": "Type5"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Samsung",
+      "price": 12000000,
+      "description": "New",
+      "category": {
+        "id": 2,
+        "name": "Type2"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Nokia",
+      "price": 7000000,
+      "description": "Active",
+      "category": {
+        "id": 1,
+        "name": "Type1"
+      }
+    },
+    {
+      "name": "Xiomi",
+      "price": 123456,
+      "category": {
+        "id": 1,
+        "name": "Type1"
+      },
+      "description": "New",
+      "id": 8
+    },
+    {
+      "name": " sd",
+      "price": 2,
+      "category": {
+        "id": 2,
+        "name": "Type2"
+      },
+      "description": "123",
+      "id": 9
+    },
+    {
+      "name": "1",
+      "price": 1,
+      "category": {
+        "id": 1,
+        "name": "Type1"
+      },
+      "description": "1",
+      "id": 10
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Type1"
+    },
+    {
+      "id": 2,
+      "name": "Type2"
+    },
+    {
+      "id": 3,
+      "name": "Type3"
+    },
+    {
+      "id": 4,
+      "name": "Type4"
+    },
+    {
+      "id": 5,
+      "name": "Type5"
+    }
+  ]
+}

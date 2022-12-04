@@ -1,0 +1,96 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "Trần Ánh Nga",
+      "dateOfBirth": "1994-11-09",
+      "idCard": "542134536",
+      "phone": "090423423",
+      "address": "Quảng Trị",
+      "email": "tha@gmail",
+      "gender": "Nữ",
+      "customerType": {
+        "id": 2,
+        "name": "Sillver"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Thi Tham",
+      "dateOfBirth": "1984-11-05",
+      "idCard": "542134536",
+      "phone": "090423423",
+      "address": "Huế",
+      "email": "thamtttt@gmail",
+      "gender": "Nữ",
+      "customerType": {
+        "id": 1,
+        "name": "Gold"
+      }
+    },
+    {
+      "name": "Nguyễn Văn Nam",
+      "dateOfBirth": "1993-12-07",
+      "idCard": "209909201",
+      "phone": "0923020943",
+      "address": "Đà nẵng",
+      "email": "q@gmail.com",
+      "gender": "Nam",
+      "customerType": {
+        "id": 2,
+        "name": "Member"
+      },
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Văn Hà",
+      "dateOfBirth": "2001-12-02",
+      "idCard": "123342345",
+      "phone": "0998989098",
+      "address": "Quảng nam",
+      "email": "namnguyen@gmail.com",
+      "gender": "Nam",
+      "customerType": {
+        "id": 2,
+        "name": "Member"
+      }
+    },
+    {
+      "name": "Nguyễn Tấn Dũng",
+      "dateOfBirth": "1998-12-07",
+      "idCard": "123343456",
+      "phone": "0909898765",
+      "address": "Đà Nẵng",
+      "email": "dt@gmail.com",
+      "gender": "Nam",
+      "customerType": {
+        "id": 2,
+        "name": "Member"
+      },
+      "id": 5
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Gold"
+    },
+    {
+      "id": 2,
+      "name": "Member"
+    },
+    {
+      "id": 3,
+      "name": "Silver"
+    },
+    {
+      "id": 4,
+      "name": "Platinum"
+    },
+    {
+      "id": 5,
+      "name": "Diamond"
+    }
+  ]
+}

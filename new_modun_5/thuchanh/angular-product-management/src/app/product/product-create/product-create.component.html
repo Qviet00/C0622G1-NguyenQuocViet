@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div  class="text-center mt3">
+  <h3>Thêm mới sản phẩm</h3>
+  <div ><a routerLink=""><button>Trở về trang danh sách</button></a></div>
+  <form style="margin-top: 50px" class="w-25 container-fluid shadow" [formGroup]="productCreate" (ngSubmit)="sumit()">
+    <table>
+      <tr>
+        <td>Name Product:</td>
+        <td><input type="text" formControlName="name" class="form-control"
+                   [ngClass]="(productCreate.controls['name'].invalid && productCreate.controls['name'].touched) ? 'is-invalid' : 'is-valid'">
+          <div class="invalid-feedback">
+            <div *ngIf="productCreate.controls['name'].errors?.required && productCreate.controls['name'].touched">
+              Không được để trống
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Price Product</td>
+        <td><input type="number" formControlName="price" class="form-control"
+                   [ngClass]="(productCreate.controls['price'].invalid && productCreate.controls['price'].touched) ? 'is-invalid' : 'is-valid'">
+          <div class="invalid-feedback">
+            <div *ngIf="productCreate.controls['price'].hasError('min') && productCreate.controls['price'].touched">
+              Gía trị phải lớn hơn 0
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Category</td>
+        <select formControlName="category" style="width: 190px" class="form-control"
+                [ngClass]="(productCreate.controls['category'].invalid && productCreate.controls['category'].touched) ? 'is-invalid' : 'is-valid'">
+          <option value="">-Chọn-</option>
+          <option *ngFor="let item of categoryCreate" [ngValue]="item">{{item.name}}</option>
+        </select>
+        <div class="invalid-feedback">
+          <div
+            *ngIf="productCreate.controls['category'].hasError('required') && productCreate.controls['category'].touched">
+            Vui lòng chọn
+          </div>
+        </div>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td><input type="text" formControlName="description" class="form-control"
+                   [ngClass]="(productCreate.controls['description'].invalid && productCreate.controls['description'].touched) ? 'is-invalid' : 'is-valid'">
+          <div class="invalid-feedback">
+            <div
+              *ngIf="productCreate.controls['description'].errors?.required && productCreate.controls['description'].touched">
+              Không để trống
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" [disabled]="!productCreate.valid" value="Tạo mới">
+          <input type="reset" value="Reset" style="margin-left: 10px">
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>

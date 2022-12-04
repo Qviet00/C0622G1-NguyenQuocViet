@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="text-center mt3">
+  <h2 style="margin-top: 30px">-Danh sách sản phẩm-</h2>
+</div>
+<div class="container mt-3">
+  <a routerLink='/customer/create'>
+    <button class="btn btn-primary">Tạo mới sản phẩm</button>
+  </a>
+</div>
+<div class="container mt-3">
+  <input #nameSearch type="text" placeholder="Search name" style="margin-right: 10px">
+  <select #TypeSearch style="margin-right: 10px;height: 30px;width: 70px">
+    <option value="" selected>-Chọn-</option>
+    <option *ngFor="let item of customerList" value="{{item.customerType.name}}">{{item.customerType.name}}</option>
+  </select>
+  <input type="submit" value="Tìm kiếm" (click)="search(nameSearch.value, TypeSearch.value)">
+</div>
+<div class="container mt-3">
+  <input type="date" name="number1" [(ngModel)]="date1" placeholder="Search name" style="margin-right: 10px">
+  <input type="date" name="number2" [(ngModel)]="date2" placeholder="Search name" style="margin-right: 10px">
+  <input type="submit" value="Tìm kiếm" (click)="searchDateOfBirth()">
+</div>
+<div class="container mt-4">
+  <table class="table table-striped table-primary">
+    <thead>
+    <tr style="font-weight: bolder ">
+      <td>STT</td>
+      <td>Tên</td>
+      <td>Ngày sinh</td>
+      <td>Số CMND</td>
+      <td>Email</td>
+      <td>Địa chỉ</td>
+      <td>Giới tính</td>
+      <td>Loại khách hàng</td>
+      <td colspan="2">Option</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customerList|paginate: { itemsPerPage: 5, currentPage: p }; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.dateOfBirth}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.customerType.name}}</td>
+      <td>
+        <a [routerLink]="['/product/edit',customer.id]">
+          <button class="btn btn-primary">Edit</button>
+        </a>
+      </td>
+      <td>
+        <a [routerLink]="['/product/delete',customer.id]">
+          <button class="btn btn-primary">Delete</button>
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container mt-3">
+  <pagination-controls (pageChange)=" p = $event"></pagination-controls>
+</div>
+</body>
+</html>

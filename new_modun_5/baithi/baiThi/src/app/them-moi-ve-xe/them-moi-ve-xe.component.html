@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="row text-center mt-3">
+  <h2 style="margin-top: 10px">Xóa vé</h2>
+</div>
+
+<form style="margin-top: 30px; max-width: 450px"  class=" container-fluid shadow" [formGroup]="themMoiVeXe" *ngIf="themMoiVeXe"
+      (ngSubmit)="themMoi()">
+  <div>
+    <div class="mb-2">
+     Điểm đi
+      <input type="text" class="form-control" formControlName="diemDi" class="form-control"
+             [ngClass]="(themMoiVeXe.controls['diemDi'].invalid && themMoiVeXe.controls['diemDi'].touched) ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="themMoiVeXe.controls['diemDi'].errors?.required && themMoiVeXe.controls['diemDi'].touched">
+          Không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      Điểm đến
+      <input type="text" class="form-control" formControlName="diemDen" class="form-control"
+             [ngClass]="(themMoiVeXe.controls['diemDen'].invalid && themMoiVeXe.controls['diemDen'].touched) ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="themMoiVeXe.controls['diemDen'].errors?.required && themMoiVeXe.controls['diemDen'].touched">
+          Không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      Gía vé
+      <input type="text" class="form-control" formControlName="giaVe" class="form-control"
+             [ngClass]="(themMoiVeXe.controls['giaVe'].invalid && themMoiVeXe.controls['giaVe'].touched) ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="themMoiVeXe.controls['giaVe'].errors?.required && themMoiVeXe.controls['giaVe'].touched">
+          Không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      Ngày khởi hành
+      <input type="date" class="form-control" formControlName="ngayKhoiHanh" class="form-control"
+             [ngClass]="(themMoiVeXe.controls['ngayKhoiHanh'].invalid && themMoiVeXe.controls['ngayKhoiHanh'].touched) ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="themMoiVeXe.controls['ngayKhoiHanh'].errors?.required && themMoiVeXe.controls['ngayKhoiHanh'].touched">
+          Không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      Giờ khời hành
+      <input type="text" class="form-control" formControlName="gioKhoiHanh" class="form-control"
+             [ngClass]="(themMoiVeXe.controls['gioKhoiHanh'].invalid && themMoiVeXe.controls['gioKhoiHanh'].touched) ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="themMoiVeXe.controls['gioKhoiHanh'].errors?.required && themMoiVeXe.controls['gioKhoiHanh'].touched">
+          Không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      Số lượng
+      <input type="text" class="form-control" formControlName="soLuong" class="form-control"
+             [ngClass]="(themMoiVeXe.controls['soLuong'].invalid && themMoiVeXe.controls['soLuong'].touched) ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="themMoiVeXe.controls['soLuong'].errors?.required && themMoiVeXe.controls['soLuong'].touched">
+          Không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      Nhà xe
+      <div style="width: 190px">
+        <select style="width: 426px;height: 38px" formControlName="nhaXe"  class="form-control"
+                [ngClass]="(themMoiVeXe.controls['nhaXe'].invalid && themMoiVeXe.controls['nhaXe'].touched) ? 'is-invalid' : 'is-valid'">
+        <option value="" selected>-Chọn-</option>
+          <option *ngFor="let item of themMoiNhaXe" [ngValue]="item">{{item.tenNhaXe}}</option>
+        </select>
+        <div class="invalid-feedback">
+          <div
+            *ngIf="themMoiVeXe.controls['nhaXe'].hasError('required') && themMoiVeXe.controls['nhaXe'].touched">
+            Vui lòng chọn
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a routerLink="">
+      <button class="btn btn-primary">Cancel</button>
+    </a>
+    <button type="reset" class="btn btn-primary">Reset</button>
+  </div>
+</form>
+</body>
+</html>

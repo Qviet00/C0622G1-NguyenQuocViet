@@ -1,0 +1,96 @@
+{
+  "veXe": [
+    {
+      "id": 1,
+      "diemDi": "Da Nang",
+      "diemDen": "Hue",
+      "giaVe": "100000",
+      "ngayKhoiHanh": "2021-06-02",
+      "gioKhoiHanh": "20h00",
+      "soLuong": 10,
+      "nhaXe": {
+        "id": 1,
+        "tenNhaXe": "Phuong Trang"
+      }
+    },
+    {
+      "id": 2,
+      "diemDi": "Da Nang",
+      "diemDen": "Hai Phong",
+      "giaVe": "450000",
+      "ngayKhoiHanh": "2021-06-03",
+      "gioKhoiHanh": "20h00",
+      "soLuong": 10,
+      "nhaXe": {
+        "id": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 3,
+      "diemDi": "Da Nang",
+      "diemDen": "Ha Noi",
+      "giaVe": "500000",
+      "ngayKhoiHanh": "2021-06-01",
+      "gioKhoiHanh": "10h00",
+      "soLuong": 10,
+      "nhaXe": {
+        "id": 3,
+        "tenNhaXe": "Trung Tin"
+      }
+    },
+    {
+      "diemDi": "Đa Nang",
+      "diemDen": "Nha Trang",
+      "giaVe": "250000",
+      "ngayKhoiHanh": "2022-12-09",
+      "gioKhoiHanh": "12h30p",
+      "soLuong": "1",
+      "nhaXe": {
+        "id": 1,
+        "tenNhaXe": "Phuong Trang"
+      },
+      "id": 5
+    },
+    {
+      "diemDi": "Da Nang",
+      "diemDen": "Quang Binh",
+      "giaVe": "350000",
+      "ngayKhoiHanh": "2022-12-08",
+      "gioKhoiHanh": "20h30p",
+      "soLuong": "3",
+      "nhaXe": {
+        "id": 1,
+        "tenNhaXe": "Phuong Trang"
+      },
+      "id": 6
+    },
+    {
+      "diemDi": "Da Nang",
+      "diemDen": "hcm",
+      "giaVe": "500000",
+      "ngayKhoiHanh": "2022-12-07",
+      "gioKhoiHanh": "20h15p",
+      "soLuong": "1",
+      "nhaXe": {
+        "id": 1,
+        "tenNhaXe": "Phuong Trang"
+      },
+      "id": 7
+    }
+  ],
+  "nhaXe": [
+    {
+      "id": 1,
+      "tenNhaXe": "Phuong Trang"
+    },
+    {
+      "id": 2,
+      "tenNhaXe": "Trung Nguyen"
+    },
+    {
+      "id": 3,
+      "tenNhaXe": "Trung Tin"
+    }
+  ]
+}
