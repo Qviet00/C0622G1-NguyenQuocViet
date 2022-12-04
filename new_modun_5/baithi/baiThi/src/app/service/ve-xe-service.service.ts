@@ -14,28 +14,28 @@ export class VeXeServiceService {
   }
 
   getAllVeXe(): Observable<Vexe[]> {
-    return this.httpClient.get<Vexe[]>(environment.apiURLVX);
+    return this.httpClient.get<Vexe[]>(environment.api_ve);
   }
   save(veXe): Observable<Vexe> {
-    return this.httpClient.post<Vexe>(environment.apiURLVX, veXe);
+    return this.httpClient.post<Vexe>(environment.api_ve, veXe);
   }
   getAllNhaxe(): Observable<Nhaxe[]>{
-    return this.httpClient.get<Nhaxe[]>(environment.apiURLNX);
+    return this.httpClient.get<Nhaxe[]>(environment.api_nha);
   }
 
   searchNgay(diemDi: string, diemDen:string) {
-    return this.httpClient.get<Vexe[]>(environment.apiURLVX+'?diemDi_like='+ diemDi+'?diemDen_like='+ diemDen)
+    return this.httpClient.get<Vexe[]>(environment.api_ve+'?diemDi_like='+ diemDi+'?diemDen_like='+ diemDen)
   }
   getAllById(id: number): Observable<Vexe> {
-    return this.httpClient.get<Vexe>(`${environment.apiURLVX}/${id}`);
+    return this.httpClient.get<Vexe>(`${environment.api_ve}/${id}`);
   }
 
   deleteVeXe(id: number):  Observable<Vexe> {
-    return this.httpClient.delete<Vexe>(`${environment.apiURLVX}/${id}`);
+    return this.httpClient.delete<Vexe>(`${environment.api_ve}/${id}`);
   }
 
   editVexe(id: number, vexe: Vexe) {
-  return this.httpClient.put<Vexe>(`${environment.apiURLVX}/${id}`, vexe);
+  return this.httpClient.put<Vexe>(`${environment.api_ve}/${id}`, vexe);
 
 }
 }

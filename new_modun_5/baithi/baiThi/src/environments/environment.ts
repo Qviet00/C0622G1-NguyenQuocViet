@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   apiURLVX: "http://localhost:3000/veXe",
-  apiURLNX: "http://localhost:3000/nhaXe"
+  apiURLNX: "http://localhost:3000/nhaXe",
+  api_ve: 'http://localhost:8080/ve',
+  api_nha: 'http://localhost:8080/nha',
 
 };
 
